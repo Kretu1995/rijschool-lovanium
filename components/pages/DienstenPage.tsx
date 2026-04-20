@@ -63,11 +63,7 @@ function ServiceDetail({ item, index }: { item: ServiceItem; index: number }) {
   const isEven = index % 2 === 0;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 32 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+    <div
       className={`grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center ${
         !isEven ? 'lg:flex-row-reverse' : ''
       }`}
@@ -128,7 +124,7 @@ function ServiceDetail({ item, index }: { item: ServiceItem; index: number }) {
           <div className="text-slate-400 text-sm">{item.priceNote}</div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

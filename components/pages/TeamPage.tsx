@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Briefcase, Heart, Star, ArrowRight, Mail } from 'lucide-react';
+import { useIsMobile } from '@/lib/useIsMobile';
 import Link from 'next/link';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 
@@ -19,13 +20,19 @@ interface TeamMember {
 
 function MemberCard({ member, index }: { member: TeamMember; index: number }) {
   const t = useTranslations('team');
+  const isMobile = useIsMobile();
+
+  const Wrapper = isMobile ? 'div' : motion.div;
+  const motionProps = isMobile ? {} : {
+    initial: { opacity: 0 },
+    whileInView: { opacity: 1 },
+    viewport: { once: true, margin: '-50px' },
+    transition: { duration: 0.5, delay: index * 0.06 },
+  };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 32 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-50px' }}
-      transition={{ duration: 0.6, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
+    <Wrapper
+      {...(motionProps as object)}
       className="card-light-hover rounded-3xl overflow-hidden group"
     >
       {/* Avatar header */}
@@ -83,7 +90,7 @@ function MemberCard({ member, index }: { member: TeamMember; index: number }) {
           <p className="text-slate-400 text-xs">{member.hobbies}</p>
         </div>
       </div>
-    </motion.div>
+    </Wrapper>
   );
 }
 
