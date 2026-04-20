@@ -126,7 +126,7 @@ export default function ChatBot() {
         onClick={() => setOpen(!open)}
         className="fixed right-5 z-50 w-14 h-14 rounded-full bg-navy shadow-navy flex items-center justify-center hover:bg-navy-light transition-all duration-200 hover:scale-110"
         aria-label="Open chat"
-        style={{ bottom: '5.5rem' }}
+        style={{ bottom: '6rem' }}
       >
         <AnimatePresence mode="wait">
           {open ? (
@@ -154,10 +154,10 @@ export default function ChatBot() {
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
             className="fixed z-50 bg-white rounded-3xl shadow-2xl border border-surface-border overflow-hidden flex flex-col"
             style={{
-              bottom: '10rem',
+              bottom: '11rem',
               right: '1.25rem',
               width: 'min(380px, calc(100vw - 2.5rem))',
-              height: 'min(480px, calc(100dvh - 12rem))',
+              height: 'min(480px, calc(100dvh - 13rem))',
             }}
           >
             {/* Header */}

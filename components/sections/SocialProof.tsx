@@ -63,7 +63,7 @@ function ScrollRow({ items, reverse = false }: { items: Testimonial[]; reverse?:
     <div className="overflow-hidden relative">
       <div className="absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-surface to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-surface to-transparent z-10 pointer-events-none" />
-      <div className={`flex py-3 ${reverse ? 'animate-scroll-right' : 'animate-scroll-left'}`}>
+      <div className={`flex py-3 w-max ${reverse ? 'animate-scroll-right' : 'animate-scroll-left'}`}>
         {doubled.map((item, i) => (
           <TestimonialCard key={i} item={item} index={i % items.length} />
         ))}
