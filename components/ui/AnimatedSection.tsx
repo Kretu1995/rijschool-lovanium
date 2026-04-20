@@ -6,24 +6,24 @@ import { useIsMobile } from '@/lib/useIsMobile';
 
 const variants: Record<string, Variants> = {
   fadeUp: {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.6 } },
   },
   fadeIn: {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.6 } },
   },
   scaleIn: {
-    hidden: { opacity: 0, scale: 0.95 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.6 } },
   },
   slideLeft: {
-    hidden: { opacity: 0, x: -40 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.6 } },
   },
   slideRight: {
-    hidden: { opacity: 0, x: 40 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.6 } },
   },
 };
 
@@ -33,8 +33,8 @@ const containerVariants: Variants = {
 };
 
 const staticVariants: Variants = {
-  hidden: { opacity: 1, y: 0, x: 0, scale: 1 },
-  visible: { opacity: 1, y: 0, x: 0, scale: 1 },
+  hidden: { opacity: 1 },
+  visible: { opacity: 1 },
 };
 
 interface AnimatedSectionProps {
