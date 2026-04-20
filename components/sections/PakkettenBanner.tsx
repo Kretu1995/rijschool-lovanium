@@ -37,7 +37,7 @@ export default function PakkettenBanner() {
           </div>
           <Link
             href={`/${locale}/pakketten`}
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gold text-white font-bold text-sm whitespace-nowrap hover:shadow-[0_0_30px_rgba(200,150,62,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gold text-white font-bold text-sm whitespace-nowrap hover:shadow-[0_0_30px_rgba(3,193,179,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
           >
             {t('cta')}
             <ArrowRight size={16} />

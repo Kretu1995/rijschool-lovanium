@@ -128,7 +128,7 @@ export default function Hero() {
                 >
                   <Link
                     href={`/${locale}/inschrijven`}
-                    className="relative inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gold text-white font-bold text-sm overflow-hidden group transition-all duration-200 hover:shadow-[0_0_30px_rgba(200,150,62,0.5)] hover:scale-[1.02] active:scale-[0.98]"
+                    className="relative inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gold text-white font-bold text-sm overflow-hidden group transition-all duration-200 hover:shadow-[0_0_30px_rgba(3,193,179,0.5)] hover:scale-[1.02] active:scale-[0.98]"
                   >
                     <span className="relative z-10 flex items-center gap-2">
                       {t('cta1')}

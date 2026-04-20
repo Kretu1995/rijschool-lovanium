@@ -12,7 +12,7 @@ interface Testimonial {
 }
 
 const avatarColors = [
-  '#0B2D5E', '#C8963E', '#1a4a8a', '#7B3F00',
+  '#0B2D5E', '#03c1b3', '#1a4a8a', '#7B3F00',
   '#6B21A8', '#065F46', '#9D174D', '#1E3A5F',
 ];
 

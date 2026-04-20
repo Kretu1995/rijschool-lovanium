@@ -211,7 +211,7 @@ export default function PakkettenPage() {
 
       {/* CTA */}
       <section className="py-20 bg-navy relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(200,150,62,0.08)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(3,193,179,0.08)_0%,transparent_70%)]" />
         <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
           <p className="text-white/40 text-xs uppercase tracking-widest mb-3">{t('ctaEyebrow')}</p>
           <h2 className="text-3xl md:text-4xl font-black text-white mb-4">{t('ctaHeading')}</h2>
