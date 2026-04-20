@@ -261,10 +261,16 @@ export default function PakkettenPage() {
                 <div className="w-12 h-12 rounded-2xl bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <AlertTriangle size={22} className="text-amber-600" />
                 </div>
-                <div>
-                  <div className="flex flex-wrap items-center gap-3 mb-2">
-                    <h3 className="text-navy font-black text-lg">Verplichte rijlessen</h3>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-amber-700 bg-amber-100 px-3 py-1 rounded-full">Na 2× niet geslaagd</span>
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center justify-between gap-3 mb-2">
+                    <div className="flex flex-wrap items-center gap-3">
+                      <h3 className="text-navy font-black text-lg">Verplichte rijlessen</h3>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-amber-700 bg-amber-100 px-3 py-1 rounded-full">Na 2× niet geslaagd</span>
+                    </div>
+                    <div className="text-right flex-shrink-0">
+                      <span className="text-2xl font-black text-navy">€85</span>
+                      <span className="text-slate-400 text-xs ml-1">/ uur</span>
+                    </div>
                   </div>
                   <p className="text-slate-600 leading-relaxed">
                     Ben je tweemaal niet geslaagd voor het rijexamen dan ben je verplicht om rijlessen te volgen. Onze lesgevers zorgen ervoor dat je met de correcte technieken leert rijden en de juiste keuzes maakt in het verkeer zodat je snel je definitief rijbewijs op zak hebt!
@@ -279,10 +285,16 @@ export default function PakkettenPage() {
                 <div className="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <Target size={22} className="text-blue-600" />
                 </div>
-                <div>
-                  <div className="flex flex-wrap items-center gap-3 mb-2">
-                    <h3 className="text-navy font-black text-lg">Proefexamen</h3>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-blue-700 bg-blue-100 px-3 py-1 rounded-full">Minstens 1 maand voor je examen</span>
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center justify-between gap-3 mb-2">
+                    <div className="flex flex-wrap items-center gap-3">
+                      <h3 className="text-navy font-black text-lg">Proefexamen</h3>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-blue-700 bg-blue-100 px-3 py-1 rounded-full">Minstens 1 maand voor je examen</span>
+                    </div>
+                    <div className="text-right flex-shrink-0">
+                      <span className="text-2xl font-black text-navy">€85</span>
+                      <span className="text-slate-400 text-xs ml-1">/ uur</span>
+                    </div>
                   </div>
                   <p className="text-slate-600 leading-relaxed">
                     Tijdens deze rijles scannen onze lesgevers jouw rijstijl en gaan ze na of je klaar bent voor het praktijkexamen. Dankzij hun feedback en tips ben je optimaal voorbereid voor het praktijkexamen. Plan een proefexamen minstens een maand voor je praktijkexamen zodanig dat je nadien voldoende tijd hebt om aan de slag te gaan met de feedback van je lesgever.
@@ -299,9 +311,14 @@ export default function PakkettenPage() {
                   <ClipboardList size={22} className="text-gold" />
                 </div>
                 <div className="flex-1">
-                  <div className="flex flex-wrap items-center gap-3 mb-2">
-                    <h3 className="text-white font-black text-lg">Examen met leswagen</h3>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-gold bg-gold/15 px-3 py-1 rounded-full">Min. 6u rijles vereist</span>
+                  <div className="flex flex-wrap items-start justify-between gap-3 mb-2">
+                    <div className="flex flex-wrap items-center gap-3">
+                      <h3 className="text-white font-black text-lg">Examen met leswagen</h3>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-gold bg-gold/15 px-3 py-1 rounded-full">Min. 6u rijles vereist</span>
+                    </div>
+                    <div className="text-right flex-shrink-0">
+                      <span className="text-2xl font-black text-gold">Op aanvraag</span>
+                    </div>
                   </div>
                   <p className="text-white/60 leading-relaxed mb-6">
                     Je kan ervoor kiezen om het praktisch examen af te leggen met onze leswagen en jouw rijlesgever als begeleider. Dit is enkel mogelijk wanneer je ook vooraf minstens 6u rijles hebt gevolgd met onze leswagen.
@@ -333,12 +350,16 @@ export default function PakkettenPage() {
 
               {/* Vervallen rijbewijs */}
               <div className="bg-red-50 border border-red-100 rounded-3xl p-8">
-                <div className="w-12 h-12 rounded-2xl bg-red-100 flex items-center justify-center mb-5">
-                  <RotateCcw size={22} className="text-red-500" />
+                <div className="flex items-start justify-between mb-5">
+                  <div className="w-12 h-12 rounded-2xl bg-red-100 flex items-center justify-center">
+                    <RotateCcw size={22} className="text-red-500" />
+                  </div>
+                  <div className="text-right">
+                    <span className="text-2xl font-black text-navy">€510</span>
+                    <span className="text-slate-400 text-xs block">6u · incl. btw</span>
+                  </div>
                 </div>
-                <div className="flex flex-wrap items-center gap-3 mb-2">
-                  <h3 className="text-navy font-black text-lg">Vervallen voorlopig rijbewijs</h3>
-                </div>
+                <h3 className="text-navy font-black text-lg mb-1">Vervallen voorlopig rijbewijs</h3>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-red-600 bg-red-100 px-3 py-1 rounded-full inline-block mb-4">Verplicht 6u rijles</span>
                 <p className="text-slate-600 text-sm leading-relaxed">
                   Is je voorlopig rijbewijs vervallen? Dan moet je vanuit de overheid verplicht 6u rijles volgen. Let er goed op dat je je rijlessen pas volgt <strong>NADAT</strong> je voorlopig rijbewijs is vervallen. Nadien kan je een nieuw voorlopig rijbewijs (model 12 maanden) aanvragen dat 1 jaar geldig is en waarmee je steeds met begeleider moet oefenen.
@@ -347,12 +368,16 @@ export default function PakkettenPage() {
 
               {/* Losse rijles */}
               <div className="bg-surface border border-surface-border rounded-3xl p-8">
-                <div className="w-12 h-12 rounded-2xl bg-navy-50 flex items-center justify-center mb-5">
-                  <Car size={22} className="text-navy" />
+                <div className="flex items-start justify-between mb-5">
+                  <div className="w-12 h-12 rounded-2xl bg-navy-50 flex items-center justify-center">
+                    <Car size={22} className="text-navy" />
+                  </div>
+                  <div className="text-right">
+                    <span className="text-2xl font-black text-navy">€85</span>
+                    <span className="text-slate-400 text-xs block">/ uur · incl. btw</span>
+                  </div>
                 </div>
-                <div className="flex flex-wrap items-center gap-3 mb-2">
-                  <h3 className="text-navy font-black text-lg">Losse rijles</h3>
-                </div>
+                <h3 className="text-navy font-black text-lg mb-1">Losse rijles</h3>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-navy bg-navy-50 px-3 py-1 rounded-full inline-block mb-4">Oefen wat jij wil</span>
                 <p className="text-slate-600 text-sm leading-relaxed">
                   Wil je eindelijk alle parkeermanoeuvres onder de knie krijgen of ga je misschien liever de eerste keer de snelweg op met een ervaren rijlesgever naast je? Kies dan voor een losse rijles en oefen specifiek op wat jij graag wil.

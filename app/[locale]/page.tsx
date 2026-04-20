@@ -8,6 +8,7 @@ import Services from '@/components/sections/Services';
 import WhyUs from '@/components/sections/WhyUs';
 import FAQ from '@/components/sections/FAQ';
 import Pricing from '@/components/sections/Pricing';
+import PakkettenBanner from '@/components/sections/PakkettenBanner';
 import Booking from '@/components/sections/Booking';
 
 const locales = ['nl', 'en', 'fr'];
@@ -35,6 +36,7 @@ export default async function HomePage({
       <WhyUs />
       <FAQ />
       <Pricing />
+      <PakkettenBanner />
       <Booking />
     </>
   );
