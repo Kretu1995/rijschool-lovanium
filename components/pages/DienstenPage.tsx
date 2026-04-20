@@ -18,48 +18,11 @@ interface ServiceItem {
   badge: string;
 }
 
-const serviceDetails: Record<number, { steps: string[]; ideal: string; duration: string }> = {
-  0: {
-    duration: '12 uur (meerdere sessies)',
-    ideal: 'Iedereen die een rijexamen wil afleggen voor categorie B',
-    steps: [
-      'Verkeerstekens en -regels',
-      'Voorrangsregels en bijzondere situaties',
-      'Weggedrag en rijgedrag',
-      'Eco-rijden en milieu',
-      'Eerste hulp bij verkeersongevallen',
-      'Examenoefeningen en simulaties',
-    ],
-  },
-  1: {
-    duration: '1 uur per les (gepland op jouw ritme)',
-    ideal: 'Iedereen die wil leren rijden voor categorie B, manueel of automaat',
-    steps: [
-      'Kennismaking en intake rijervaring',
-      'Basistechnieken (starten, stoppen, schakelen)',
-      'Manoeuvres in de stad en op de baan',
-      'Autosnelweg en complexe situaties',
-      'Rijexamen voorbereiding',
-      'Opfrislessen voor ervaren rijders',
-    ],
-  },
-  2: {
-    duration: 'Flexibel — 1 of meerdere sessies',
-    ideal: 'Nieuwe rijbewijshouders die hun zelfvertrouwen willen opbouwen',
-    steps: [
-      'Evaluatie huidige rijvaardigheden',
-      'Specifieke aandachtspunten bespreken',
-      'Oefenen van moeilijke situaties',
-      'Autosnelweg, rondpunten, parkeren',
-      'Tips voor zelfstandig rijden',
-      'Persoonlijk actieplan',
-    ],
-  },
-};
 
-function ServiceDetail({ item, index }: { item: ServiceItem; index: number }) {
+interface ServiceDetailEntry { duration: string; ideal: string; steps: string[]; }
+
+function ServiceDetail({ item, index, detail, labels }: { item: ServiceItem; index: number; detail: ServiceDetailEntry; labels: { duur: string; ideaalVoor: string; watJeLeert: string } }) {
   const Icon = iconMap[item.icon] || Car;
-  const detail = serviceDetails[index];
   const isEven = index % 2 === 0;
 
   return (
@@ -96,17 +59,17 @@ function ServiceDetail({ item, index }: { item: ServiceItem; index: number }) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
           <div className="bg-surface rounded-2xl p-4">
-            <p className="text-xs text-slate-400 uppercase tracking-wider mb-1">Duur</p>
+            <p className="text-xs text-slate-400 uppercase tracking-wider mb-1">{labels.duur}</p>
             <p className="text-navy font-semibold text-sm">{detail.duration}</p>
           </div>
           <div className="bg-surface rounded-2xl p-4">
-            <p className="text-xs text-slate-400 uppercase tracking-wider mb-1">Ideaal voor</p>
+            <p className="text-xs text-slate-400 uppercase tracking-wider mb-1">{labels.ideaalVoor}</p>
             <p className="text-navy font-semibold text-sm">{detail.ideal}</p>
           </div>
         </div>
 
         <div className="mb-8">
-          <p className="text-xs text-slate-400 uppercase tracking-wider mb-3">Wat je leert</p>
+          <p className="text-xs text-slate-400 uppercase tracking-wider mb-3">{labels.watJeLeert}</p>
           <ul className="space-y-2">
             {detail.steps.map((step, i) => (
               <li key={i} className="flex items-center gap-3 text-sm">
@@ -132,6 +95,8 @@ export default function DienstenPage() {
   const t = useTranslations('services');
   const locale = useLocale();
   const items = t.raw('items') as ServiceItem[];
+  const serviceDetails = t.raw('serviceDetails') as ServiceDetailEntry[];
+  const labels = { duur: t('duur'), ideaalVoor: t('ideaalVoor'), watJeLeert: t('watJeLeert') };
 
   return (
     <>
@@ -156,7 +121,7 @@ export default function DienstenPage() {
       <section className="section-padding bg-white">
         <div className="container-wide space-y-24 lg:space-y-32">
           {items.map((item, i) => (
-            <ServiceDetail key={i} item={item} index={i} />
+            <ServiceDetail key={i} item={item} index={i} detail={serviceDetails[i]} labels={labels} />
           ))}
         </div>
       </section>
@@ -165,14 +130,10 @@ export default function DienstenPage() {
       <section className="section-padding bg-surface">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="eyebrow mb-4">Transparante tarieven</p>
-            <h2 className="heading-md mb-6">Alles-in-prijs, geen verborgen kosten</h2>
+            <p className="eyebrow mb-4">{t('pricingEyebrow')}</p>
+            <h2 className="heading-md mb-6">{t('pricingHeadline')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-              {[
-                { label: 'Inschrijving', price: '€35', sub: 'Eenmalig' },
-                { label: 'Theorieopleiding', price: '€170', sub: '12 uur' },
-                { label: 'Praktijkles', price: '€85', sub: 'Per uur · incl. btw' },
-              ].map((p, i) => (
+              {(t.raw('pricingItems') as { label: string; price: string; sub: string }[]).map((p, i) => (
                 <div key={i} className="card-light rounded-2xl p-6 text-center">
                   <p className="text-slate-400 text-sm mb-2">{p.label}</p>
                   <p className="text-4xl font-black text-navy">{p.price}</p>
@@ -181,7 +142,7 @@ export default function DienstenPage() {
               ))}
             </div>
             <Link href={`/${locale}#booking`} className="btn-primary inline-flex items-center gap-2">
-              Schrijf je in <ArrowRight size={16} />
+              {t('pricingCta')} <ArrowRight size={16} />
             </Link>
           </AnimatedSection>
         </div>

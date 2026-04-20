@@ -124,9 +124,9 @@ export default function ChatBot() {
         animate={{ scale: 1 }}
         transition={{ delay: 1, type: 'spring', stiffness: 300, damping: 24 }}
         onClick={() => setOpen(!open)}
-        className="fixed right-5 z-50 w-14 h-14 rounded-full bg-navy shadow-navy flex items-center justify-center hover:bg-navy-light transition-all duration-200 hover:scale-110"
+        className="fixed right-5 z-50 w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:opacity-90 transition-all duration-200 hover:scale-110"
+        style={{ backgroundColor: '#03c1b3', bottom: '6rem' }}
         aria-label="Open chat"
-        style={{ bottom: '6rem' }}
       >
         <AnimatePresence mode="wait">
           {open ? (
@@ -161,8 +161,8 @@ export default function ChatBot() {
             }}
           >
             {/* Header */}
-            <div className="bg-navy px-5 py-4 flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-gold flex items-center justify-center flex-shrink-0">
+            <div className="px-5 py-4 flex items-center gap-3" style={{ backgroundColor: '#03c1b3' }}>
+              <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
                 <Bot size={18} className="text-white" />
               </div>
               <div>
@@ -178,7 +178,7 @@ export default function ChatBot() {
             <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-surface">
               {messages.map((msg, i) => (
                 <div key={i} className={`flex items-end gap-2 ${msg.role === 'user' ? 'flex-row-reverse' : ''}`}>
-                  <div className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 ${msg.role === 'bot' ? 'bg-navy' : 'bg-gold'}`}>
+                  <div className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 ${msg.role === 'bot' ? '' : 'bg-gold'}`} style={msg.role === 'bot' ? { backgroundColor: '#03c1b3' } : {}}>
                     {msg.role === 'bot' ? <Bot size={13} className="text-white" /> : <User size={13} className="text-white" />}
                   </div>
                   <div className={`max-w-[78%] ${msg.role === 'user' ? 'items-end' : 'items-start'} flex flex-col gap-1`}>
@@ -186,8 +186,9 @@ export default function ChatBot() {
                       className={`px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
                         msg.role === 'bot'
                           ? 'bg-white text-navy shadow-card rounded-bl-sm'
-                          : 'bg-navy text-white rounded-br-sm'
+                          : 'text-white rounded-br-sm'
                       }`}
+                      style={msg.role === 'user' ? { backgroundColor: '#03c1b3' } : {}}
                       dangerouslySetInnerHTML={{ __html: formatMessage(msg.text) }}
                     />
                     <span className="text-[10px] text-slate-400 px-1">{msg.time}</span>
@@ -197,7 +198,7 @@ export default function ChatBot() {
 
               {typing && (
                 <div className="flex items-end gap-2">
-                  <div className="w-7 h-7 rounded-full bg-navy flex items-center justify-center">
+                  <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: '#03c1b3' }}>
                     <Bot size={13} className="text-white" />
                   </div>
                   <div className="bg-white rounded-2xl rounded-bl-sm px-4 py-3 shadow-card">
@@ -222,7 +223,10 @@ export default function ChatBot() {
                     <button
                       key={i}
                       onClick={() => sendMessage(reply)}
-                      className="text-xs bg-white border border-surface-border text-navy px-3 py-1.5 rounded-full hover:bg-navy hover:text-white hover:border-navy transition-all duration-200"
+                      className="text-xs bg-white border border-surface-border text-navy px-3 py-1.5 rounded-full hover:text-white hover:border-transparent transition-all duration-200"
+                      style={{ '--hover-bg': '#03c1b3' } as React.CSSProperties}
+                      onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#03c1b3'; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = ''; }}
                     >
                       {reply}
                     </button>
@@ -262,7 +266,8 @@ export default function ChatBot() {
                 <button
                   type="submit"
                   disabled={!input.trim()}
-                  className="w-10 h-10 rounded-xl bg-navy flex items-center justify-center hover:bg-navy-light disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200"
+                  className="w-10 h-10 rounded-xl flex items-center justify-center hover:opacity-80 disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200"
+                  style={{ backgroundColor: '#03c1b3' }}
                   aria-label="Send"
                 >
                   <Send size={15} className="text-white" />

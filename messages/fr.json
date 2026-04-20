@@ -5,6 +5,7 @@
     "pricing": "Tarifs",
     "booking": "S'inscrire",
     "contact": "Contact",
+    "packages": "Forfaits",
     "bookCta": "S'inscrire"
   },
   "hero": {
@@ -21,7 +22,10 @@
     "stat3Value": "#2863",
     "stat3Label": "Agréé par l'État",
     "badge": "Manuel & automatique · Véhicules Audi",
-    "scrollHint": "Découvrir plus"
+    "scrollHint": "Découvrir plus",
+    "available": "Places disponibles",
+    "trustBullets": ["97% de réussite", "Démarrer en une semaine", "Manuel & automatique"],
+    "statLabels": ["Taux de réussite", "Ans d'expérience", "Moniteurs", "Élèves satisfaits"]
   },
   "proof": {
     "eyebrow": "Ce que disent nos élèves",
@@ -120,6 +124,34 @@
           "Planning flexible"
         ],
         "badge": "Après le permis"
+      }
+    ],
+    "duur": "Durée",
+    "ideaalVoor": "Idéal pour",
+    "watJeLeert": "Ce que vous apprenez",
+    "pricingEyebrow": "Tarifs transparents",
+    "pricingHeadline": "Prix tout compris, sans frais cachés",
+    "pricingCta": "S'inscrire",
+    "pricingItems": [
+      {"label": "Inscription", "price": "€35", "sub": "Unique"},
+      {"label": "Formation théorique", "price": "€170", "sub": "12 heures"},
+      {"label": "Cours de conduite", "price": "€85", "sub": "Par heure · TVA incl."}
+    ],
+    "serviceDetails": [
+      {
+        "duration": "12 heures (plusieurs sessions)",
+        "ideal": "Toute personne souhaitant passer un examen de conduite pour la catégorie B",
+        "steps": ["Panneaux et règles de circulation","Règles de priorité et situations particulières","Comportement routier","Éco-conduite et environnement","Premiers secours aux accidents","Exercices et simulations d'examen"]
+      },
+      {
+        "duration": "1 heure par cours (à votre rythme)",
+        "ideal": "Toute personne souhaitant apprendre à conduire pour la catégorie B, manuel ou automatique",
+        "steps": ["Introduction et entretien d'expérience","Techniques de base (démarrer, arrêter, changer de vitesse)","Manœuvres en ville et sur route","Autoroute et situations complexes","Préparation à l'examen de conduite","Cours de recyclage pour conducteurs expérimentés"]
+      },
+      {
+        "duration": "Flexible — 1 ou plusieurs sessions",
+        "ideal": "Nouveaux titulaires souhaitant renforcer leur confiance",
+        "steps": ["Évaluation des compétences actuelles","Discussion des points d'attention spécifiques","Pratique de situations difficiles","Autoroute, ronds-points, stationnement","Conseils pour conduire seul","Plan d'action personnel"]
       }
     ]
   },
@@ -559,6 +591,55 @@
       "privacy": "J'accepte le traitement de mes données pour le traitement de ma demande d'inscription.",
       "required": "Champ obligatoire"
     }
+  },
+  "trustBar": {
+    "items": ["Auto-école agréée #2863","4.9/5 Google Reviews","Véhicules Audi modernes","À côté de la gare de Louvain","WhatsApp disponible","Délais d'attente courts","Manuel & automatique","Planning flexible"]
+  },
+  "pakkettenBanner": {
+    "eyebrow": "Forfaits de conduite",
+    "headline": "Choisissez le forfait qui vous convient",
+    "cta": "Voir tous les forfaits",
+    "packages": [
+      {"name": "Starter", "price": "€510", "hours": "6h"},
+      {"name": "Comfort", "price": "€1.020", "hours": "12h"},
+      {"name": "Master", "price": "€1.700", "hours": "20h"}
+    ]
+  },
+  "pakketten": {
+    "breadcrumbHome": "Accueil",
+    "breadcrumbCurrent": "Forfaits",
+    "eyebrow": "Forfaits de conduite",
+    "headline1": "Formation de qualité à",
+    "headline2": "votre rythme",
+    "intro": "À Rijschool Lovanium, vous bénéficiez d'une formation de qualité où, en plus de la technique de conduite, une attention particulière est portée à la compréhension du trafic, à l'environnement et à la bonne attitude en circulation. Choisissez un forfait comme préparation ou complément à votre formation, ou optez pour le Forfait Master (20h) pour vous entraîner sans accompagnateur.",
+    "ctaEnroll": "S'inscrire",
+    "ctaPackages": "Nos forfaits",
+    "packagesEyebrow": "Forfaits",
+    "packagesHeading": "Choisissez votre forfait",
+    "packageNote": "Tous les prix sont TVA comprise · 85€/heure · Frais d'inscription (€35) uniques et non compris",
+    "enrollBtn": "S'inscrire",
+    "mostComplete": "Le plus complet",
+    "servicesEyebrow": "Cours individuels",
+    "servicesHeading": "Cours de conduite spécifiques",
+    "includedIn": "Inclus dans le forfait",
+    "bookLesson": "Réservez votre cours",
+    "ctaEyebrow": "Rijschool Lovanium · Louvain",
+    "ctaHeading": "Prêt à commencer?",
+    "ctaSubtitle": "Inscrivez-vous aujourd'hui et commencez vos cours de conduite dans la semaine.",
+    "ctaBtn": "S'inscrire",
+    "ctaCall": "Nous appeler",
+    "packages": [
+      {"name": "Forfait Starter","hours": "6h","price": "510","badge": null,"highlight": false,"skills": ["Position assise","Technique de direction","Technique visuelle","Démarrer & s'arrêter","Changer de vitesse","Technique de freinage"],"missing": ["Carrefours","Manœuvres","Ronds-points","Choix de voie","Dépassement","Autoroute"]},
+      {"name": "Forfait Comfort","hours": "12h","price": "1.020","badge": null,"highlight": false,"skills": ["Position assise","Technique de direction","Technique visuelle","Démarrer & s'arrêter","Changer de vitesse","Technique de freinage","Carrefours","Manœuvres"],"missing": ["Ronds-points","Choix de voie","Dépassement","Autoroute"]},
+      {"name": "Forfait Master","hours": "20h","price": "1.700","badge": "Le plus complet","highlight": true,"skills": ["Position assise","Technique de direction","Technique visuelle","Démarrer & s'arrêter","Changer de vitesse","Technique de freinage","Carrefours","Manœuvres","Ronds-points","Choix de voie","Dépassement","Autoroute"],"missing": []}
+    ],
+    "services": [
+      {"title": "Cours de conduite obligatoires","badge": "Après 2× échec","description": "Si vous avez échoué deux fois à l'examen de conduite, vous êtes obligé de suivre des cours. Nos moniteurs vous apprennent à conduire avec les bonnes techniques pour que vous obteniez rapidement votre permis définitif!","price": "€510","priceNote": "6h · TVA incl.","included": null},
+      {"title": "Examen blanc","badge": "Au moins 1 mois avant l'examen","description": "Lors de ce cours, nos moniteurs analysent votre style de conduite et vérifient si vous êtes prêt pour l'examen pratique. Grâce à leurs commentaires, vous serez optimalement préparé. Planifiez un examen blanc au moins un mois avant l'examen pratique.","price": "€170","priceNote": "2h · TVA incl.","included": null},
+      {"title": "Examen avec véhicule école","badge": "Min. 6h de cours requis","description": "Vous pouvez choisir de passer l'examen pratique avec notre véhicule école et votre moniteur comme accompagnateur. Ceci est uniquement possible si vous avez préalablement suivi au moins 6h de cours avec notre véhicule.","price": "€475","priceNote": null,"included": ["Examen blanc (2h)","Cours juste avant l'examen pratique (1h)","Accompagnement à l'examen","Rétribution pour le centre d'examen"]},
+      {"title": "Permis provisoire expiré","badge": "6h de cours obligatoires","description": "Votre permis provisoire a expiré? Vous êtes alors obligé par la loi de suivre 6h de cours de conduite. Veillez à suivre vos cours APRÈS l'expiration de votre permis provisoire. Vous pourrez ensuite demander un nouveau permis provisoire (modèle 12 mois).","price": "€510","priceNote": "6h · TVA incl.","included": null},
+      {"title": "Cours individuel","badge": "Pratiquez ce que vous voulez","description": "Vous souhaitez enfin maîtriser toutes les manœuvres de stationnement, ou préférez-vous emprunter l'autoroute pour la première fois avec un moniteur expérimenté? Choisissez un cours individuel et entraînez-vous spécifiquement sur ce que vous souhaitez.","price": "€170","priceNote": "2h · TVA incl.","included": null}
+    ]
   },
   "footer": {
     "tagline": "Votre permis. Votre liberté.",

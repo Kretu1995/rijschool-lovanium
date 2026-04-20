@@ -5,6 +5,7 @@
     "pricing": "Tarieven",
     "booking": "Inschrijven",
     "contact": "Contact",
+    "packages": "Pakketten",
     "bookCta": "Inschrijven"
   },
   "hero": {
@@ -21,7 +22,10 @@
     "stat3Value": "#2863",
     "stat3Label": "Erkend door de overheid",
     "badge": "Manueel & automaat · Audi lesvoertuigen",
-    "scrollHint": "Ontdek meer"
+    "scrollHint": "Ontdek meer",
+    "available": "Plaatsen beschikbaar",
+    "trustBullets": ["97% slaagpercentage", "Start binnen de week", "Manueel & automaat"],
+    "statLabels": ["Slaagpercentage", "Jaar ervaring", "Instructeurs", "Tevreden leerlingen"]
   },
   "proof": {
     "eyebrow": "Wat onze leerlingen zeggen",
@@ -120,6 +124,34 @@
           "Flexibele planning"
         ],
         "badge": "Na je rijbewijs"
+      }
+    ],
+    "duur": "Duur",
+    "ideaalVoor": "Ideaal voor",
+    "watJeLeert": "Wat je leert",
+    "pricingEyebrow": "Transparante tarieven",
+    "pricingHeadline": "Alles-in-prijs, geen verborgen kosten",
+    "pricingCta": "Schrijf je in",
+    "pricingItems": [
+      {"label": "Inschrijving", "price": "€35", "sub": "Eenmalig"},
+      {"label": "Theorieopleiding", "price": "€170", "sub": "12 uur"},
+      {"label": "Praktijkles", "price": "€85", "sub": "Per uur · incl. btw"}
+    ],
+    "serviceDetails": [
+      {
+        "duration": "12 uur (meerdere sessies)",
+        "ideal": "Iedereen die een rijexamen wil afleggen voor categorie B",
+        "steps": ["Verkeerstekens en -regels","Voorrangsregels en bijzondere situaties","Weggedrag en rijgedrag","Eco-rijden en milieu","Eerste hulp bij verkeersongevallen","Examenoefeningen en simulaties"]
+      },
+      {
+        "duration": "1 uur per les (gepland op jouw ritme)",
+        "ideal": "Iedereen die wil leren rijden voor categorie B, manueel of automaat",
+        "steps": ["Kennismaking en intake rijervaring","Basistechnieken (starten, stoppen, schakelen)","Manoeuvres in de stad en op de baan","Autosnelweg en complexe situaties","Rijexamen voorbereiding","Opfrislessen voor ervaren rijders"]
+      },
+      {
+        "duration": "Flexibel — 1 of meerdere sessies",
+        "ideal": "Nieuwe rijbewijshouders die hun zelfvertrouwen willen opbouwen",
+        "steps": ["Evaluatie huidige rijvaardigheden","Specifieke aandachtspunten bespreken","Oefenen van moeilijke situaties","Autosnelweg, rondpunten, parkeren","Tips voor zelfstandig rijden","Persoonlijk actieplan"]
       }
     ]
   },
@@ -559,6 +591,55 @@
       "privacy": "Ik ga akkoord met de verwerking van mijn gegevens voor de verwerking van mijn inschrijvingsaanvraag.",
       "required": "Verplicht veld"
     }
+  },
+  "trustBar": {
+    "items": ["Erkend rijschool #2863","4.9/5 Google Reviews","Moderne Audi-lesvoertuigen","Naast station Leuven","WhatsApp bereikbaar","Korte wachttijden","Manueel & automaat","Flexibele planning"]
+  },
+  "pakkettenBanner": {
+    "eyebrow": "Rijlespakketten",
+    "headline": "Kies het pakket dat bij jou past",
+    "cta": "Bekijk alle pakketten",
+    "packages": [
+      {"name": "Starter", "price": "€510", "hours": "6u"},
+      {"name": "Comfort", "price": "€1.020", "hours": "12u"},
+      {"name": "Master", "price": "€1.700", "hours": "20u"}
+    ]
+  },
+  "pakketten": {
+    "breadcrumbHome": "Home",
+    "breadcrumbCurrent": "Pakketten",
+    "eyebrow": "Rijlespakketten",
+    "headline1": "Kwaliteitsopleiding op",
+    "headline2": "jouw tempo",
+    "intro": "Bij Rijschool Lovanium geniet je een kwaliteitsopleiding waarbij er naast rijtechniek ook aandacht besteed wordt aan verkeersinzicht, het milieu en de juiste attitude in het verkeer. Kies een pakket als voorbereiding of aanvulling op je opleiding, of kies voor Pakket Master (20u) om ook zonder begeleider verder te kunnen oefenen.",
+    "ctaEnroll": "Inschrijven",
+    "ctaPackages": "Onze pakketten",
+    "packagesEyebrow": "Pakketten",
+    "packagesHeading": "Kies jouw pakket",
+    "packageNote": "Alle prijzen zijn inclusief btw · €85/uur · Inschrijvingskosten (€35) zijn eenmalig en niet inbegrepen",
+    "enrollBtn": "Inschrijven",
+    "mostComplete": "Meest volledig",
+    "servicesEyebrow": "Individuele lessen",
+    "servicesHeading": "Specifieke rijlessen",
+    "includedIn": "Inbegrepen in het pakket",
+    "bookLesson": "Boek je rijles",
+    "ctaEyebrow": "Rijschool Lovanium · Leuven",
+    "ctaHeading": "Klaar om te starten?",
+    "ctaSubtitle": "Schrijf je vandaag in en start al binnen de week met je rijlessen.",
+    "ctaBtn": "Schrijf je in",
+    "ctaCall": "Bel ons",
+    "packages": [
+      {"name": "Pakket Starter","hours": "6u","price": "510","badge": null,"highlight": false,"skills": ["Zithouding","Stuurtechniek","Kijktechniek","Vertrekken & stoppen","Schakelen","Remtechniek"],"missing": ["Kruispunten","Manoeuvres","Rotondes","Rijstrookkeuze","Inhalen","Snelweg"]},
+      {"name": "Pakket Comfort","hours": "12u","price": "1.020","badge": null,"highlight": false,"skills": ["Zithouding","Stuurtechniek","Kijktechniek","Vertrekken & stoppen","Schakelen","Remtechniek","Kruispunten","Manoeuvres"],"missing": ["Rotondes","Rijstrookkeuze","Inhalen","Snelweg"]},
+      {"name": "Pakket Master","hours": "20u","price": "1.700","badge": "Meest volledig","highlight": true,"skills": ["Zithouding","Stuurtechniek","Kijktechniek","Vertrekken & stoppen","Schakelen","Remtechniek","Kruispunten","Manoeuvres","Rotondes","Rijstrookkeuze","Inhalen","Snelweg"],"missing": []}
+    ],
+    "services": [
+      {"title": "Verplichte rijlessen","badge": "Na 2× niet geslaagd","description": "Ben je tweemaal niet geslaagd voor het rijexamen dan ben je verplicht om rijlessen te volgen. Onze lesgevers zorgen ervoor dat je met de correcte technieken leert rijden en de juiste keuzes maakt in het verkeer zodat je snel je definitief rijbewijs op zak hebt!","price": "€510","priceNote": "6u · incl. btw","included": null},
+      {"title": "Proefexamen","badge": "Minstens 1 maand voor je examen","description": "Tijdens deze rijles scannen onze lesgevers jouw rijstijl en gaan ze na of je klaar bent voor het praktijkexamen. Dankzij hun feedback en tips ben je optimaal voorbereid voor het praktijkexamen.","price": "€170","priceNote": "2u · incl. btw","included": null},
+      {"title": "Examen met leswagen","badge": "Min. 6u rijles vereist","description": "Je kan ervoor kiezen om het praktisch examen af te leggen met onze leswagen en jouw rijlesgever als begeleider. Dit is enkel mogelijk wanneer je ook vooraf minstens 6u rijles hebt gevolgd met onze leswagen.","price": "€475","priceNote": null,"included": ["Proefexamen (2u)","Rijles net voor het praktijkexamen (1u)","Examenbegeleiding","Retributie voor het examencentrum"]},
+      {"title": "Vervallen voorlopig rijbewijs","badge": "Verplicht 6u rijles","description": "Is je voorlopig rijbewijs vervallen? Dan moet je vanuit de overheid verplicht 6u rijles volgen. Nadien kan je een nieuw voorlopig rijbewijs (model 12 maanden) aanvragen dat 1 jaar geldig is.","price": "€510","priceNote": "6u · incl. btw","included": null},
+      {"title": "Losse rijles","badge": "Oefen wat jij wil","description": "Wil je eindelijk alle parkeermanoeuvres onder de knie krijgen of ga je misschien liever de eerste keer de snelweg op met een ervaren rijlesgever naast je? Kies dan voor een losse rijles en oefen specifiek op wat jij graag wil.","price": "€170","priceNote": "2u · incl. btw","included": null}
+    ]
   },
   "footer": {
     "tagline": "Jouw rijbewijs. Jouw vrijheid.",

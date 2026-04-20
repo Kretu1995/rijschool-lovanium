@@ -5,6 +5,7 @@
     "pricing": "Pricing",
     "booking": "Enroll",
     "contact": "Contact",
+    "packages": "Packages",
     "bookCta": "Enroll now"
   },
   "hero": {
@@ -21,7 +22,10 @@
     "stat3Value": "#2863",
     "stat3Label": "Government accredited",
     "badge": "Manual & automatic · Audi training vehicles",
-    "scrollHint": "Discover more"
+    "scrollHint": "Discover more",
+    "available": "Spots available",
+    "trustBullets": ["97% pass rate", "Start within a week", "Manual & automatic"],
+    "statLabels": ["Pass rate", "Years experience", "Instructors", "Happy students"]
   },
   "proof": {
     "eyebrow": "What our students say",
@@ -120,6 +124,34 @@
           "Flexible scheduling"
         ],
         "badge": "After your license"
+      }
+    ],
+    "duur": "Duration",
+    "ideaalVoor": "Ideal for",
+    "watJeLeert": "What you learn",
+    "pricingEyebrow": "Transparent pricing",
+    "pricingHeadline": "All-in pricing, no hidden costs",
+    "pricingCta": "Enroll now",
+    "pricingItems": [
+      {"label": "Registration", "price": "€35", "sub": "One-time"},
+      {"label": "Theory course", "price": "€170", "sub": "12 hours"},
+      {"label": "Driving lesson", "price": "€85", "sub": "Per hour · VAT incl."}
+    ],
+    "serviceDetails": [
+      {
+        "duration": "12 hours (multiple sessions)",
+        "ideal": "Anyone who wants to take a driving exam for category B",
+        "steps": ["Traffic signs and rules","Right-of-way rules and special situations","Road and driving behavior","Eco-driving and environment","First aid at traffic accidents","Exam exercises and simulations"]
+      },
+      {
+        "duration": "1 hour per lesson (at your own pace)",
+        "ideal": "Anyone who wants to learn to drive for category B, manual or automatic",
+        "steps": ["Introduction and driving experience intake","Basic techniques (starting, stopping, shifting)","Maneuvers in the city and on the road","Motorway and complex situations","Driving exam preparation","Refresher lessons for experienced drivers"]
+      },
+      {
+        "duration": "Flexible — 1 or multiple sessions",
+        "ideal": "New license holders who want to build their confidence",
+        "steps": ["Evaluation of current driving skills","Discuss specific points of attention","Practice difficult situations","Motorway, roundabouts, parking","Tips for independent driving","Personal action plan"]
       }
     ]
   },
@@ -559,6 +591,55 @@
       "privacy": "I agree to the processing of my data for handling my enrollment request.",
       "required": "Required field"
     }
+  },
+  "trustBar": {
+    "items": ["Accredited driving school #2863","4.9/5 Google Reviews","Modern Audi training vehicles","Next to Leuven station","WhatsApp available","Short waiting times","Manual & automatic","Flexible scheduling"]
+  },
+  "pakkettenBanner": {
+    "eyebrow": "Driving packages",
+    "headline": "Choose the package that suits you",
+    "cta": "View all packages",
+    "packages": [
+      {"name": "Starter", "price": "€510", "hours": "6h"},
+      {"name": "Comfort", "price": "€1,020", "hours": "12h"},
+      {"name": "Master", "price": "€1,700", "hours": "20h"}
+    ]
+  },
+  "pakketten": {
+    "breadcrumbHome": "Home",
+    "breadcrumbCurrent": "Packages",
+    "eyebrow": "Driving packages",
+    "headline1": "Quality training at",
+    "headline2": "your own pace",
+    "intro": "At Rijschool Lovanium you enjoy quality training where, in addition to driving technique, attention is also paid to traffic insight, the environment and the right attitude in traffic. Choose a package as preparation or supplement to your training, or choose the Master Package (20h) to practice without a supervisor.",
+    "ctaEnroll": "Enroll",
+    "ctaPackages": "Our packages",
+    "packagesEyebrow": "Packages",
+    "packagesHeading": "Choose your package",
+    "packageNote": "All prices include VAT · €85/hour · Registration fee (€35) is one-time and not included",
+    "enrollBtn": "Enroll",
+    "mostComplete": "Most complete",
+    "servicesEyebrow": "Individual lessons",
+    "servicesHeading": "Specific driving lessons",
+    "includedIn": "Included in the package",
+    "bookLesson": "Book your lesson",
+    "ctaEyebrow": "Rijschool Lovanium · Leuven",
+    "ctaHeading": "Ready to start?",
+    "ctaSubtitle": "Enroll today and start your driving lessons within a week.",
+    "ctaBtn": "Enroll now",
+    "ctaCall": "Call us",
+    "packages": [
+      {"name": "Starter Package","hours": "6h","price": "510","badge": null,"highlight": false,"skills": ["Seating position","Steering technique","Visual scanning","Starting & stopping","Shifting","Braking technique"],"missing": ["Intersections","Maneuvers","Roundabouts","Lane choice","Overtaking","Motorway"]},
+      {"name": "Comfort Package","hours": "12h","price": "1,020","badge": null,"highlight": false,"skills": ["Seating position","Steering technique","Visual scanning","Starting & stopping","Shifting","Braking technique","Intersections","Maneuvers"],"missing": ["Roundabouts","Lane choice","Overtaking","Motorway"]},
+      {"name": "Master Package","hours": "20h","price": "1,700","badge": "Most complete","highlight": true,"skills": ["Seating position","Steering technique","Visual scanning","Starting & stopping","Shifting","Braking technique","Intersections","Maneuvers","Roundabouts","Lane choice","Overtaking","Motorway"],"missing": []}
+    ],
+    "services": [
+      {"title": "Mandatory driving lessons","badge": "After 2× failed","description": "If you have failed the driving exam twice, you are required to take driving lessons. Our instructors ensure you learn to drive with the correct techniques and make the right choices in traffic so you quickly get your permanent license!","price": "€510","priceNote": "6h · VAT incl.","included": null},
+      {"title": "Mock exam","badge": "At least 1 month before your exam","description": "During this lesson our instructors scan your driving style and check whether you are ready for the practical exam. Thanks to their feedback and tips you are optimally prepared. Plan a mock exam at least a month before your practical exam.","price": "€170","priceNote": "2h · VAT incl.","included": null},
+      {"title": "Exam with training vehicle","badge": "Min. 6h lessons required","description": "You can choose to take the practical exam with our training vehicle and your instructor as supervisor. This is only possible if you have previously taken at least 6 hours of lessons with our vehicle.","price": "€475","priceNote": null,"included": ["Mock exam (2h)","Lesson just before the practical exam (1h)","Exam accompaniment","Exam center fee"]},
+      {"title": "Expired provisional license","badge": "6h lessons required","description": "Has your provisional license expired? Then you are required by law to take 6 hours of driving lessons. Make sure you take your lessons AFTER your provisional license has expired. Afterwards you can apply for a new provisional license (12-month model) valid for 1 year.","price": "€510","priceNote": "6h · VAT incl.","included": null},
+      {"title": "Individual lesson","badge": "Practice what you want","description": "Do you want to finally master all parking maneuvers, or would you prefer to hit the motorway for the first time with an experienced instructor beside you? Choose an individual lesson and practice specifically what you want.","price": "€170","priceNote": "2h · VAT incl.","included": null}
+    ]
   },
   "footer": {
     "tagline": "Your license. Your freedom.",

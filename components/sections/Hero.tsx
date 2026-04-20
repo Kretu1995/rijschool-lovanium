@@ -71,7 +71,7 @@ export default function Hero() {
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
                     </span>
-                    <span className="text-white/70 text-xs font-semibold tracking-widest uppercase">Plaatsen beschikbaar</span>
+                    <span className="text-white/70 text-xs font-semibold tracking-widest uppercase">{t('available')}</span>
                   </div>
                   <div className="flex items-center gap-1.5 bg-white/8 border border-white/15 rounded-full px-3 py-2">
                     <Shield size={11} className="text-gold" />
@@ -111,7 +111,7 @@ export default function Hero() {
                   transition={{ duration: 0.6, delay: 0.5 }}
                   className="flex flex-wrap gap-x-5 gap-y-2 mb-9"
                 >
-                  {['97% slaagpercentage', 'Start binnen de week', 'Manueel & automaat'].map((item) => (
+                  {(t.raw('trustBullets') as string[]).map((item) => (
                     <div key={item} className="flex items-center gap-1.5">
                       <CheckCircle size={13} className="text-gold flex-shrink-0" />
                       <span className="text-white/60 text-xs font-medium">{item}</span>
@@ -229,18 +229,21 @@ export default function Hero() {
             <div className="max-w-7xl mx-auto px-6 py-6">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/8 rounded-2xl overflow-hidden">
                 {[
-                  { value: 97, suffix: '%', label: 'Slaagpercentage' },
-                  { value: 10, suffix: '+', label: 'Jaar ervaring' },
-                  { value: 7, suffix: '', label: 'Instructeurs' },
-                  { value: 500, suffix: '+', label: 'Tevreden leerlingen' },
-                ].map((stat, i) => (
+                  { value: 97, suffix: '%' },
+                  { value: 10, suffix: '+' },
+                  { value: 7, suffix: '' },
+                  { value: 500, suffix: '+' },
+                ].map((stat, i) => {
+                  const labels = t.raw('statLabels') as string[];
+                  return (
                   <div key={i} className="bg-navy px-6 py-5 text-center">
                     <p className="text-2xl font-black text-white leading-none mb-1">
                       <AnimatedCounter to={stat.value} suffix={stat.suffix} />
                     </p>
-                    <p className="text-white/35 text-xs">{stat.label}</p>
+                    <p className="text-white/35 text-xs">{labels[i]}</p>
                   </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
