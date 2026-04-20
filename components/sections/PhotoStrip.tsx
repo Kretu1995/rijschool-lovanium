@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const photos = [
   {
@@ -25,25 +28,31 @@ const photos = [
 
 export default function PhotoStrip() {
   return (
-    <div className="bg-white py-4 overflow-hidden">
-      <div className="flex gap-4 px-6 max-w-7xl mx-auto">
-        {photos.map((photo, i) => (
-          <div
-            key={i}
-            className="relative flex-1 min-w-0 rounded-2xl overflow-hidden aspect-[4/3] group"
-          >
-            <Image
-              src={photo.src}
-              alt={photo.alt}
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
-            <div className="absolute bottom-3 left-3">
-              <p className="text-white text-xs font-bold">{photo.caption}</p>
-            </div>
-          </div>
-        ))}
+    <div className="bg-white py-8 md:py-10">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          {photos.map((photo, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.55, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="relative rounded-2xl overflow-hidden aspect-square md:aspect-[4/3] group"
+            >
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
+              <div className="absolute bottom-3 left-3">
+                <p className="text-white text-xs font-bold drop-shadow">{photo.caption}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );
