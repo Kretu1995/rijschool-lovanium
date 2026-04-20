@@ -90,14 +90,8 @@ export default function Navigation() {
       </motion.header>
 
       {/* Mobile menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-white pt-20 px-6 md:hidden overflow-y-auto"
+      {mobileOpen && (
+          <div className="fixed inset-0 z-40 bg-white pt-20 px-6 md:hidden overflow-y-auto"
           >
             <nav className="flex flex-col gap-1 pt-4">
               {navLinks.map((link) => (
@@ -129,9 +123,8 @@ export default function Navigation() {
               <a href="tel:+32492482853" className="text-navy font-semibold">+32 492 48 28 53</a>
               <p className="text-slate-400 text-sm mt-1">Ma–Vr 10:00–17:00</p>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+      }
     </>
   );
 }
