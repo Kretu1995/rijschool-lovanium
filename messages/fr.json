@@ -85,7 +85,12 @@
         "price": "€170",
         "priceNote": "12 heures de formation",
         "description": "Réussissez votre examen théorique du premier coup. Notre formation interactive de 12 heures vous prépare complètement à l'examen officiel à Louvain.",
-        "features": ["12h de formation intensive", "Curriculum officiellement agréé", "En petit groupe", "Conseils & stratégie d'examen"],
+        "features": [
+          "12h de formation intensive",
+          "Curriculum officiellement agréé",
+          "En petit groupe",
+          "Conseils & stratégie d'examen"
+        ],
         "badge": "Obligatoire pour débutants"
       },
       {
@@ -94,7 +99,12 @@
         "price": "€85",
         "priceNote": "par heure (TVA incluse)",
         "description": "Prenez la route en toute sécurité avec un moniteur expérimenté. Conduisez une Audi moderne avec double commande — boîte manuelle ou automatique.",
-        "features": ["Audi de formation moderne", "Manuel & automatique", "Double commande", "Coach de conduite personnel"],
+        "features": [
+          "Audi de formation moderne",
+          "Manuel & automatique",
+          "Double commande",
+          "Coach de conduite personnel"
+        ],
         "badge": "Le plus populaire"
       },
       {
@@ -103,7 +113,12 @@
         "price": "Sur demande",
         "priceNote": "pour titulaires du permis",
         "description": "Déjà titulaire du permis mais vous souhaitez rafraîchir vos compétences ? Notre séance de rappel est idéale pour les nouveaux conducteurs.",
-        "features": ["Pour nouveaux titulaires", "Renforcer la confiance", "Exercer des situations spécifiques", "Planning flexible"],
+        "features": [
+          "Pour nouveaux titulaires",
+          "Renforcer la confiance",
+          "Exercer des situations spécifiques",
+          "Planning flexible"
+        ],
         "badge": "Après le permis"
       }
     ]
@@ -158,7 +173,12 @@
         "price": "35",
         "unit": "unique",
         "description": "Inscription unique à Rijschool Lovanium. Obligatoire pour les nouveaux élèves.",
-        "features": ["Inscription comme élève", "Dossier de conduite personnel", "Accès à la planification", "Entretien d'accueil"],
+        "features": [
+          "Inscription comme élève",
+          "Dossier de conduite personnel",
+          "Accès à la planification",
+          "Entretien d'accueil"
+        ],
         "highlight": false
       },
       {
@@ -166,7 +186,13 @@
         "price": "170",
         "unit": "12 heures",
         "description": "Formation théorique complète de 12 heures. Recommandée pour ceux qui veulent réussir du premier coup.",
-        "features": ["12h de cours théoriques", "Curriculum officiellement agréé", "Règles et signaux routiers", "Préparation à l'examen", "Support de cours inclus"],
+        "features": [
+          "12h de cours théoriques",
+          "Curriculum officiellement agréé",
+          "Règles et signaux routiers",
+          "Préparation à l'examen",
+          "Support de cours inclus"
+        ],
         "highlight": false
       },
       {
@@ -174,7 +200,13 @@
         "price": "85",
         "unit": "par heure",
         "description": "Cours de conduite individuel avec un moniteur certifié dans une Audi moderne.",
-        "features": ["1 heure de cours individuel", "Audi de formation moderne", "Manuel ou automatique", "Double commande", "Feedback personnalisé"],
+        "features": [
+          "1 heure de cours individuel",
+          "Audi de formation moderne",
+          "Manuel ou automatique",
+          "Double commande",
+          "Feedback personnalisé"
+        ],
         "highlight": true
       }
     ]
@@ -193,7 +225,13 @@
         "initials": "G",
         "color": "#0B2D5E",
         "bio": "En tant que fondateur et directeur, Gert dirige Rijschool Lovanium. Il combine sa passion pour l'enseignement avec une connaissance approfondie de la sécurité routière.",
-        "specializations": ["Anxiété de conduite", "TDAH & TDA", "Troubles d'apprentissage", "Éco-conduite", "Premiers secours"],
+        "specializations": [
+          "Anxiété de conduite",
+          "TDAH & TDA",
+          "Troubles d'apprentissage",
+          "Éco-conduite",
+          "Premiers secours"
+        ],
         "hobbies": "Musique & sport",
         "experience": "Fondateur"
       },
@@ -203,7 +241,11 @@
         "initials": "H",
         "color": "#1A4080",
         "bio": "Avec plus de 9 ans d'expérience, Hugo a guidé des centaines d'élèves vers leur permis. Connu pour son approche calme et structurée.",
-        "specializations": ["Anxiété de conduite", "Troubles d'apprentissage", "Éco-conduite"],
+        "specializations": [
+          "Anxiété de conduite",
+          "Troubles d'apprentissage",
+          "Éco-conduite"
+        ],
         "hobbies": "Photographie",
         "experience": "9+ ans"
       },
@@ -213,7 +255,10 @@
         "initials": "S",
         "color": "#C8963E",
         "bio": "Sandra apporte plus de 3 ans d'expérience et est spécialisée dans l'accompagnement des élèves atteints de TDAH et d'autisme.",
-        "specializations": ["TDAH & Autisme", "Séances de rappel"],
+        "specializations": [
+          "TDAH & Autisme",
+          "Séances de rappel"
+        ],
         "hobbies": "Moto, cuisine & convivialité",
         "experience": "3+ ans"
       },
@@ -223,7 +268,11 @@
         "initials": "E",
         "color": "#2D6A4F",
         "bio": "Edward a plus de 12 ans d'expérience dans l'enseignement de la conduite. Il anime également des séances de rappel et de formation.",
-        "specializations": ["Anxiété de conduite", "Troubles d'apprentissage", "Éco-conduite"],
+        "specializations": [
+          "Anxiété de conduite",
+          "Troubles d'apprentissage",
+          "Éco-conduite"
+        ],
         "hobbies": "Voyages, musique & culture",
         "experience": "12+ ans"
       },
@@ -233,7 +282,12 @@
         "initials": "J",
         "color": "#7B3F00",
         "bio": "Avec 12+ ans d'expérience, Joris est l'un de nos moniteurs les plus expérimentés. Il gère également les programmes théoriques.",
-        "specializations": ["Autisme", "Anxiété de conduite", "Troubles d'apprentissage", "Éco-conduite"],
+        "specializations": [
+          "Autisme",
+          "Anxiété de conduite",
+          "Troubles d'apprentissage",
+          "Éco-conduite"
+        ],
         "hobbies": "Musique",
         "experience": "12+ ans"
       },
@@ -243,7 +297,10 @@
         "initials": "J",
         "color": "#6B21A8",
         "bio": "Johan a plus de 10 ans d'expérience en tant que moniteur, guidant les élèves avec une attention particulière à l'anxiété de conduite.",
-        "specializations": ["Anxiété de conduite", "Éco-conduite"],
+        "specializations": [
+          "Anxiété de conduite",
+          "Éco-conduite"
+        ],
         "hobbies": "Cyclisme & voyages",
         "experience": "10+ ans"
       },
@@ -253,7 +310,9 @@
         "initials": "L",
         "color": "#065F46",
         "bio": "Ludo est notre nouvel enthousiaste avec une formation en premiers secours. Il apporte un regard frais et beaucoup de motivation.",
-        "specializations": ["Premiers secours"],
+        "specializations": [
+          "Premiers secours"
+        ],
         "hobbies": "Jardinage & antiquités",
         "experience": "2 ans"
       }
@@ -275,7 +334,13 @@
       "emailPlaceholder": "jean@exemple.be",
       "service": "Service souhaité",
       "serviceDefault": "Choisir un service...",
-      "serviceOptions": ["Formation théorique (€170)", "Cours de conduite (€85/h)", "Séance de rappel", "Inscription + Théorie + Pratique", "Inscription seulement (€35)"],
+      "serviceOptions": [
+        "Formation théorique (€170)",
+        "Cours de conduite (€85/h)",
+        "Séance de rappel",
+        "Inscription + Théorie + Pratique",
+        "Inscription seulement (€35)"
+      ],
       "message": "Message (facultatif)",
       "messagePlaceholder": "Posez une question ou parlez-nous de vous...",
       "submit": "Envoyer la demande",
@@ -362,6 +427,30 @@
       {
         "question": "Comment puis-je me rendre à votre adresse ?",
         "answer": "Nous sommes situés au centre d'affaires Regus, Martelarenplein 20E, 3000 Louvain — juste à côté de la gare. Accessible en train, tram, bus et il y a une zone kiss & ride."
+      },
+      {
+        "question": "Puis-je combiner les cours avec les études ou le travail ?",
+        "answer": "Absolument. Nous planifions les cours 7 jours sur 7, du matin tôt jusqu’en soirée. Que vous soyez étudiant, en horaires décalés ou avec un agenda chargé — nous trouverons toujours un moment qui convient."
+      },
+      {
+        "question": "Quelle est la différence entre le parcours auto-école et le permis libre (VR) ?",
+        "answer": "Avec le parcours auto-école, vous passez vos examens par notre intermédiaire. Vous n’avez pas besoin de conduite accompagnée et pouvez conduire avec un panneau L après 6 cours. C’est la voie la plus rapide et structurée vers votre permis."
+      },
+      {
+        "question": "Puis-je suivre tous mes cours avec le même moniteur ?",
+        "answer": "Oui, c’est ce que nous visons toujours. La continuité est importante pour la confiance et la progression. À votre inscription, nous vous attribuons un moniteur fixe. Ce n’est qu’en cas de maladie ou de congé que nous changeons temporairement."
+      },
+      {
+        "question": "Quels supports d’apprentissage je reçois pour la théorie ?",
+        "answer": "Vous avez accès à notre plateforme d’apprentissage numérique avec questions d’entraînement, panneaux de signalisation et manuel théorique. Utilisable sur smartphone, tablette ou ordinateur — pratique pour s’entraîner partout."
+      },
+      {
+        "question": "Y a-t-il un âge minimum pour commencer ?",
+        "answer": "Vous pouvez commencer les cours théoriques dès 16 ans. Les cours pratiques commencent normalement à partir de 17 ans (conduite accompagnée) ou 18 ans pour le parcours auto-école. Nous discutons volontiers des options selon votre âge."
+      },
+      {
+        "question": "Que faire si je veux annuler ou reporter un cours ?",
+        "answer": "Les cours peuvent être annulés ou reportés gratuitement jusqu’à 24 heures à l’avance via WhatsApp. Les annulations moins de 24 heures à l’avance seront facturées. Cela maintient le planning équitable pour tout le monde."
       }
     ]
   },
@@ -371,7 +460,12 @@
     "placeholder": "Tapez votre question...",
     "send": "Envoyer",
     "greeting": "Bonjour ! 👋 Je suis l'assistant de Rijschool Lovanium. Comment puis-je vous aider ?",
-    "quickReplies": ["Quels sont les tarifs ?", "Comment s'inscrire ?", "Manuel ou automatique ?", "Adresse & horaires"],
+    "quickReplies": [
+      "Quels sont les tarifs ?",
+      "Comment s'inscrire ?",
+      "Manuel ou automatique ?",
+      "Adresse & horaires"
+    ],
     "whatsappText": "Préférez un chat personnel ?",
     "whatsappCta": "Ouvrir WhatsApp"
   },
@@ -406,21 +500,60 @@
       "email": "Adresse e-mail",
       "emailPlaceholder": "nom@exemple.be",
       "preferredContact": "Méthode de contact préférée",
-      "contactOptions": ["WhatsApp", "Téléphone", "E-mail"],
+      "contactOptions": [
+        "WhatsApp",
+        "Téléphone",
+        "E-mail"
+      ],
       "licenseType": "Catégorie de permis",
-      "licenseOptions": ["B (voiture)", "AM (cyclomoteur)", "A1 (moto légère)", "A (moto)"],
+      "licenseOptions": [
+        "B (voiture)",
+        "AM (cyclomoteur)",
+        "A1 (moto légère)",
+        "A (moto)"
+      ],
       "transmission": "Boîte de vitesses",
-      "transmissionOptions": ["Manuelle", "Automatique", "Pas de préférence"],
+      "transmissionOptions": [
+        "Manuelle",
+        "Automatique",
+        "Pas de préférence"
+      ],
       "theoryDone": "Examen théorique déjà réussi ?",
-      "theoryOptions": ["Non, pas encore", "Oui, déjà réussi", "En cours de préparation"],
+      "theoryOptions": [
+        "Non, pas encore",
+        "Oui, déjà réussi",
+        "En cours de préparation"
+      ],
       "previousLessons": "Des leçons de conduite précédentes ?",
-      "previousOptions": ["Non, débutant complet", "Oui, quelques leçons ailleurs", "Oui, beaucoup de leçons mais arrêté"],
+      "previousOptions": [
+        "Non, débutant complet",
+        "Oui, quelques leçons ailleurs",
+        "Oui, beaucoup de leçons mais arrêté"
+      ],
       "startDate": "Quand voulez-vous commencer ?",
-      "startOptions": ["Le plus tôt possible", "Dans 1 mois", "Dans 1 à 3 mois", "Pas encore sûr"],
+      "startOptions": [
+        "Le plus tôt possible",
+        "Dans 1 mois",
+        "Dans 1 à 3 mois",
+        "Pas encore sûr"
+      ],
       "specialNeeds": "Besoins particuliers ou circonstances",
-      "specialOptions": ["Pas de besoins particuliers", "Anxiété de conduite", "TDAH / ADD", "Autisme", "Difficultés de lecture / dyslexie", "Autre"],
+      "specialOptions": [
+        "Pas de besoins particuliers",
+        "Anxiété de conduite",
+        "TDAH / ADD",
+        "Autisme",
+        "Difficultés de lecture / dyslexie",
+        "Autre"
+      ],
       "hearAbout": "Comment nous avez-vous trouvés ?",
-      "hearOptions": ["Google", "Réseaux sociaux", "Famille ou amis", "Écoles ou CLB", "Autre"],
+      "hearOptions": [
+        "Google",
+        "Réseaux sociaux",
+        "Famille ou amis",
+        "Écoles ou CLB",
+        "Autre"
+      ],
       "remarks": "Remarques ou questions",
       "remarksPlaceholder": "Avez-vous des questions ou quelque chose que nous devons savoir ?",
       "privacy": "J'accepte le traitement de mes données pour le traitement de ma demande d'inscription.",
@@ -431,7 +564,13 @@
     "tagline": "Votre permis. Votre liberté.",
     "description": "Auto-école agréée à Louvain (agrément #2863). Cours théoriques, cours de conduite et séances de rappel. Spécialisée en anxiété de conduite, TDAH et troubles d'apprentissage.",
     "navTitle": "Navigation",
-    "navLinks": ["Accueil", "Services", "Équipe", "Tarifs", "S'inscrire"],
+    "navLinks": [
+      "Accueil",
+      "Services",
+      "Équipe",
+      "Tarifs",
+      "S'inscrire"
+    ],
     "contactTitle": "Contact",
     "legal": {
       "privacy": "Politique de confidentialité",

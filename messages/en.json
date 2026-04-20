@@ -85,7 +85,12 @@
         "price": "€170",
         "priceNote": "12 hours of training",
         "description": "Pass your theory exam on the first try. Our 12-hour interactive course fully prepares you for the official traffic exam in Leuven.",
-        "features": ["12 hours of intensive training", "Officially accredited curriculum", "Small group format", "Exam tips & strategy"],
+        "features": [
+          "12 hours of intensive training",
+          "Officially accredited curriculum",
+          "Small group format",
+          "Exam tips & strategy"
+        ],
         "badge": "Required for beginners"
       },
       {
@@ -94,7 +99,12 @@
         "price": "€85",
         "priceNote": "per hour (VAT incl.)",
         "description": "Get safely on the road with an experienced instructor. Drive in a modern Audi with dual controls — manual or automatic transmission.",
-        "features": ["Modern Audi training vehicle", "Manual & automatic", "Dual controls", "Personal driving coach"],
+        "features": [
+          "Modern Audi training vehicle",
+          "Manual & automatic",
+          "Dual controls",
+          "Personal driving coach"
+        ],
         "badge": "Most popular"
       },
       {
@@ -103,7 +113,12 @@
         "price": "On request",
         "priceNote": "for license holders",
         "description": "Already licensed but want to refresh your skills? Our refresher session is ideal for new drivers who want to build confidence.",
-        "features": ["For new license holders", "Build confidence", "Practice specific situations", "Flexible scheduling"],
+        "features": [
+          "For new license holders",
+          "Build confidence",
+          "Practice specific situations",
+          "Flexible scheduling"
+        ],
         "badge": "After your license"
       }
     ]
@@ -158,7 +173,12 @@
         "price": "35",
         "unit": "one-time",
         "description": "One-time registration at Rijschool Lovanium. Required for new students.",
-        "features": ["Registration as a student", "Personal driving file", "Access to lesson planning", "Intake interview"],
+        "features": [
+          "Registration as a student",
+          "Personal driving file",
+          "Access to lesson planning",
+          "Intake interview"
+        ],
         "highlight": false
       },
       {
@@ -166,7 +186,13 @@
         "price": "170",
         "unit": "12 hours",
         "description": "Complete 12-hour theory course. Recommended for those who want to pass on the first attempt.",
-        "features": ["12 hours theory lessons", "Officially accredited curriculum", "Traffic rules & signs", "Exam preparation", "Course materials included"],
+        "features": [
+          "12 hours theory lessons",
+          "Officially accredited curriculum",
+          "Traffic rules & signs",
+          "Exam preparation",
+          "Course materials included"
+        ],
         "highlight": false
       },
       {
@@ -174,7 +200,13 @@
         "price": "85",
         "unit": "per hour",
         "description": "Individual driving lesson with a certified instructor in a modern Audi.",
-        "features": ["1 hour individual lesson", "Modern Audi training vehicle", "Manual or automatic", "Dual controls", "Personal feedback"],
+        "features": [
+          "1 hour individual lesson",
+          "Modern Audi training vehicle",
+          "Manual or automatic",
+          "Dual controls",
+          "Personal feedback"
+        ],
         "highlight": true
       }
     ]
@@ -193,7 +225,13 @@
         "initials": "G",
         "color": "#0B2D5E",
         "bio": "As founder and director, Gert leads Rijschool Lovanium. He combines his passion for education with an in-depth knowledge of road safety.",
-        "specializations": ["Driving anxiety", "ADHD & ADD", "Learning disabilities", "Eco-driving", "First aid"],
+        "specializations": [
+          "Driving anxiety",
+          "ADHD & ADD",
+          "Learning disabilities",
+          "Eco-driving",
+          "First aid"
+        ],
         "hobbies": "Music & sports",
         "experience": "Founder"
       },
@@ -203,7 +241,11 @@
         "initials": "H",
         "color": "#1A4080",
         "bio": "With over 9 years of experience, Hugo has guided hundreds of students to their license. Known for his calm, structured approach.",
-        "specializations": ["Driving anxiety", "Learning disabilities", "Eco-driving"],
+        "specializations": [
+          "Driving anxiety",
+          "Learning disabilities",
+          "Eco-driving"
+        ],
         "hobbies": "Photography",
         "experience": "9+ years"
       },
@@ -213,7 +255,10 @@
         "initials": "S",
         "color": "#C8963E",
         "bio": "Sandra brings over 3 years of experience and specializes in guiding students with ADHD and autism. She also conducts refresher sessions.",
-        "specializations": ["ADHD & Autism", "Refresher sessions"],
+        "specializations": [
+          "ADHD & Autism",
+          "Refresher sessions"
+        ],
         "hobbies": "Motorcycling, cooking & socializing",
         "experience": "3+ years"
       },
@@ -223,7 +268,11 @@
         "initials": "E",
         "color": "#2D6A4F",
         "bio": "Edward has over 12 years of experience in driving instruction. He also leads refresher and training sessions for license holders.",
-        "specializations": ["Driving anxiety", "Learning disabilities", "Eco-driving"],
+        "specializations": [
+          "Driving anxiety",
+          "Learning disabilities",
+          "Eco-driving"
+        ],
         "hobbies": "Travel, music & culture",
         "experience": "12+ years"
       },
@@ -233,7 +282,12 @@
         "initials": "J",
         "color": "#7B3F00",
         "bio": "With 12+ years of experience, Joris is one of our most experienced instructors. He also manages theory and school license programs.",
-        "specializations": ["Autism", "Driving anxiety", "Learning disabilities", "Eco-driving"],
+        "specializations": [
+          "Autism",
+          "Driving anxiety",
+          "Learning disabilities",
+          "Eco-driving"
+        ],
         "hobbies": "Music",
         "experience": "12+ years"
       },
@@ -243,7 +297,10 @@
         "initials": "J",
         "color": "#6B21A8",
         "bio": "Johan has over 10 years of experience as a driving instructor, guiding students with special attention to driving anxiety and eco-driving.",
-        "specializations": ["Driving anxiety", "Eco-driving"],
+        "specializations": [
+          "Driving anxiety",
+          "Eco-driving"
+        ],
         "hobbies": "Cycling & travel",
         "experience": "10+ years"
       },
@@ -253,7 +310,9 @@
         "initials": "L",
         "color": "#065F46",
         "bio": "Ludo is our enthusiastic newcomer with a background in first aid. He brings a fresh perspective and plenty of motivation to his lessons.",
-        "specializations": ["First aid"],
+        "specializations": [
+          "First aid"
+        ],
         "hobbies": "Gardening & antiques",
         "experience": "2 years"
       }
@@ -275,7 +334,13 @@
       "emailPlaceholder": "john@example.com",
       "service": "Desired service",
       "serviceDefault": "Choose a service...",
-      "serviceOptions": ["Theory course (€170)", "Driving lessons (€85/h)", "Refresher session", "Registration + Theory + Practice", "Registration only (€35)"],
+      "serviceOptions": [
+        "Theory course (€170)",
+        "Driving lessons (€85/h)",
+        "Refresher session",
+        "Registration + Theory + Practice",
+        "Registration only (€35)"
+      ],
       "message": "Message (optional)",
       "messagePlaceholder": "Ask a question or tell us something about yourself...",
       "submit": "Send request",
@@ -362,6 +427,30 @@
       {
         "question": "How do I reach your location?",
         "answer": "We are located in the Regus business center at Martelarenplein 20E, 3000 Leuven — right next to the train station. Accessible by train, tram, bus and there is a kiss & ride zone. Ideally located for students from the entire Leuven region."
+      },
+      {
+        "question": "Can I combine lessons with school or work?",
+        "answer": "Absolutely. We schedule lessons 7 days a week, from early morning to late evening. Whether you are a student, work shifts or have a busy schedule — we will always find a time that works for you."
+      },
+      {
+        "question": "What is the difference between a driving school route and a free license (VR)?",
+        "answer": "With a driving school route you take your exams through us. You do not need supervised driving and can drive with an L-plate after 6 lessons. This is the fastest and most structured route to your license."
+      },
+      {
+        "question": "Can I take all my lessons with the same instructor?",
+        "answer": "Yes, we always aim for that. Continuity is important for trust and progress. Upon registration we link you to a permanent instructor. Only in case of illness or leave do we temporarily switch."
+      },
+      {
+        "question": "What learning materials do I get for theory?",
+        "answer": "You get access to our digital learning platform with practice questions, traffic signs and theory book. You can use this on your smartphone, tablet or laptop — convenient to practice anywhere."
+      },
+      {
+        "question": "Is there a minimum age to start?",
+        "answer": "You can start theory lessons from age 16. Practical lessons normally start from age 17 (supervised driving) or 18 for the driving school route. We are happy to discuss options based on your age."
+      },
+      {
+        "question": "What if I want to cancel or reschedule a lesson?",
+        "answer": "Lessons can be cancelled or rescheduled for free up to 24 hours in advance via WhatsApp. Cancellations less than 24 hours in advance will be charged. This keeps the schedule fair for everyone."
       }
     ]
   },
@@ -371,7 +460,12 @@
     "placeholder": "Type your question...",
     "send": "Send",
     "greeting": "Hello! 👋 I'm the assistant of Rijschool Lovanium. How can I help you?",
-    "quickReplies": ["What are the prices?", "How to enroll?", "Manual or automatic?", "Location & hours"],
+    "quickReplies": [
+      "What are the prices?",
+      "How to enroll?",
+      "Manual or automatic?",
+      "Location & hours"
+    ],
     "whatsappText": "Prefer a personal chat?",
     "whatsappCta": "Open WhatsApp"
   },
@@ -406,21 +500,60 @@
       "email": "Email address",
       "emailPlaceholder": "name@example.be",
       "preferredContact": "Preferred contact method",
-      "contactOptions": ["WhatsApp", "Phone", "Email"],
+      "contactOptions": [
+        "WhatsApp",
+        "Phone",
+        "Email"
+      ],
       "licenseType": "License category",
-      "licenseOptions": ["B (car)", "AM (moped)", "A1 (light motorcycle)", "A (motorcycle)"],
+      "licenseOptions": [
+        "B (car)",
+        "AM (moped)",
+        "A1 (light motorcycle)",
+        "A (motorcycle)"
+      ],
       "transmission": "Gearbox",
-      "transmissionOptions": ["Manual", "Automatic", "No preference"],
+      "transmissionOptions": [
+        "Manual",
+        "Automatic",
+        "No preference"
+      ],
       "theoryDone": "Passed the theory exam already?",
-      "theoryOptions": ["No, not yet", "Yes, already passed", "Currently preparing"],
+      "theoryOptions": [
+        "No, not yet",
+        "Yes, already passed",
+        "Currently preparing"
+      ],
       "previousLessons": "Had driving lessons before?",
-      "previousOptions": ["No, complete beginner", "Yes, a few lessons elsewhere", "Yes, many lessons but stopped"],
+      "previousOptions": [
+        "No, complete beginner",
+        "Yes, a few lessons elsewhere",
+        "Yes, many lessons but stopped"
+      ],
       "startDate": "When do you want to start?",
-      "startOptions": ["As soon as possible", "Within 1 month", "In 1–3 months", "Not sure yet"],
+      "startOptions": [
+        "As soon as possible",
+        "Within 1 month",
+        "In 1–3 months",
+        "Not sure yet"
+      ],
       "specialNeeds": "Special needs or circumstances",
-      "specialOptions": ["No special needs", "Driving anxiety", "ADHD / ADD", "Autism", "Reading difficulties / dyslexia", "Other"],
+      "specialOptions": [
+        "No special needs",
+        "Driving anxiety",
+        "ADHD / ADD",
+        "Autism",
+        "Reading difficulties / dyslexia",
+        "Other"
+      ],
       "hearAbout": "How did you find us?",
-      "hearOptions": ["Google", "Social media", "Family or friends", "Schools or CLB", "Other"],
+      "hearOptions": [
+        "Google",
+        "Social media",
+        "Family or friends",
+        "Schools or CLB",
+        "Other"
+      ],
       "remarks": "Remarks or questions",
       "remarksPlaceholder": "Do you have any questions or something we should know?",
       "privacy": "I agree to the processing of my data for handling my enrollment request.",
@@ -431,7 +564,13 @@
     "tagline": "Your license. Your freedom.",
     "description": "Accredited driving school in Leuven (license #2863). Theory lessons, driving lessons and refresher sessions. Specialized in driving anxiety, ADHD and learning disabilities.",
     "navTitle": "Navigation",
-    "navLinks": ["Home", "Services", "Team", "Pricing", "Enroll"],
+    "navLinks": [
+      "Home",
+      "Services",
+      "Team",
+      "Pricing",
+      "Enroll"
+    ],
     "contactTitle": "Contact",
     "legal": {
       "privacy": "Privacy Policy",

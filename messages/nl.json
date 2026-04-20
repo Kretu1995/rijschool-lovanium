@@ -85,7 +85,12 @@
         "price": "€170",
         "priceNote": "12 uur opleiding",
         "description": "Slaag vanaf de eerste keer voor je theorie-examen. Onze interactieve opleiding van 12 uur bereidt je volledig voor op het officiële verkeersexamen in Leuven.",
-        "features": ["12 uur intensieve opleiding", "Officieel erkend curriculum", "In klein groepsverband", "Examentips & -strategie"],
+        "features": [
+          "12 uur intensieve opleiding",
+          "Officieel erkend curriculum",
+          "In klein groepsverband",
+          "Examentips & -strategie"
+        ],
         "badge": "Verplicht voor beginners"
       },
       {
@@ -94,7 +99,12 @@
         "price": "€85",
         "priceNote": "per uur (incl. btw)",
         "description": "Ga veilig de weg op met een ervaren lesgever. Rij op moderne Audi-lesvoertuigen met dubbele bediening, zowel manueel als automaat beschikbaar.",
-        "features": ["Moderne Audi-lesvoertuigen", "Manueel & automaat", "Dubbele bediening", "Persoonlijke rijcoach"],
+        "features": [
+          "Moderne Audi-lesvoertuigen",
+          "Manueel & automaat",
+          "Dubbele bediening",
+          "Persoonlijke rijcoach"
+        ],
         "badge": "Populairste keuze"
       },
       {
@@ -103,7 +113,12 @@
         "price": "Op aanvraag",
         "priceNote": "voor rijbewijshouders",
         "description": "Al geslaagd maar wil je je rijvaardigheden opfrissen? Ons terugkommoment is ideaal voor nieuwe rijbewijshouders die zelfvertrouwen willen opbouwen.",
-        "features": ["Voor nieuwe rijbewijshouders", "Zelfvertrouwen opbouwen", "Specifieke situaties oefenen", "Flexibele planning"],
+        "features": [
+          "Voor nieuwe rijbewijshouders",
+          "Zelfvertrouwen opbouwen",
+          "Specifieke situaties oefenen",
+          "Flexibele planning"
+        ],
         "badge": "Na je rijbewijs"
       }
     ]
@@ -210,7 +225,13 @@
         "initials": "G",
         "color": "#0B2D5E",
         "bio": "Als oprichter en directeur staat Gert aan het hoofd van Rijschool Lovanium. Hij combineert zijn passie voor onderwijs met een grondige kennis van verkeersveiligheid.",
-        "specializations": ["Rijangst", "ADHD & ADD", "Leerstoornissen", "Eco-rijden", "EHBO"],
+        "specializations": [
+          "Rijangst",
+          "ADHD & ADD",
+          "Leerstoornissen",
+          "Eco-rijden",
+          "EHBO"
+        ],
         "hobbies": "Muziek & sport",
         "experience": "Oprichter"
       },
@@ -220,7 +241,11 @@
         "initials": "H",
         "color": "#1A4080",
         "bio": "Met meer dan 9 jaar ervaring heeft Hugo al honderden leerlingen begeleid naar hun rijbewijs. Hij staat bekend om zijn rustige, gestructureerde aanpak.",
-        "specializations": ["Rijangst", "Leerstoornissen", "Eco-rijden"],
+        "specializations": [
+          "Rijangst",
+          "Leerstoornissen",
+          "Eco-rijden"
+        ],
         "hobbies": "Fotografie",
         "experience": "9+ jaar"
       },
@@ -230,7 +255,10 @@
         "initials": "S",
         "color": "#C8963E",
         "bio": "Sandra brengt meer dan 3 jaar ervaring mee en is gespecialiseerd in het begeleiden van leerlingen met ADHD en autisme. Ze verzorgt ook terugkommomenten.",
-        "specializations": ["ADHD & Autisme", "Terugkommomenten"],
+        "specializations": [
+          "ADHD & Autisme",
+          "Terugkommomenten"
+        ],
         "hobbies": "Motorrijden, koken & gezelligheid",
         "experience": "3+ jaar"
       },
@@ -240,7 +268,11 @@
         "initials": "E",
         "color": "#2D6A4F",
         "bio": "Edward heeft meer dan 12 jaar ervaring in het rijonderricht. Hij leidt ook terugkom- en opleidingssessies voor rijbewijshouders.",
-        "specializations": ["Rijangst", "Leerstoornissen", "Eco-rijden"],
+        "specializations": [
+          "Rijangst",
+          "Leerstoornissen",
+          "Eco-rijden"
+        ],
         "hobbies": "Reizen, muziek & cultuur",
         "experience": "12+ jaar"
       },
@@ -250,7 +282,12 @@
         "initials": "J",
         "color": "#7B3F00",
         "bio": "Met 12+ jaar ervaring is Joris een van onze meest ervaren instructeurs. Hij beheert ook de theorie- en schoolrijbewijsprogramma's.",
-        "specializations": ["Autisme", "Rijangst", "Leerstoornissen", "Eco-rijden"],
+        "specializations": [
+          "Autisme",
+          "Rijangst",
+          "Leerstoornissen",
+          "Eco-rijden"
+        ],
         "hobbies": "Muziek",
         "experience": "12+ jaar"
       },
@@ -260,7 +297,10 @@
         "initials": "J",
         "color": "#6B21A8",
         "bio": "Johan heeft meer dan 10 jaar rijervaring als instructeur en begeleidt leerlingen met bijzondere aandacht voor rijangst en eco-rijgedrag.",
-        "specializations": ["Rijangst", "Eco-rijden"],
+        "specializations": [
+          "Rijangst",
+          "Eco-rijden"
+        ],
         "hobbies": "Fietsen & reizen",
         "experience": "10+ jaar"
       },
@@ -270,7 +310,9 @@
         "initials": "L",
         "color": "#065F46",
         "bio": "Ludo is onze enthousiaste nieuwkomer met een achtergrond in EHBO. Hij brengt een frisse blik en veel motivatie mee in zijn lessen.",
-        "specializations": ["EHBO"],
+        "specializations": [
+          "EHBO"
+        ],
         "hobbies": "Tuinieren & antiquiteiten",
         "experience": "2 jaar"
       }
@@ -292,7 +334,13 @@
       "emailPlaceholder": "jan@voorbeeld.be",
       "service": "Gewenste dienst",
       "serviceDefault": "Kies een dienst...",
-      "serviceOptions": ["Theorieopleiding (€170)", "Praktijklessen (€85/u)", "Terugkommoment", "Inschrijving + Theorie + Praktijk", "Enkel inschrijven (€35)"],
+      "serviceOptions": [
+        "Theorieopleiding (€170)",
+        "Praktijklessen (€85/u)",
+        "Terugkommoment",
+        "Inschrijving + Theorie + Praktijk",
+        "Enkel inschrijven (€35)"
+      ],
       "message": "Bericht (optioneel)",
       "messagePlaceholder": "Stel een vraag of vertel iets over jezelf...",
       "submit": "Verstuur aanvraag",
@@ -379,6 +427,30 @@
       {
         "question": "Hoe bereik ik jullie locatie?",
         "answer": "We zitten in het Regus businesscenter op Martelarenplein 20E, 3000 Leuven — vlak naast het station. Bereikbaar met trein, tram, bus en er is een kiss & ride zone. Ideaal gelegen voor leerlingen uit de hele regio Leuven."
+      },
+      {
+        "question": "Kan ik lessen combineren met school of werk?",
+        "answer": "Absoluut. We plannen lessen 7 dagen op 7, van vroeg in de ochtend tot laat in de avond. Of je nu student bent, werkt in shifts of een druk schema hebt — we vinden altijd een moment dat past."
+      },
+      {
+        "question": "Wat is het verschil tussen rijschool en vrij rijbewijs (VR)?",
+        "answer": "Met een rijschooltraject rij je je examens via ons. Je hebt geen begeleid rijden nodig en mag al rijden met een L-bord na 6 lessen. Dit is de snelste en meest gestructureerde route naar je rijbewijs."
+      },
+      {
+        "question": "Kan ik al mijn lessen bij dezelfde instructeur volgen?",
+        "answer": "Ja, dat streven we altijd na. Continuiteit is belangrijk voor vertrouwen en progressie. Bij je inschrijving koppelen we je aan een vaste instructeur. Enkel bij ziekte of verlof schakelen we tijdelijk over."
+      },
+      {
+        "question": "Welke leermiddelen krijg ik voor de theorie?",
+        "answer": "Je krijgt toegang tot ons digitaal leerplatform met oefenvragen, verkeersborden en theorieboek. Je kunt dit op je smartphone, tablet of laptop gebruiken — handig om overal te oefenen."
+      },
+      {
+        "question": "Is er een minimumleeftijd om te starten?",
+        "answer": "Je kunt al starten met theorielessen vanaf 16 jaar. Praktijklessen starten normaal gezien vanaf 17 jaar (begeleid rijden) of 18 jaar voor het rijschooltraject. We bespreken de opties graag op basis van je leeftijd."
+      },
+      {
+        "question": "Wat als ik een les wil annuleren of verplaatsen?",
+        "answer": "Lessen kun je tot 24 uur van tevoren gratis annuleren of verplaatsen via WhatsApp. Bij annulatie korter dan 24 uur wordt de les aangerekend. Zo houden we de planning eerlijk voor iedereen."
       }
     ]
   },
@@ -388,7 +460,12 @@
     "placeholder": "Typ je vraag...",
     "send": "Verstuur",
     "greeting": "Hallo! 👋 Ik ben de assistent van Rijschool Lovanium. Hoe kan ik je helpen?",
-    "quickReplies": ["Wat zijn de prijzen?", "Hoe inschrijven?", "Manueel of automaat?", "Locatie & uren"],
+    "quickReplies": [
+      "Wat zijn de prijzen?",
+      "Hoe inschrijven?",
+      "Manueel of automaat?",
+      "Locatie & uren"
+    ],
     "whatsappText": "Liever persoonlijk chatten?",
     "whatsappCta": "Open WhatsApp"
   },
@@ -423,21 +500,60 @@
       "email": "E-mailadres",
       "emailPlaceholder": "naam@voorbeeld.be",
       "preferredContact": "Voorkeur contactmethode",
-      "contactOptions": ["WhatsApp", "Telefoon", "E-mail"],
+      "contactOptions": [
+        "WhatsApp",
+        "Telefoon",
+        "E-mail"
+      ],
       "licenseType": "Rijbewijscategorie",
-      "licenseOptions": ["B (personenwagen)", "AM (bromfiets)", "A1 (lichte motor)", "A (motor)"],
+      "licenseOptions": [
+        "B (personenwagen)",
+        "AM (bromfiets)",
+        "A1 (lichte motor)",
+        "A (motor)"
+      ],
       "transmission": "Versnellingsbak",
-      "transmissionOptions": ["Manueel", "Automaat", "Geen voorkeur"],
+      "transmissionOptions": [
+        "Manueel",
+        "Automaat",
+        "Geen voorkeur"
+      ],
       "theoryDone": "Theoretisch examen al geslaagd?",
-      "theoryOptions": ["Nee, nog niet", "Ja, al geslaagd", "Bezig met voorbereiding"],
+      "theoryOptions": [
+        "Nee, nog niet",
+        "Ja, al geslaagd",
+        "Bezig met voorbereiding"
+      ],
       "previousLessons": "Eerder rijlessen gevolgd?",
-      "previousOptions": ["Nee, volledig beginnersniveau", "Ja, enkele lessen elders", "Ja, veel lessen maar gestopt"],
+      "previousOptions": [
+        "Nee, volledig beginnersniveau",
+        "Ja, enkele lessen elders",
+        "Ja, veel lessen maar gestopt"
+      ],
       "startDate": "Wanneer wil je starten?",
-      "startOptions": ["Zo snel mogelijk", "Binnen 1 maand", "Over 1–3 maanden", "Nog niet zeker"],
+      "startOptions": [
+        "Zo snel mogelijk",
+        "Binnen 1 maand",
+        "Over 1–3 maanden",
+        "Nog niet zeker"
+      ],
       "specialNeeds": "Bijzondere noden of omstandigheden",
-      "specialOptions": ["Geen bijzondere noden", "Rijangst", "ADHD / ADD", "Autisme", "Leesmoeilijkheden / dyslexie", "Andere"],
+      "specialOptions": [
+        "Geen bijzondere noden",
+        "Rijangst",
+        "ADHD / ADD",
+        "Autisme",
+        "Leesmoeilijkheden / dyslexie",
+        "Andere"
+      ],
       "hearAbout": "Hoe heb je ons gevonden?",
-      "hearOptions": ["Google", "Sociale media", "Familie of vrienden", "Scholen of CLB", "Andere"],
+      "hearOptions": [
+        "Google",
+        "Sociale media",
+        "Familie of vrienden",
+        "Scholen of CLB",
+        "Andere"
+      ],
       "remarks": "Opmerkingen of vragen",
       "remarksPlaceholder": "Heb je nog vragen of iets dat we zeker moeten weten?",
       "privacy": "Ik ga akkoord met de verwerking van mijn gegevens voor de verwerking van mijn inschrijvingsaanvraag.",
@@ -448,7 +564,13 @@
     "tagline": "Jouw rijbewijs. Jouw vrijheid.",
     "description": "Erkende rijschool in Leuven (erkenning #2863). Theorielessen, praktijklessen en terugkommomenten. Gespecialiseerd in rijangst, ADHD en leerstoornissen.",
     "navTitle": "Navigatie",
-    "navLinks": ["Home", "Diensten", "Team", "Tarieven", "Inschrijven"],
+    "navLinks": [
+      "Home",
+      "Diensten",
+      "Team",
+      "Tarieven",
+      "Inschrijven"
+    ],
     "contactTitle": "Contact",
     "legal": {
       "privacy": "Privacybeleid",
