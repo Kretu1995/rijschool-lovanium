@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Plus, Minus, MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
+import { MotionInView } from '@/components/ui/MotionInView';
 
 interface FAQItem {
   question: string;
@@ -18,7 +19,7 @@ function AccordionItem({ item, index, isOpen, onToggle }: {
   onToggle: () => void;
 }) {
   return (
-    <motion.div
+    <MotionInView
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-30px' }}
@@ -60,7 +61,7 @@ function AccordionItem({ item, index, isOpen, onToggle }: {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </MotionInView>
   );
 }
 

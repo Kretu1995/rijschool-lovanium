@@ -2,8 +2,8 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { BookOpen, Car, RefreshCw, ArrowRight, Check, type LucideIcon } from 'lucide-react';
-import { motion } from 'framer-motion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
+import { MotionInView } from '@/components/ui/MotionInView';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -30,7 +30,7 @@ function ServiceCard({ item, index }: { item: ServiceItem; index: number }) {
   const isMiddle = index === 1;
 
   return (
-    <motion.div
+    <MotionInView
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
@@ -93,7 +93,7 @@ function ServiceCard({ item, index }: { item: ServiceItem; index: number }) {
           ))}
         </ul>
       </div>
-    </motion.div>
+    </MotionInView>
   );
 }
 

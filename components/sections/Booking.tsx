@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, CheckCircle, AlertCircle, Send, MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
+import { MotionInView } from '@/components/ui/MotionInView';
 import { cn } from '@/lib/utils';
 
 type FormState = 'idle' | 'submitting' | 'success' | 'error';
@@ -59,7 +60,7 @@ export default function Booking() {
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-5xl mx-auto items-start">
           {/* Form */}
-          <motion.div
+          <MotionInView
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -139,10 +140,10 @@ export default function Booking() {
                 </motion.form>
               )}
             </AnimatePresence>
-          </motion.div>
+          </MotionInView>
 
           {/* Contact sidebar */}
-          <motion.div
+          <MotionInView
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -191,7 +192,7 @@ export default function Booking() {
               </div>
               <div className="absolute inset-0 bg-navy/5 group-hover:bg-navy/10 transition-colors duration-200" />
             </a>
-          </motion.div>
+          </MotionInView>
         </div>
       </div>
     </section>

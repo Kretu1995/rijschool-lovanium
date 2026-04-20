@@ -2,8 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import { MapPin, Brain, Car, Shield, Clock, MessageCircle, type LucideIcon } from 'lucide-react';
-import { motion } from 'framer-motion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
+import { MotionInView } from '@/components/ui/MotionInView';
 import Image from 'next/image';
 
 const iconMap: Record<string, LucideIcon> = { MapPin, Brain, Car, Shield, Clock, MessageCircle };
@@ -88,7 +88,7 @@ export default function WhyUs() {
             {items.map((item, i) => {
               const Icon = iconMap[item.icon] || Car;
               return (
-                <motion.div
+                <MotionInView
                   key={i}
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +101,7 @@ export default function WhyUs() {
                   </div>
                   <h3 className="font-bold text-white mb-2 text-sm">{item.title}</h3>
                   <p className="text-white/50 text-xs leading-relaxed">{item.description}</p>
-                </motion.div>
+                </MotionInView>
               );
             })}
           </div>

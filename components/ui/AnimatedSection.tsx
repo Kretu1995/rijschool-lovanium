@@ -1,7 +1,8 @@
 'use client';
 
 import { motion, Variants, useReducedMotion } from 'framer-motion';
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode } from 'react';
+import { useIsMobile } from '@/lib/useIsMobile';
 
 const variants: Record<string, Variants> = {
   fadeUp: {
@@ -28,12 +29,7 @@ const variants: Record<string, Variants> = {
 
 const containerVariants: Variants = {
   hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.1,
-    },
-  },
+  visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
 };
 
 const staticVariants: Variants = {
@@ -47,17 +43,6 @@ interface AnimatedSectionProps {
   variant?: keyof typeof variants;
   delay?: number;
   stagger?: boolean;
-}
-
-function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener('resize', check, { passive: true });
-    return () => window.removeEventListener('resize', check);
-  }, []);
-  return isMobile;
 }
 
 export function AnimatedSection({
@@ -74,9 +59,10 @@ export function AnimatedSection({
   return (
     <motion.div
       className={className}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: '-80px' }}
+      initial={noAnimation ? 'visible' : 'hidden'}
+      animate={noAnimation ? 'visible' : undefined}
+      whileInView={noAnimation ? undefined : 'visible'}
+      viewport={noAnimation ? undefined : { once: true, margin: '-80px' }}
       variants={noAnimation ? staticVariants : (stagger ? containerVariants : variants[variant])}
       custom={delay}
     >

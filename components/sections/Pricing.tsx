@@ -2,8 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import { Check, ArrowRight, Star } from 'lucide-react';
-import { motion } from 'framer-motion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
+import { MotionInView } from '@/components/ui/MotionInView';
 import { cn } from '@/lib/utils';
 
 interface PricePlan {
@@ -19,7 +19,7 @@ function PriceCard({ plan, index, onBook }: { plan: PricePlan; index: number; on
   const t = useTranslations('pricing');
 
   return (
-    <motion.div
+    <MotionInView
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
@@ -86,7 +86,7 @@ function PriceCard({ plan, index, onBook }: { plan: PricePlan; index: number; on
         {t('cta')}
         <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform duration-200" />
       </button>
-    </motion.div>
+    </MotionInView>
   );
 }
 

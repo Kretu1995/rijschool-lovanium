@@ -1,9 +1,9 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
+import { MotionInView } from '@/components/ui/MotionInView';
 
 interface Step {
   number: string;
@@ -32,7 +32,7 @@ export default function HowItWorks() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, i) => (
-              <motion.div
+              <MotionInView
                 key={i}
                 initial={{ opacity: 0, y: 32 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -59,13 +59,13 @@ export default function HowItWorks() {
 
                 {/* Price/detail badge */}
                 <span className="inline-block tag-navy text-[11px]">{step.detail}</span>
-              </motion.div>
+              </MotionInView>
             ))}
           </div>
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
+        <MotionInView
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -79,7 +79,7 @@ export default function HowItWorks() {
             Start vandaag
             <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform duration-200" />
           </button>
-        </motion.div>
+        </MotionInView>
       </div>
     </section>
   );
