@@ -1,47 +1,84 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  User, Phone, Mail, MapPin, CheckCircle, AlertCircle,
-  ChevronRight, ChevronLeft, Car, BookOpen, MessageCircle, Send
+  User, Phone, Mail, CheckCircle, AlertCircle,
+  ChevronRight, ChevronLeft, Car, BookOpen, MessageCircle, Send,
+  MapPin, Clock, Shield, Zap
 } from 'lucide-react';
 import Link from 'next/link';
-import { useLocale } from 'next-intl';
 import { cn } from '@/lib/utils';
 
-const inputClass = 'w-full bg-white border border-surface-border rounded-xl px-4 py-3 text-navy text-sm placeholder:text-slate-300 focus:outline-none focus:border-navy/40 focus:ring-2 focus:ring-navy/10 transition-all duration-200';
-const labelClass = 'block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2';
-const selectClass = cn(inputClass, 'cursor-pointer appearance-none bg-white');
+const inputClass =
+  'w-full bg-white border-2 border-slate-100 rounded-2xl px-4 py-3.5 text-navy text-sm placeholder:text-slate-300 focus:outline-none focus:border-navy/30 focus:ring-4 focus:ring-navy/5 transition-all duration-200 font-medium';
+const labelClass = 'block text-xs font-bold text-slate-400 uppercase tracking-[0.12em] mb-2.5';
 
 type FormState = 'idle' | 'submitting' | 'success' | 'error';
 
 interface FormData {
-  firstName: string;
-  lastName: string;
-  birthdate: string;
-  nationality: string;
-  street: string;
-  city: string;
-  postalCode: string;
-  phone: string;
-  email: string;
-  preferredContact: string;
-  licenseType: string;
-  transmission: string;
-  theoryDone: string;
-  previousLessons: string;
-  startDate: string;
-  specialNeeds: string;
-  hearAbout: string;
-  remarks: string;
-  privacy: boolean;
+  firstName: string; lastName: string; birthdate: string; nationality: string;
+  street: string; city: string; postalCode: string;
+  phone: string; email: string; preferredContact: string;
+  licenseType: string; transmission: string; theoryDone: string; previousLessons: string; startDate: string;
+  specialNeeds: string; hearAbout: string; remarks: string; privacy: boolean;
 }
 
 const TOTAL_STEPS = 4;
-
 const stepIcons = [User, Phone, Car, BookOpen];
+
+function PillChoice({ options, value, name, onChange }: {
+  options: string[]; value: string; name: string;
+  onChange: (v: string) => void;
+}) {
+  return (
+    <div className="flex flex-wrap gap-2.5 mt-1">
+      {options.map((opt) => (
+        <label key={opt} className={cn(
+          'px-4 py-2.5 rounded-full border-2 text-sm font-semibold cursor-pointer transition-all duration-200 select-none',
+          value === opt
+            ? 'bg-navy text-white border-navy shadow-sm'
+            : 'bg-white border-slate-100 text-slate-500 hover:border-navy/30 hover:text-navy'
+        )}>
+          <input type="radio" name={name} value={opt} checked={value === opt}
+            onChange={() => onChange(opt)} className="sr-only" />
+          {opt}
+        </label>
+      ))}
+    </div>
+  );
+}
+
+function CardChoice({ options, value, name, onChange }: {
+  options: string[]; value: string; name: string;
+  onChange: (v: string) => void;
+}) {
+  return (
+    <div className="flex flex-col gap-2.5 mt-1">
+      {options.map((opt) => (
+        <label key={opt} className={cn(
+          'flex items-center gap-4 px-5 py-4 rounded-2xl border-2 cursor-pointer transition-all duration-200 select-none group',
+          value === opt
+            ? 'bg-navy border-navy shadow-sm'
+            : 'bg-white border-slate-100 hover:border-navy/30'
+        )}>
+          <input type="radio" name={name} value={opt} checked={value === opt}
+            onChange={() => onChange(opt)} className="sr-only" />
+          <div className={cn(
+            'w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-all duration-200',
+            value === opt ? 'border-white bg-white/20' : 'border-slate-300'
+          )}>
+            {value === opt && <div className="w-2.5 h-2.5 rounded-full bg-white" />}
+          </div>
+          <span className={cn('text-sm font-semibold transition-colors duration-200',
+            value === opt ? 'text-white' : 'text-slate-600 group-hover:text-navy'
+          )}>{opt}</span>
+        </label>
+      ))}
+    </div>
+  );
+}
 
 export default function InschrijvenPage() {
   const t = useTranslations('inschrijven');
@@ -61,6 +98,9 @@ export default function InschrijvenPage() {
   const set = (field: keyof FormData) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
       setData(prev => ({ ...prev, [field]: (e.target as HTMLInputElement).type === 'checkbox' ? (e.target as HTMLInputElement).checked : e.target.value }));
+
+  const setVal = (field: keyof FormData) => (v: string) =>
+    setData(prev => ({ ...prev, [field]: v }));
 
   const stepLabels = [t('step1'), t('step2'), t('step3'), t('step4')];
 
@@ -90,354 +130,351 @@ export default function InschrijvenPage() {
   const hearOptions = f.raw('hearOptions') as string[];
 
   return (
-    <div className="min-h-screen bg-surface pt-24 pb-20">
-      <div className="max-w-4xl mx-auto px-6">
+    <div className="min-h-screen bg-surface">
 
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-slate-400 mb-10">
-          <Link href={`/${locale}`} className="hover:text-navy transition-colors">Home</Link>
-          <ChevronRight size={14} />
-          <span className="text-navy font-semibold">{t('headline')}</span>
+      {/* Navy hero header */}
+      <div className="bg-navy pt-28 pb-16 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.04]"
+          style={{ backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
+        <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-gold/10 blur-[80px]" />
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="flex items-center gap-2 text-white/40 text-sm mb-8">
+            <Link href={`/${locale}`} className="hover:text-white/70 transition-colors">Home</Link>
+            <ChevronRight size={14} />
+            <span className="text-white/70">{t('headline')}</span>
+          </div>
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+            <div>
+              <p className="text-gold text-xs font-bold tracking-[0.2em] uppercase mb-3">{t('eyebrow')}</p>
+              <h1 className="text-4xl md:text-5xl font-black text-white mb-4">{t('headline')}</h1>
+              <p className="text-white/50 max-w-lg text-sm leading-relaxed">{t('subtitle')}</p>
+            </div>
+            {/* Trust badges */}
+            <div className="flex flex-wrap gap-3 lg:flex-col lg:items-end">
+              {[
+                { icon: Shield, text: 'Erkend #2863' },
+                { icon: Zap, text: 'Snel starten' },
+                { icon: Clock, text: 'Reactie < 1 werkdag' },
+              ].map(({ icon: Icon, text }) => (
+                <div key={text} className="flex items-center gap-2 text-white/50 text-xs font-medium">
+                  <Icon size={13} className="text-gold" />
+                  {text}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
+      </div>
 
-        {/* Header */}
-        <div className="mb-10">
-          <p className="eyebrow mb-3">{t('eyebrow')}</p>
-          <h1 className="heading-lg mb-3">{t('headline')}</h1>
-          <p className="text-slate-500 max-w-xl">{t('subtitle')}</p>
-        </div>
+      {/* Main content */}
+      <div className="max-w-5xl mx-auto px-6 -mt-2 pb-24">
 
         {formState === 'success' ? (
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="bg-white rounded-3xl border border-surface-border shadow-card p-12 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white rounded-3xl shadow-card border border-surface-border p-12 md:p-16 text-center mt-8"
           >
-            <div className="w-20 h-20 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-6">
-              <CheckCircle size={40} className="text-green-500" />
-            </div>
-            <h2 className="text-2xl font-black text-navy mb-3">{t('successTitle')}</h2>
-            <p className="text-slate-500 max-w-md mx-auto mb-8">{t('successText')}</p>
-            <a
-              href="https://wa.me/32492482853"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#25D366] text-white font-semibold text-sm hover:bg-[#1ebe5d] transition-colors"
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20, delay: 0.1 }}
+              className="w-24 h-24 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-8"
             >
-              <MessageCircle size={16} />
-              WhatsApp
-            </a>
+              <CheckCircle size={44} className="text-green-500" />
+            </motion.div>
+            <h2 className="text-3xl font-black text-navy mb-4">{t('successTitle')}</h2>
+            <p className="text-slate-500 max-w-md mx-auto mb-10 leading-relaxed">{t('successText')}</p>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <a href="https://wa.me/32492482853" target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#25D366] text-white font-semibold text-sm hover:bg-[#1ebe5d] transition-colors shadow-sm">
+                <MessageCircle size={16} />
+                Stuur een WhatsApp
+              </a>
+              <Link href={`/${locale}`}
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-slate-100 text-slate-500 font-semibold text-sm hover:border-navy/30 hover:text-navy transition-all duration-200">
+                Terug naar home
+              </Link>
+            </div>
           </motion.div>
         ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 items-start">
 
-            {/* Step sidebar */}
-            <div className="lg:col-span-1">
-              <div className="bg-white rounded-2xl border border-surface-border shadow-card p-6 space-y-3 sticky top-28">
-                {stepLabels.map((label, i) => {
-                  const StepIcon = stepIcons[i];
-                  const stepNum = i + 1;
-                  const isActive = step === stepNum;
-                  const isDone = step > stepNum;
-                  return (
-                    <div
-                      key={i}
-                      className={cn(
-                        'flex items-center gap-3 p-3 rounded-xl transition-all duration-200',
-                        isActive ? 'bg-navy text-white' : isDone ? 'bg-green-50 text-green-600' : 'text-slate-400'
-                      )}
-                    >
-                      <div className={cn(
-                        'w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-sm font-black',
-                        isActive ? 'bg-white/20' : isDone ? 'bg-green-100' : 'bg-surface'
+            {/* Sidebar */}
+            <div className="lg:col-span-4 space-y-4">
+              {/* Step navigator */}
+              <div className="bg-white rounded-3xl border border-surface-border shadow-card p-6">
+                <p className="text-[10px] font-bold text-slate-300 uppercase tracking-[0.2em] mb-5">Jouw voortgang</p>
+                <div className="space-y-2">
+                  {stepLabels.map((label, i) => {
+                    const StepIcon = stepIcons[i];
+                    const stepNum = i + 1;
+                    const isActive = step === stepNum;
+                    const isDone = step > stepNum;
+                    return (
+                      <div key={i} className={cn(
+                        'flex items-center gap-4 p-4 rounded-2xl transition-all duration-300',
+                        isActive ? 'bg-navy' : isDone ? 'bg-surface' : ''
                       )}>
-                        {isDone ? <CheckCircle size={16} /> : <StepIcon size={15} />}
+                        <div className={cn(
+                          'w-10 h-10 rounded-2xl flex items-center justify-center flex-shrink-0 transition-all duration-300',
+                          isActive ? 'bg-white/15' : isDone ? 'bg-green-500' : 'bg-slate-100'
+                        )}>
+                          {isDone
+                            ? <CheckCircle size={18} className="text-white" />
+                            : <StepIcon size={17} className={isActive ? 'text-white' : 'text-slate-400'} />
+                          }
+                        </div>
+                        <div>
+                          <p className={cn('text-[10px] font-bold uppercase tracking-widest',
+                            isActive ? 'text-white/40' : isDone ? 'text-green-500/60' : 'text-slate-300'
+                          )}>Stap {stepNum}</p>
+                          <p className={cn('text-sm font-bold',
+                            isActive ? 'text-white' : isDone ? 'text-green-600' : 'text-slate-300'
+                          )}>{label}</p>
+                        </div>
                       </div>
-                      <div>
-                        <p className="text-[10px] font-bold uppercase tracking-widest opacity-60">Stap {stepNum}</p>
-                        <p className="text-xs font-semibold leading-tight">{label}</p>
-                      </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
 
-                {/* Contact info */}
-                <div className="mt-4 pt-4 border-t border-surface-border space-y-2">
-                  <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Hulp nodig?</p>
-                  <a href="tel:+32492482853" className="flex items-center gap-2 text-xs text-navy font-semibold hover:text-gold transition-colors">
-                    <Phone size={12} className="text-gold" />
-                    +32 492 48 28 53
+                {/* Progress */}
+                <div className="mt-6 pt-5 border-t border-surface-border">
+                  <div className="flex justify-between text-xs mb-2">
+                    <span className="text-slate-400">Voltooid</span>
+                    <span className="font-bold text-navy">{Math.round(((step - 1) / TOTAL_STEPS) * 100)}%</span>
+                  </div>
+                  <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-gradient-to-r from-navy to-navy-light rounded-full"
+                      animate={{ width: `${((step - 1) / TOTAL_STEPS) * 100}%` }}
+                      transition={{ duration: 0.5, ease: 'easeOut' }}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact card */}
+              <div className="bg-white rounded-3xl border border-surface-border shadow-card p-6">
+                <p className="text-[10px] font-bold text-slate-300 uppercase tracking-[0.2em] mb-4">Hulp nodig?</p>
+                <div className="space-y-3">
+                  <a href="tel:+32492482853" className="flex items-center gap-3 p-3.5 rounded-2xl bg-gold-bg border border-gold/20 hover:border-gold/40 transition-colors group">
+                    <div className="w-9 h-9 rounded-xl bg-gold flex items-center justify-center flex-shrink-0">
+                      <Phone size={14} className="text-white" />
+                    </div>
+                    <div>
+                      <p className="text-navy font-bold text-sm">+32 492 48 28 53</p>
+                      <p className="text-slate-400 text-xs">Ook via WhatsApp</p>
+                    </div>
                   </a>
-                  <a href="mailto:info@rijschoollovanium.be" className="flex items-center gap-2 text-xs text-navy font-semibold hover:text-gold transition-colors">
-                    <Mail size={12} className="text-gold" />
-                    info@rijschoollovanium.be
+                  <a href="mailto:info@rijschoollovanium.be" className="flex items-center gap-3 p-3.5 rounded-2xl bg-surface hover:bg-slate-50 transition-colors">
+                    <div className="w-9 h-9 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0">
+                      <Mail size={14} className="text-slate-500" />
+                    </div>
+                    <div>
+                      <p className="text-navy font-bold text-xs">info@rijschoollovanium.be</p>
+                      <p className="text-slate-400 text-xs">Ma–Vr 10:00–17:00</p>
+                    </div>
+                  </a>
+                  <a href="https://maps.google.com/?q=Martelarenplein+20E,+3000+Leuven" target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-3.5 rounded-2xl bg-surface hover:bg-slate-50 transition-colors">
+                    <div className="w-9 h-9 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0">
+                      <MapPin size={14} className="text-slate-500" />
+                    </div>
+                    <div>
+                      <p className="text-navy font-bold text-sm">Martelarenplein 20E</p>
+                      <p className="text-slate-400 text-xs">3000 Leuven</p>
+                    </div>
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Form */}
-            <div className="lg:col-span-3">
-              {/* Progress bar */}
-              <div className="mb-6">
-                <div className="flex items-center justify-between text-xs text-slate-400 mb-2">
-                  <span>Stap {step} van {TOTAL_STEPS}</span>
-                  <span>{Math.round((step / TOTAL_STEPS) * 100)}% voltooid</span>
-                </div>
-                <div className="h-1.5 bg-surface rounded-full overflow-hidden">
-                  <motion.div
-                    className="h-full bg-navy rounded-full"
-                    animate={{ width: `${(step / TOTAL_STEPS) * 100}%` }}
-                    transition={{ duration: 0.4, ease: 'easeOut' }}
-                  />
-                </div>
-              </div>
-
+            <div className="lg:col-span-8">
               <form onSubmit={handleSubmit}>
-                <div className="bg-white rounded-3xl border border-surface-border shadow-card p-8">
-                  <AnimatePresence mode="wait">
+                <div className="bg-white rounded-3xl border border-surface-border shadow-card overflow-hidden">
 
-                    {/* Step 1: Personal */}
-                    {step === 1 && (
-                      <motion.div key="step1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.25 }} className="space-y-5">
-                        <h2 className="text-lg font-bold text-navy mb-6 flex items-center gap-2">
-                          <User size={18} className="text-gold" />
-                          {t('step1')}
-                        </h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                          <div>
-                            <label className={labelClass}>{f('firstName')} *</label>
-                            <input type="text" required placeholder="Jan" value={data.firstName} onChange={set('firstName')} className={inputClass} />
-                          </div>
-                          <div>
-                            <label className={labelClass}>{f('lastName')} *</label>
-                            <input type="text" required placeholder="Janssen" value={data.lastName} onChange={set('lastName')} className={inputClass} />
-                          </div>
-                        </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                          <div>
-                            <label className={labelClass}>{f('birthdate')} *</label>
-                            <input type="date" required value={data.birthdate} onChange={set('birthdate')} className={inputClass} />
-                          </div>
-                          <div>
-                            <label className={labelClass}>{f('nationality')}</label>
-                            <input type="text" placeholder={f('nationalityPlaceholder')} value={data.nationality} onChange={set('nationality')} className={inputClass} />
-                          </div>
-                        </div>
-                        <div>
-                          <label className={labelClass}>{f('street')} *</label>
-                          <input type="text" required placeholder={f('streetPlaceholder')} value={data.street} onChange={set('street')} className={inputClass} />
-                        </div>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                          <div className="col-span-1">
-                            <label className={labelClass}>{f('postalCode')} *</label>
-                            <input type="text" required placeholder={f('postalCodePlaceholder')} value={data.postalCode} onChange={set('postalCode')} className={inputClass} />
-                          </div>
-                          <div className="col-span-1 sm:col-span-2">
-                            <label className={labelClass}>{f('city')} *</label>
-                            <input type="text" required placeholder={f('cityPlaceholder')} value={data.city} onChange={set('city')} className={inputClass} />
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-
-                    {/* Step 2: Contact */}
-                    {step === 2 && (
-                      <motion.div key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.25 }} className="space-y-5">
-                        <h2 className="text-lg font-bold text-navy mb-6 flex items-center gap-2">
-                          <Phone size={18} className="text-gold" />
-                          {t('step2')}
-                        </h2>
-                        <div>
-                          <label className={labelClass}>{f('phone')} *</label>
-                          <input type="tel" required placeholder={f('phonePlaceholder')} value={data.phone} onChange={set('phone')} className={inputClass} />
-                        </div>
-                        <div>
-                          <label className={labelClass}>{f('email')} *</label>
-                          <input type="email" required placeholder={f('emailPlaceholder')} value={data.email} onChange={set('email')} className={inputClass} />
-                        </div>
-                        <div>
-                          <label className={labelClass}>{f('preferredContact')} *</label>
-                          <div className="flex flex-wrap gap-3 mt-1">
-                            {contactOptions.map((opt) => (
-                              <label key={opt} className={cn(
-                                'flex items-center gap-2 px-4 py-2.5 rounded-xl border text-sm font-medium cursor-pointer transition-all duration-200',
-                                data.preferredContact === opt
-                                  ? 'bg-navy text-white border-navy'
-                                  : 'bg-white border-surface-border text-slate-600 hover:border-navy/30'
-                              )}>
-                                <input type="radio" name="preferredContact" value={opt} checked={data.preferredContact === opt} onChange={set('preferredContact')} className="sr-only" />
-                                {opt}
-                              </label>
-                            ))}
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-
-                    {/* Step 3: Training */}
-                    {step === 3 && (
-                      <motion.div key="step3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.25 }} className="space-y-5">
-                        <h2 className="text-lg font-bold text-navy mb-6 flex items-center gap-2">
-                          <Car size={18} className="text-gold" />
-                          {t('step3')}
-                        </h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                          <div>
-                            <label className={labelClass}>{f('licenseType')} *</label>
-                            <select required value={data.licenseType} onChange={set('licenseType')} className={selectClass} style={{ color: data.licenseType ? '#0F172A' : '#CBD5E1' }}>
-                              <option value="" disabled>Kies categorie</option>
-                              {licenseOptions.map(opt => <option key={opt} value={opt} className="text-navy">{opt}</option>)}
-                            </select>
-                          </div>
-                          <div>
-                            <label className={labelClass}>{f('transmission')} *</label>
-                            <select required value={data.transmission} onChange={set('transmission')} className={selectClass} style={{ color: data.transmission ? '#0F172A' : '#CBD5E1' }}>
-                              <option value="" disabled>Kies type</option>
-                              {transmissionOptions.map(opt => <option key={opt} value={opt} className="text-navy">{opt}</option>)}
-                            </select>
-                          </div>
-                        </div>
-                        <div>
-                          <label className={labelClass}>{f('theoryDone')} *</label>
-                          <div className="flex flex-col gap-2 mt-1">
-                            {theoryOptions.map((opt) => (
-                              <label key={opt} className={cn(
-                                'flex items-center gap-3 px-4 py-3 rounded-xl border text-sm font-medium cursor-pointer transition-all duration-200',
-                                data.theoryDone === opt ? 'bg-navy text-white border-navy' : 'bg-white border-surface-border text-slate-600 hover:border-navy/30'
-                              )}>
-                                <input type="radio" name="theoryDone" value={opt} checked={data.theoryDone === opt} onChange={set('theoryDone')} className="sr-only" />
-                                <div className={cn('w-4 h-4 rounded-full border-2 flex items-center justify-center flex-shrink-0', data.theoryDone === opt ? 'border-white' : 'border-slate-300')}>
-                                  {data.theoryDone === opt && <div className="w-2 h-2 rounded-full bg-white" />}
-                                </div>
-                                {opt}
-                              </label>
-                            ))}
-                          </div>
-                        </div>
-                        <div>
-                          <label className={labelClass}>{f('previousLessons')} *</label>
-                          <div className="flex flex-col gap-2 mt-1">
-                            {previousOptions.map((opt) => (
-                              <label key={opt} className={cn(
-                                'flex items-center gap-3 px-4 py-3 rounded-xl border text-sm font-medium cursor-pointer transition-all duration-200',
-                                data.previousLessons === opt ? 'bg-navy text-white border-navy' : 'bg-white border-surface-border text-slate-600 hover:border-navy/30'
-                              )}>
-                                <input type="radio" name="previousLessons" value={opt} checked={data.previousLessons === opt} onChange={set('previousLessons')} className="sr-only" />
-                                <div className={cn('w-4 h-4 rounded-full border-2 flex items-center justify-center flex-shrink-0', data.previousLessons === opt ? 'border-white' : 'border-slate-300')}>
-                                  {data.previousLessons === opt && <div className="w-2 h-2 rounded-full bg-white" />}
-                                </div>
-                                {opt}
-                              </label>
-                            ))}
-                          </div>
-                        </div>
-                        <div>
-                          <label className={labelClass}>{f('startDate')} *</label>
-                          <div className="flex flex-wrap gap-2 mt-1">
-                            {startOptions.map((opt) => (
-                              <label key={opt} className={cn(
-                                'px-4 py-2 rounded-full border text-sm font-medium cursor-pointer transition-all duration-200',
-                                data.startDate === opt ? 'bg-navy text-white border-navy' : 'bg-white border-surface-border text-slate-600 hover:border-navy/30'
-                              )}>
-                                <input type="radio" name="startDate" value={opt} checked={data.startDate === opt} onChange={set('startDate')} className="sr-only" />
-                                {opt}
-                              </label>
-                            ))}
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-
-                    {/* Step 4: Extra */}
-                    {step === 4 && (
-                      <motion.div key="step4" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.25 }} className="space-y-5">
-                        <h2 className="text-lg font-bold text-navy mb-6 flex items-center gap-2">
-                          <BookOpen size={18} className="text-gold" />
-                          {t('step4')}
-                        </h2>
-                        <div>
-                          <label className={labelClass}>{f('specialNeeds')}</label>
-                          <div className="flex flex-wrap gap-2 mt-1">
-                            {specialOptions.map((opt) => (
-                              <label key={opt} className={cn(
-                                'px-3 py-2 rounded-full border text-xs font-medium cursor-pointer transition-all duration-200',
-                                data.specialNeeds === opt ? 'bg-navy text-white border-navy' : 'bg-white border-surface-border text-slate-600 hover:border-navy/30'
-                              )}>
-                                <input type="radio" name="specialNeeds" value={opt} checked={data.specialNeeds === opt} onChange={set('specialNeeds')} className="sr-only" />
-                                {opt}
-                              </label>
-                            ))}
-                          </div>
-                        </div>
-                        <div>
-                          <label className={labelClass}>{f('hearAbout')}</label>
-                          <select value={data.hearAbout} onChange={set('hearAbout')} className={selectClass} style={{ color: data.hearAbout ? '#0F172A' : '#CBD5E1' }}>
-                            <option value="" disabled>Kies optie</option>
-                            {hearOptions.map(opt => <option key={opt} value={opt} className="text-navy">{opt}</option>)}
-                          </select>
-                        </div>
-                        <div>
-                          <label className={labelClass}>{f('remarks')}</label>
-                          <textarea rows={4} placeholder={f('remarksPlaceholder')} value={data.remarks} onChange={set('remarks')} className={cn(inputClass, 'resize-none')} />
-                        </div>
-                        <label className="flex items-start gap-3 cursor-pointer group">
-                          <div className={cn(
-                            'mt-0.5 w-5 h-5 rounded flex items-center justify-center border-2 flex-shrink-0 transition-all duration-200',
-                            data.privacy ? 'bg-navy border-navy' : 'border-slate-300 group-hover:border-navy/50'
-                          )}>
-                            {data.privacy && <CheckCircle size={12} className="text-white" />}
-                          </div>
-                          <input type="checkbox" required checked={data.privacy} onChange={set('privacy')} className="sr-only" />
-                          <span className="text-sm text-slate-500 leading-relaxed">{f('privacy')} *</span>
-                        </label>
-                      </motion.div>
-                    )}
-
-                  </AnimatePresence>
-
-                  {formState === 'error' && (
-                    <div className="flex items-center gap-2 text-red-500 text-sm bg-red-50 rounded-xl px-4 py-3 border border-red-100 mt-5">
-                      <AlertCircle size={15} />
-                      Er ging iets mis. Probeer opnieuw of neem contact op via WhatsApp.
+                  {/* Step header bar */}
+                  <div className="px-8 pt-8 pb-6 border-b border-surface-border">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-2xl bg-navy flex items-center justify-center flex-shrink-0">
+                        {(() => { const Icon = stepIcons[step - 1]; return <Icon size={20} className="text-white" />; })()}
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-bold text-slate-300 uppercase tracking-[0.15em]">Stap {step} van {TOTAL_STEPS}</p>
+                        <h2 className="text-xl font-black text-navy">{stepLabels[step - 1]}</h2>
+                      </div>
                     </div>
-                  )}
+                  </div>
 
-                  {/* Navigation buttons */}
-                  <div className="flex items-center justify-between mt-8 pt-6 border-t border-surface-border">
+                  <div className="p-8">
+                    <AnimatePresence mode="wait">
+
+                      {/* Step 1 */}
+                      {step === 1 && (
+                        <motion.div key="step1"
+                          initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: -24 }} transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+                          className="space-y-5">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                              <label className={labelClass}>{f('firstName')} <span className="text-gold">*</span></label>
+                              <input type="text" required placeholder="Jan" value={data.firstName} onChange={set('firstName')} className={inputClass} />
+                            </div>
+                            <div>
+                              <label className={labelClass}>{f('lastName')} <span className="text-gold">*</span></label>
+                              <input type="text" required placeholder="Janssen" value={data.lastName} onChange={set('lastName')} className={inputClass} />
+                            </div>
+                          </div>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                              <label className={labelClass}>{f('birthdate')} <span className="text-gold">*</span></label>
+                              <input type="date" required value={data.birthdate} onChange={set('birthdate')} className={inputClass} />
+                            </div>
+                            <div>
+                              <label className={labelClass}>{f('nationality')}</label>
+                              <input type="text" placeholder={f('nationalityPlaceholder')} value={data.nationality} onChange={set('nationality')} className={inputClass} />
+                            </div>
+                          </div>
+                          <div>
+                            <label className={labelClass}>{f('street')} <span className="text-gold">*</span></label>
+                            <input type="text" required placeholder={f('streetPlaceholder')} value={data.street} onChange={set('street')} className={inputClass} />
+                          </div>
+                          <div className="grid grid-cols-5 gap-4">
+                            <div className="col-span-2">
+                              <label className={labelClass}>{f('postalCode')} <span className="text-gold">*</span></label>
+                              <input type="text" required placeholder={f('postalCodePlaceholder')} value={data.postalCode} onChange={set('postalCode')} className={inputClass} />
+                            </div>
+                            <div className="col-span-3">
+                              <label className={labelClass}>{f('city')} <span className="text-gold">*</span></label>
+                              <input type="text" required placeholder={f('cityPlaceholder')} value={data.city} onChange={set('city')} className={inputClass} />
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+
+                      {/* Step 2 */}
+                      {step === 2 && (
+                        <motion.div key="step2"
+                          initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: -24 }} transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+                          className="space-y-6">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                              <label className={labelClass}>{f('phone')} <span className="text-gold">*</span></label>
+                              <input type="tel" required placeholder={f('phonePlaceholder')} value={data.phone} onChange={set('phone')} className={inputClass} />
+                            </div>
+                            <div>
+                              <label className={labelClass}>{f('email')} <span className="text-gold">*</span></label>
+                              <input type="email" required placeholder={f('emailPlaceholder')} value={data.email} onChange={set('email')} className={inputClass} />
+                            </div>
+                          </div>
+                          <div>
+                            <label className={labelClass}>{f('preferredContact')} <span className="text-gold">*</span></label>
+                            <PillChoice options={contactOptions} value={data.preferredContact} name="preferredContact" onChange={setVal('preferredContact')} />
+                          </div>
+                        </motion.div>
+                      )}
+
+                      {/* Step 3 */}
+                      {step === 3 && (
+                        <motion.div key="step3"
+                          initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: -24 }} transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+                          className="space-y-6">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                              <label className={labelClass}>{f('licenseType')} <span className="text-gold">*</span></label>
+                              <PillChoice options={licenseOptions} value={data.licenseType} name="licenseType" onChange={setVal('licenseType')} />
+                            </div>
+                            <div>
+                              <label className={labelClass}>{f('transmission')} <span className="text-gold">*</span></label>
+                              <PillChoice options={transmissionOptions} value={data.transmission} name="transmission" onChange={setVal('transmission')} />
+                            </div>
+                          </div>
+                          <div>
+                            <label className={labelClass}>{f('theoryDone')} <span className="text-gold">*</span></label>
+                            <CardChoice options={theoryOptions} value={data.theoryDone} name="theoryDone" onChange={setVal('theoryDone')} />
+                          </div>
+                          <div>
+                            <label className={labelClass}>{f('previousLessons')} <span className="text-gold">*</span></label>
+                            <CardChoice options={previousOptions} value={data.previousLessons} name="previousLessons" onChange={setVal('previousLessons')} />
+                          </div>
+                          <div>
+                            <label className={labelClass}>{f('startDate')} <span className="text-gold">*</span></label>
+                            <PillChoice options={startOptions} value={data.startDate} name="startDate" onChange={setVal('startDate')} />
+                          </div>
+                        </motion.div>
+                      )}
+
+                      {/* Step 4 */}
+                      {step === 4 && (
+                        <motion.div key="step4"
+                          initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: -24 }} transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+                          className="space-y-6">
+                          <div>
+                            <label className={labelClass}>{f('specialNeeds')}</label>
+                            <PillChoice options={specialOptions} value={data.specialNeeds} name="specialNeeds" onChange={setVal('specialNeeds')} />
+                          </div>
+                          <div>
+                            <label className={labelClass}>{f('hearAbout')}</label>
+                            <PillChoice options={hearOptions} value={data.hearAbout} name="hearAbout" onChange={setVal('hearAbout')} />
+                          </div>
+                          <div>
+                            <label className={labelClass}>{f('remarks')}</label>
+                            <textarea rows={4} placeholder={f('remarksPlaceholder')} value={data.remarks} onChange={set('remarks')}
+                              className={cn(inputClass, 'resize-none')} />
+                          </div>
+
+                          {/* Privacy */}
+                          <label className="flex items-start gap-4 cursor-pointer group p-4 rounded-2xl bg-surface border-2 border-transparent hover:border-slate-100 transition-all duration-200">
+                            <div className={cn(
+                              'mt-0.5 w-6 h-6 rounded-lg border-2 flex items-center justify-center flex-shrink-0 transition-all duration-200',
+                              data.privacy ? 'bg-navy border-navy' : 'border-slate-200 group-hover:border-navy/40'
+                            )}>
+                              {data.privacy && <CheckCircle size={14} className="text-white" />}
+                            </div>
+                            <input type="checkbox" required checked={data.privacy} onChange={set('privacy')} className="sr-only" />
+                            <span className="text-sm text-slate-500 leading-relaxed pt-0.5">{f('privacy')} <span className="text-gold">*</span></span>
+                          </label>
+                        </motion.div>
+                      )}
+
+                    </AnimatePresence>
+
+                    {formState === 'error' && (
+                      <div className="flex items-center gap-3 text-red-600 text-sm bg-red-50 rounded-2xl px-5 py-4 border-2 border-red-100 mt-6">
+                        <AlertCircle size={16} className="flex-shrink-0" />
+                        Er ging iets mis. Probeer opnieuw of neem contact op via WhatsApp.
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Footer nav */}
+                  <div className="px-8 py-5 bg-surface border-t border-surface-border flex items-center justify-between">
                     {step > 1 ? (
-                      <button
-                        type="button"
-                        onClick={() => setStep(s => s - 1)}
-                        className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-surface-border text-slate-500 text-sm font-medium hover:border-navy/30 hover:text-navy transition-all duration-200"
-                      >
+                      <button type="button" onClick={() => setStep(s => s - 1)}
+                        className="flex items-center gap-2 px-5 py-3 rounded-2xl border-2 border-slate-100 text-slate-500 text-sm font-semibold hover:border-navy/20 hover:text-navy transition-all duration-200">
                         <ChevronLeft size={16} />
                         {t('prev')}
                       </button>
                     ) : <div />}
 
-                    <button
-                      type="submit"
-                      disabled={formState === 'submitting'}
+                    <button type="submit" disabled={formState === 'submitting'}
                       className={cn(
-                        'flex items-center gap-2 px-7 py-3 rounded-xl font-semibold text-sm transition-all duration-200',
+                        'flex items-center gap-2.5 px-8 py-3.5 rounded-2xl font-bold text-sm transition-all duration-200',
                         formState === 'submitting'
-                          ? 'bg-navy/60 text-white cursor-not-allowed'
-                          : 'bg-navy text-white hover:bg-navy-light hover:shadow-navy'
-                      )}
-                    >
+                          ? 'bg-navy/50 text-white cursor-not-allowed'
+                          : 'bg-navy text-white hover:bg-navy-light hover:shadow-navy hover:scale-[1.02] active:scale-[0.98]'
+                      )}>
                       {step < TOTAL_STEPS ? (
-                        <>
-                          {t('next')}
-                          <ChevronRight size={16} />
-                        </>
+                        <>{t('next')}<ChevronRight size={16} /></>
                       ) : formState === 'submitting' ? (
                         t('submitting')
                       ) : (
-                        <>
-                          {t('submit')}
-                          <Send size={14} />
-                        </>
+                        <>{t('submit')}<Send size={14} /></>
                       )}
                     </button>
                   </div>
