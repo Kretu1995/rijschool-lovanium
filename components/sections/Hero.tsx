@@ -184,7 +184,7 @@ export default function Hero() {
                 >
                   <div className="flex items-center justify-center gap-0.5 mb-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={11} className="fill-gold text-gold" />
+                      <Star key={i} size={11} className="fill-[#f59e0b] text-[#f59e0b]" />
                     ))}
                   </div>
                   <p className="text-white font-black text-2xl leading-none">4.9</p>

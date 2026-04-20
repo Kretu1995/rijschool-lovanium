@@ -20,7 +20,7 @@ function StarRating({ count = 5 }: { count?: number }) {
   return (
     <div className="flex items-center gap-0.5">
       {Array.from({ length: count }).map((_, i) => (
-        <Star key={i} size={11} className="fill-gold text-gold" />
+        <Star key={i} size={11} className="fill-[#f59e0b] text-[#f59e0b]" />
       ))}
     </div>
   );
@@ -80,7 +80,7 @@ export default function SocialProof() {
                 <span className="text-3xl font-black text-navy">4.9</span>
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={14} className="fill-gold text-gold" />
+                    <Star key={i} size={14} className="fill-[#f59e0b] text-[#f59e0b]" />
                   ))}
                 </div>
               </div>
