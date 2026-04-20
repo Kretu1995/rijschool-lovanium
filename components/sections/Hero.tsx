@@ -172,12 +172,15 @@ export default function Hero() {
                 {/* Glow under car */}
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-16 bg-gold/20 blur-3xl rounded-full pointer-events-none" />
 
-                {/* Google rating */}
+                {/* Google rating — floats up/down */}
                 <motion.div
                   initial={{ opacity: 0, y: -12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 1.2 }}
-                  className="absolute top-10 right-4 bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl px-5 py-4 text-center z-10"
+                  animate={{ opacity: 1, y: [0, -10, 0] }}
+                  transition={{
+                    opacity: { duration: 0.5, delay: 1.2 },
+                    y: { duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 1.2 },
+                  }}
+                  className="absolute top-10 right-4 bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl px-5 py-4 text-center z-20"
                 >
                   <div className="flex items-center justify-center gap-0.5 mb-1">
                     {[...Array(5)].map((_, i) => (
@@ -188,12 +191,15 @@ export default function Hero() {
                   <p className="text-white/40 text-[10px] mt-1">Google Reviews</p>
                 </motion.div>
 
-                {/* Stat floating card */}
+                {/* 97% stat — above the car, floats opposite phase */}
                 <motion.div
                   initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 1.35 }}
-                  className="absolute bottom-28 left-0 bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl px-5 py-3 z-10"
+                  animate={{ opacity: 1, y: [0, 10, 0] }}
+                  transition={{
+                    opacity: { duration: 0.5, delay: 1.35 },
+                    y: { duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 1.35 },
+                  }}
+                  className="absolute top-36 left-4 bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl px-5 py-3 z-20"
                 >
                   <p className="text-gold font-black text-2xl leading-none">97%</p>
                   <p className="text-white/40 text-[10px] mt-0.5">Slaagpercentage</p>
