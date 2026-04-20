@@ -21,9 +21,20 @@ interface FormData {
   firstName: string; lastName: string; birthdate: string; nationality: string;
   street: string; city: string; postalCode: string;
   phone: string; email: string; preferredContact: string;
+  selectedPackage: string;
   licenseType: string; transmission: string; theoryDone: string; previousLessons: string; startDate: string;
   specialNeeds: string; hearAbout: string; remarks: string; privacy: boolean;
 }
+
+const PACKAGES = [
+  { id: 'starter',    label: 'Pakket Starter',                        detail: '6u · €510',    desc: 'Kennismaking & basisvaardigheden' },
+  { id: 'comfort',    label: 'Pakket Comfort',                        detail: '12u · €1.020', desc: 'Inclusief kruispunten & manoeuvres' },
+  { id: 'master',     label: 'Pakket Master',                         detail: '20u · €1.700', desc: 'Volledig — ook snelweg & inhalen', highlight: true },
+  { id: 'verplicht',  label: 'Verplichte rijlessen (2× niet geslaagd)', detail: '6u · €510',  desc: 'Verplicht na 2× niet geslaagd' },
+  { id: 'proef',      label: 'Proefexamen',                           detail: '2u · €170',    desc: 'Klaar voor het praktijkexamen?' },
+  { id: 'examen',     label: 'Pakket Examen met leswagen',            detail: '€475',         desc: 'Proefexamen + rijles + begeleiding' },
+  { id: 'losse',      label: 'Losse rijles',                          detail: '2u · €170',    desc: 'Oefen specifiek wat jij wil' },
+];
 
 const TOTAL_STEPS = 4;
 const stepIcons = [User, Phone, Car, BookOpen];
@@ -91,6 +102,7 @@ export default function InschrijvenPage() {
     firstName: '', lastName: '', birthdate: '', nationality: '',
     street: '', city: '', postalCode: '',
     phone: '', email: '', preferredContact: '',
+    selectedPackage: '',
     licenseType: '', transmission: '', theoryDone: '', previousLessons: '', startDate: '',
     specialNeeds: '', hearAbout: '', remarks: '', privacy: false,
   });
@@ -383,6 +395,33 @@ export default function InschrijvenPage() {
                           initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: -24 }} transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
                           className="space-y-6">
+
+                          {/* Package selector */}
+                          <div>
+                            <label className={labelClass}>Gewenst pakket of les <span className="text-gold">*</span></label>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-1">
+                              {PACKAGES.map((pkg) => {
+                                const active = data.selectedPackage === pkg.id;
+                                return (
+                                  <label key={pkg.id} className={cn(
+                                    'flex flex-col gap-0.5 px-4 py-3.5 rounded-2xl border-2 cursor-pointer transition-all duration-200 select-none',
+                                    active
+                                      ? pkg.highlight ? 'bg-navy border-navy' : 'bg-navy border-navy'
+                                      : 'bg-white border-slate-100 hover:border-navy/30'
+                                  )}>
+                                    <input type="radio" name="selectedPackage" value={pkg.id}
+                                      checked={active} onChange={() => setVal('selectedPackage')(pkg.id)} className="sr-only" />
+                                    <div className="flex items-center justify-between gap-2">
+                                      <span className={cn('text-sm font-bold leading-snug', active ? 'text-white' : 'text-navy')}>{pkg.label}</span>
+                                      <span className={cn('text-xs font-black whitespace-nowrap flex-shrink-0', active ? 'text-gold' : 'text-navy')}>{pkg.detail}</span>
+                                    </div>
+                                    <span className={cn('text-xs', active ? 'text-white/50' : 'text-slate-400')}>{pkg.desc}</span>
+                                  </label>
+                                );
+                              })}
+                            </div>
+                          </div>
+
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                               <label className={labelClass}>{f('licenseType')} <span className="text-gold">*</span></label>

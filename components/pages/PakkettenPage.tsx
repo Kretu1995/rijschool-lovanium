@@ -268,8 +268,8 @@ export default function PakkettenPage() {
                       <span className="text-[10px] font-bold uppercase tracking-widest text-amber-700 bg-amber-100 px-3 py-1 rounded-full">Na 2× niet geslaagd</span>
                     </div>
                     <div className="text-right flex-shrink-0">
-                      <span className="text-2xl font-black text-navy">€85</span>
-                      <span className="text-slate-400 text-xs ml-1">/ uur</span>
+                      <span className="text-2xl font-black text-navy">€510</span>
+                      <span className="text-slate-400 text-xs block">6u · incl. btw</span>
                     </div>
                   </div>
                   <p className="text-slate-600 leading-relaxed">
@@ -292,8 +292,8 @@ export default function PakkettenPage() {
                       <span className="text-[10px] font-bold uppercase tracking-widest text-blue-700 bg-blue-100 px-3 py-1 rounded-full">Minstens 1 maand voor je examen</span>
                     </div>
                     <div className="text-right flex-shrink-0">
-                      <span className="text-2xl font-black text-navy">€85</span>
-                      <span className="text-slate-400 text-xs ml-1">/ uur</span>
+                      <span className="text-2xl font-black text-navy">€170</span>
+                      <span className="text-slate-400 text-xs block">2u · incl. btw</span>
                     </div>
                   </div>
                   <p className="text-slate-600 leading-relaxed">
@@ -317,7 +317,7 @@ export default function PakkettenPage() {
                       <span className="text-[10px] font-bold uppercase tracking-widest text-gold bg-gold/15 px-3 py-1 rounded-full">Min. 6u rijles vereist</span>
                     </div>
                     <div className="text-right flex-shrink-0">
-                      <span className="text-2xl font-black text-gold">Op aanvraag</span>
+                      <span className="text-2xl font-black text-gold">€475</span>
                     </div>
                   </div>
                   <p className="text-white/60 leading-relaxed mb-6">
@@ -373,8 +373,8 @@ export default function PakkettenPage() {
                     <Car size={22} className="text-navy" />
                   </div>
                   <div className="text-right">
-                    <span className="text-2xl font-black text-navy">€85</span>
-                    <span className="text-slate-400 text-xs block">/ uur · incl. btw</span>
+                    <span className="text-2xl font-black text-navy">€170</span>
+                    <span className="text-slate-400 text-xs block">2u · incl. btw</span>
                   </div>
                 </div>
                 <h3 className="text-navy font-black text-lg mb-1">Losse rijles</h3>
