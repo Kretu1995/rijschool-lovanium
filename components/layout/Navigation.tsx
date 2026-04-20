@@ -24,6 +24,7 @@ export default function Navigation() {
   const navLinks = [
     { label: 'Home', href: `/${locale}` },
     { label: t('services'), href: `/${locale}/diensten` },
+    { label: 'Pakketten', href: `/${locale}/pakketten` },
     { label: t('team'), href: `/${locale}/team` },
     { label: t('pricing'), href: `/${locale}#pricing` },
     { label: t('contact'), href: `/${locale}#booking` },
