@@ -2,7 +2,6 @@
 
 import { useTranslations } from 'next-intl';
 import { Star } from 'lucide-react';
-import { motion } from 'framer-motion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 
 interface Testimonial {
@@ -62,19 +61,13 @@ function ScrollRow({ items, reverse = false }: { items: Testimonial[]; reverse?:
   const doubled = [...items, ...items];
   return (
     <div className="overflow-hidden relative">
-      {/* Fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-surface to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-surface to-transparent z-10 pointer-events-none" />
-
-      <motion.div
-        className="flex py-3"
-        animate={{ x: reverse ? ['0%', '50%'] : ['0%', '-50%'] }}
-        transition={{ duration: 28, ease: 'linear', repeat: Infinity }}
-      >
+      <div className="absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-surface to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-surface to-transparent z-10 pointer-events-none" />
+      <div className={`flex py-3 ${reverse ? 'animate-scroll-right' : 'animate-scroll-left'}`}>
         {doubled.map((item, i) => (
           <TestimonialCard key={i} item={item} index={i % items.length} />
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }

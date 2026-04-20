@@ -138,16 +138,15 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right: visual card */}
+          {/* Right: Audi photo + floating stats */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="relative hidden lg:block"
+            className="relative hidden lg:flex flex-col gap-4"
           >
-            {/* Main card */}
-            <div className="relative rounded-3xl overflow-hidden bg-navy aspect-[4/5] shadow-navy">
-              {/* Real Lovanium Audi photo */}
+            {/* Main photo — landscape, natural aspect */}
+            <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-navy">
               <Image
                 src="/audi-lovanium.jpg"
                 alt="Rijschool Lovanium Audi A3 lesvoertuig"
@@ -155,56 +154,40 @@ export default function Hero() {
                 className="object-cover object-center"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-navy/5" />
-
-              {/* Content on card */}
-              <div className="absolute inset-0 flex flex-col justify-between p-10">
-                <div>
-                  <p className="text-gold text-xs font-bold tracking-widest uppercase mb-2">Rijschool Lovanium</p>
-                  <p className="text-white/90 text-sm">Leuven · België</p>
-                </div>
-
-                {/* Animated stats */}
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between py-4 border-b border-white/10">
-                    <span className="text-white/60 text-sm">{t('stat1Label')}</span>
-                    <span className="text-white font-black text-xl"><AnimatedCounter to={97} suffix="%" /></span>
-                  </div>
-                  <div className="flex items-center justify-between py-4 border-b border-white/10">
-                    <span className="text-white/60 text-sm">{t('stat2Label')}</span>
-                    <span className="text-white font-black text-xl"><AnimatedCounter to={10} suffix="+" /></span>
-                  </div>
-                  <div className="flex items-center justify-between py-4">
-                    <span className="text-white/60 text-sm">{t('stat3Label')}</span>
-                    <span className="text-white font-black text-xl"><AnimatedCounter to={500} suffix="+" /></span>
-                  </div>
-                </div>
-
-                {/* Bottom CTA */}
-                <button
-                  onClick={() => scrollTo('booking')}
-                  className="w-full py-4 rounded-2xl bg-gold text-white font-bold text-sm tracking-wide hover:bg-gold-light transition-colors duration-200"
-                >
-                  {t('cta1')} →
-                </button>
+              {/* Subtle vignette only at bottom */}
+              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-navy/60 to-transparent" />
+              {/* Label */}
+              <div className="absolute bottom-5 left-5">
+                <p className="text-white font-bold text-sm">Rijschool Lovanium · Audi A3</p>
+                <p className="text-white/60 text-xs">Leuven · België</p>
+              </div>
+              {/* Google badge */}
+              <div className="absolute top-4 right-4 bg-white rounded-2xl shadow-card px-4 py-3 border border-surface-border">
+                <p className="text-xl font-black text-navy leading-none">4.9 ★</p>
+                <p className="text-slate-400 text-[10px] mt-0.5">Google Reviews</p>
               </div>
             </div>
 
-            {/* Floating badge */}
-            <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-card px-5 py-4 border border-surface-border">
-              <p className="text-2xl font-black text-navy">4.9 ★</p>
-              <p className="text-slate-400 text-xs">Google Reviews</p>
+            {/* Stats row below photo */}
+            <div className="grid grid-cols-3 gap-3">
+              {[
+                { value: 97, suffix: '%', label: t('stat1Label') },
+                { value: 10, suffix: '+', label: t('stat2Label') },
+                { value: 500, suffix: '+', label: t('stat3Label') },
+              ].map((stat, i) => (
+                <div key={i} className="bg-white rounded-2xl border border-surface-border px-4 py-4 text-center shadow-card">
+                  <p className="text-2xl font-black text-navy leading-none mb-1">
+                    <AnimatedCounter to={stat.value} suffix={stat.suffix} />
+                  </p>
+                  <p className="text-slate-400 text-[11px]">{stat.label}</p>
+                </div>
+              ))}
             </div>
 
-            {/* Floating bottom badge */}
-            <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-card px-5 py-3 border border-surface-border flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-gold-bg flex items-center justify-center">
-                <CheckCircle size={16} className="text-gold" />
-              </div>
-              <div>
-                <p className="text-navy font-bold text-sm">Erkenning #2863</p>
-                <p className="text-slate-400 text-xs">Federale Overheid</p>
-              </div>
+            {/* Erkenning badge */}
+            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white rounded-full shadow-card px-5 py-2.5 border border-surface-border flex items-center gap-2">
+              <CheckCircle size={14} className="text-gold" />
+              <p className="text-navy font-bold text-xs whitespace-nowrap">Erkend rijschool #2863</p>
             </div>
           </motion.div>
         </div>

@@ -21,7 +21,7 @@ export default function WhatsAppButton() {
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0, opacity: 0 }}
           transition={{ type: 'spring', stiffness: 300, damping: 24 }}
-          className="fixed bottom-24 right-5 z-40 flex items-center gap-3 md:bottom-8"
+          className="fixed bottom-8 right-5 z-40 flex items-center gap-3"
         >
           {/* Tooltip */}
           <AnimatePresence>
