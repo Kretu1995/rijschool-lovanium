@@ -57,27 +57,12 @@ function TestimonialCard({ item, index }: { item: Testimonial; index: number }) 
   );
 }
 
-function ScrollRow({ items, reverse = false }: { items: Testimonial[]; reverse?: boolean }) {
-  const doubled = [...items, ...items];
-  return (
-    <div className="overflow-hidden relative">
-      <div className="absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-surface to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-surface to-transparent z-10 pointer-events-none" />
-      <div className={`flex py-3 w-max ${reverse ? 'animate-scroll-right' : 'animate-scroll-left'}`}>
-        {doubled.map((item, i) => (
-          <TestimonialCard key={i} item={item} index={i % items.length} />
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function SocialProof() {
   const t = useTranslations('proof');
   const testimonials = t.raw('testimonials') as Testimonial[];
 
-  const row1 = testimonials.slice(0, Math.ceil(testimonials.length / 2));
-  const row2 = testimonials.slice(Math.ceil(testimonials.length / 2));
+  // Triple so the loop is always seamlessly filled on any screen width
+  const looped = [...testimonials, ...testimonials, ...testimonials];
 
   return (
     <section id="proof" className="section-padding bg-surface overflow-hidden">
@@ -117,10 +102,15 @@ export default function SocialProof() {
         </AnimatedSection>
       </div>
 
-      {/* Full-width scrolling rows */}
-      <div className="space-y-4">
-        <ScrollRow items={row1} />
-        <ScrollRow items={row2.length > 0 ? row2 : row1} reverse />
+      {/* Single seamless scrolling row */}
+      <div className="overflow-hidden relative">
+        <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-surface to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-surface to-transparent z-10 pointer-events-none" />
+        <div className="flex py-4 w-max animate-scroll-left">
+          {looped.map((item, i) => (
+            <TestimonialCard key={i} item={item} index={i % testimonials.length} />
+          ))}
+        </div>
       </div>
     </section>
   );
