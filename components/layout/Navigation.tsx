@@ -2,8 +2,8 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { useEffect, useState } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
@@ -124,7 +124,7 @@ export default function Navigation() {
               <p className="text-slate-400 text-sm mt-1">Ma–Vr 10:00–17:00</p>
             </div>
           </div>
-      }
+      )}
     </>
   );
 }
