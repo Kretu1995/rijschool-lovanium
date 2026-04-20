@@ -82,7 +82,6 @@ export default async function LocaleLayout({
           <Navigation />
           <main>{children}</main>
           <Footer />
-          <StickyMobileCTA />
           <WhatsAppButton />
           <ChatBot />
         </NextIntlClientProvider>
