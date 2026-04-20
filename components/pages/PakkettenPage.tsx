@@ -246,27 +246,127 @@ export default function PakkettenPage() {
       </section>
 
       {/* Extra services */}
-      <section className="section-padding bg-surface">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14">
+      <section className="section-padding bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="mb-14">
             <p className="eyebrow mb-3">Individuele lessen</p>
             <h2 className="heading-lg">Specifieke rijlessen</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {extraServices.map((service, i) => {
-              const Icon = service.icon;
-              return (
-                <div key={i} className={`border rounded-3xl p-7 bg-white ${service.color.includes('border') ? service.color.split(' ')[1] : 'border-surface-border'} bg-white`}>
-                  <div className={`w-11 h-11 rounded-2xl ${service.iconBg} flex items-center justify-center mb-5`}>
-                    <Icon size={20} className={service.iconColor} />
-                  </div>
-                  <h3 className="text-navy font-bold text-base mb-1">{service.title}</h3>
-                  <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">{service.subtitle}</p>
-                  <p className="text-slate-500 text-sm leading-relaxed">{service.description}</p>
+          <div className="space-y-5">
+
+            {/* Verplichte rijlessen */}
+            <div className="bg-amber-50 border border-amber-200 rounded-3xl p-8">
+              <div className="flex items-start gap-5">
+                <div className="w-12 h-12 rounded-2xl bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <AlertTriangle size={22} className="text-amber-600" />
                 </div>
-              );
-            })}
+                <div>
+                  <div className="flex flex-wrap items-center gap-3 mb-2">
+                    <h3 className="text-navy font-black text-lg">Verplichte rijlessen</h3>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-amber-700 bg-amber-100 px-3 py-1 rounded-full">Na 2× niet geslaagd</span>
+                  </div>
+                  <p className="text-slate-600 leading-relaxed">
+                    Ben je tweemaal niet geslaagd voor het rijexamen dan ben je verplicht om rijlessen te volgen. Onze lesgevers zorgen ervoor dat je met de correcte technieken leert rijden en de juiste keuzes maakt in het verkeer zodat je snel je definitief rijbewijs op zak hebt!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Proefexamen */}
+            <div className="bg-blue-50 border border-blue-200 rounded-3xl p-8">
+              <div className="flex items-start gap-5">
+                <div className="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Target size={22} className="text-blue-600" />
+                </div>
+                <div>
+                  <div className="flex flex-wrap items-center gap-3 mb-2">
+                    <h3 className="text-navy font-black text-lg">Proefexamen</h3>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-blue-700 bg-blue-100 px-3 py-1 rounded-full">Minstens 1 maand voor je examen</span>
+                  </div>
+                  <p className="text-slate-600 leading-relaxed">
+                    Tijdens deze rijles scannen onze lesgevers jouw rijstijl en gaan ze na of je klaar bent voor het praktijkexamen. Dankzij hun feedback en tips ben je optimaal voorbereid voor het praktijkexamen. Plan een proefexamen minstens een maand voor je praktijkexamen zodanig dat je nadien voldoende tijd hebt om aan de slag te gaan met de feedback van je lesgever.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Examen met leswagen */}
+            <div className="bg-navy rounded-3xl p-8 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
+              <div className="relative flex items-start gap-5">
+                <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <ClipboardList size={22} className="text-gold" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center gap-3 mb-2">
+                    <h3 className="text-white font-black text-lg">Examen met leswagen</h3>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-gold bg-gold/15 px-3 py-1 rounded-full">Min. 6u rijles vereist</span>
+                  </div>
+                  <p className="text-white/60 leading-relaxed mb-6">
+                    Je kan ervoor kiezen om het praktisch examen af te leggen met onze leswagen en jouw rijlesgever als begeleider. Dit is enkel mogelijk wanneer je ook vooraf minstens 6u rijles hebt gevolgd met onze leswagen.
+                  </p>
+                  <div className="bg-white/8 border border-white/10 rounded-2xl p-5">
+                    <p className="text-white/40 text-xs font-bold uppercase tracking-widest mb-4">Inbegrepen in het pakket</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      {[
+                        'Proefexamen (2u)',
+                        'Rijles net voor het praktijkexamen (1u)',
+                        'Examenbegeleiding',
+                        'Retributie voor het examencentrum',
+                      ].map((item) => (
+                        <div key={item} className="flex items-center gap-2.5">
+                          <div className="w-4 h-4 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
+                            <Check size={9} className="text-gold" />
+                          </div>
+                          <span className="text-white/70 text-sm">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom row: 2 cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+              {/* Vervallen rijbewijs */}
+              <div className="bg-red-50 border border-red-100 rounded-3xl p-8">
+                <div className="w-12 h-12 rounded-2xl bg-red-100 flex items-center justify-center mb-5">
+                  <RotateCcw size={22} className="text-red-500" />
+                </div>
+                <div className="flex flex-wrap items-center gap-3 mb-2">
+                  <h3 className="text-navy font-black text-lg">Vervallen voorlopig rijbewijs</h3>
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-red-600 bg-red-100 px-3 py-1 rounded-full inline-block mb-4">Verplicht 6u rijles</span>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  Is je voorlopig rijbewijs vervallen? Dan moet je vanuit de overheid verplicht 6u rijles volgen. Let er goed op dat je je rijlessen pas volgt <strong>NADAT</strong> je voorlopig rijbewijs is vervallen. Nadien kan je een nieuw voorlopig rijbewijs (model 12 maanden) aanvragen dat 1 jaar geldig is en waarmee je steeds met begeleider moet oefenen.
+                </p>
+              </div>
+
+              {/* Losse rijles */}
+              <div className="bg-surface border border-surface-border rounded-3xl p-8">
+                <div className="w-12 h-12 rounded-2xl bg-navy-50 flex items-center justify-center mb-5">
+                  <Car size={22} className="text-navy" />
+                </div>
+                <div className="flex flex-wrap items-center gap-3 mb-2">
+                  <h3 className="text-navy font-black text-lg">Losse rijles</h3>
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-navy bg-navy-50 px-3 py-1 rounded-full inline-block mb-4">Oefen wat jij wil</span>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  Wil je eindelijk alle parkeermanoeuvres onder de knie krijgen of ga je misschien liever de eerste keer de snelweg op met een ervaren rijlesgever naast je? Kies dan voor een losse rijles en oefen specifiek op wat jij graag wil.
+                </p>
+                <Link
+                  href={`/${locale}/inschrijven`}
+                  className="inline-flex items-center gap-2 mt-6 text-navy font-semibold text-sm hover:text-gold transition-colors group"
+                >
+                  Boek je rijles
+                  <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
