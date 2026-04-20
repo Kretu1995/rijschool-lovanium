@@ -89,9 +89,7 @@ export default function Hero() {
                   <h1 className="text-5xl md:text-6xl xl:text-[72px] font-black tracking-tight leading-[1.0] text-white">
                     {t('headline1')}
                   </h1>
-                  <h1 className="text-5xl md:text-6xl xl:text-[72px] font-black tracking-tight leading-[1.0]"
-                    style={{ WebkitTextStroke: '2px #C8963E', color: 'transparent' }}
-                  >
+                  <h1 className="text-5xl md:text-6xl xl:text-[72px] font-black tracking-tight leading-[1.0] text-gold">
                     {t('headline2')}
                   </h1>
                 </motion.div>
