@@ -25,6 +25,7 @@ export default function Navigation() {
     { label: t('team'), href: `/${locale}/team` },
     { label: t('pricing'), href: `/${locale}#pricing` },
     { label: t('contact'), href: `/${locale}#booking` },
+    { label: t('booking'), href: `/${locale}/inschrijven` },
   ];
 
   return (
@@ -68,7 +69,7 @@ export default function Navigation() {
           <div className="hidden md:flex items-center gap-4">
             <LanguageSwitcher />
             <Link
-              href={`/${locale}#booking`}
+              href={`/${locale}/inschrijven`}
               className="btn-primary text-sm"
             >
               {t('bookCta')}
@@ -110,7 +111,7 @@ export default function Navigation() {
             </nav>
             <div className="mt-8 flex flex-col gap-4">
               <Link
-                href={`/${locale}#booking`}
+                href={`/${locale}/inschrijven`}
                 onClick={() => setMobileOpen(false)}
                 className="btn-primary justify-center text-center"
               >

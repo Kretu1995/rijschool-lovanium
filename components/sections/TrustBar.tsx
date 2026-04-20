@@ -13,24 +13,17 @@ const items = [
   { icon: Clock, text: 'Flexibele planning' },
 ];
 
-// Duplicate for seamless loop
-const allItems = [...items, ...items];
-
 export default function TrustBar() {
   return (
-    <div className="bg-navy py-4 overflow-hidden">
-      <div className="flex">
-        <div className="marquee-inner">
-          {allItems.map((item, i) => {
+    <div className="bg-navy py-5 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
+          {items.map((item, i) => {
             const Icon = item.icon;
             return (
-              <div
-                key={i}
-                className="flex items-center gap-2.5 px-8 text-white/70 flex-shrink-0 text-sm font-medium"
-              >
+              <div key={i} className="flex items-center gap-2 text-white/75 text-sm font-medium">
                 <Icon size={14} className="text-gold flex-shrink-0" />
                 <span>{item.text}</span>
-                <span className="ml-8 text-white/20">·</span>
               </div>
             );
           })}
