@@ -396,6 +396,7 @@
     "eyebrow": "Hoe het werkt",
     "headline": "Van nul tot rijbewijs in 4 stappen",
     "subtitle": "We begeleiden je door elk onderdeel. Duidelijk, persoonlijk en op jouw tempo.",
+    "startCta": "Start vandaag",
     "steps": [
       {
         "number": "01",
@@ -591,6 +592,9 @@
       "privacy": "Ik ga akkoord met de verwerking van mijn gegevens voor de verwerking van mijn inschrijvingsaanvraag.",
       "required": "Verplicht veld"
     }
+  },
+  "photoStrip": {
+    "captions": ["Onze Audi A3", "Theorieopleiding", "Rijles in Leuven", "Online leermateriaal"]
   },
   "trustBar": {
     "items": ["Erkend rijschool #2863","4.9/5 Google Reviews","Moderne Audi-lesvoertuigen","Naast station Leuven","WhatsApp bereikbaar","Korte wachttijden","Manueel & automaat","Flexibele planning"]

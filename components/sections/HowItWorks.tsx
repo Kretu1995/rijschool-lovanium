@@ -76,7 +76,7 @@ export default function HowItWorks() {
             onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
             className="btn-primary text-base px-8 py-4 group"
           >
-            Start vandaag
+            {t('startCta')}
             <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform duration-200" />
           </button>
         </MotionInView>

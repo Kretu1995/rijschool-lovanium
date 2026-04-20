@@ -27,7 +27,7 @@ export default function Navigation() {
     { label: t('packages'), href: `/${locale}/pakketten` },
     { label: t('team'), href: `/${locale}/team` },
     { label: t('pricing'), href: `/${locale}#pricing` },
-    { label: t('contact'), href: `/${locale}#booking` },
+    { label: t('booking'), href: `/${locale}/inschrijven` },
   ];
 
   return (
@@ -57,7 +57,7 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-5">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

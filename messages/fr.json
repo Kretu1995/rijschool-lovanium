@@ -396,6 +396,7 @@
     "eyebrow": "Comment ça marche",
     "headline": "De zéro au permis en 4 étapes",
     "subtitle": "Nous vous guidons à travers chaque étape. Clair, personnel et à votre rythme.",
+    "startCta": "Commencer aujourd'hui",
     "steps": [
       {
         "number": "01",
@@ -591,6 +592,9 @@
       "privacy": "J'accepte le traitement de mes données pour le traitement de ma demande d'inscription.",
       "required": "Champ obligatoire"
     }
+  },
+  "photoStrip": {
+    "captions": ["Notre Audi A3", "Formation théorique", "Conduite à Louvain", "Supports d'apprentissage"]
   },
   "trustBar": {
     "items": ["Auto-école agréée #2863","4.9/5 Google Reviews","Véhicules Audi modernes","À côté de la gare de Louvain","WhatsApp disponible","Délais d'attente courts","Manuel & automatique","Planning flexible"]

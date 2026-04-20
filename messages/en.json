@@ -396,6 +396,7 @@
     "eyebrow": "How it works",
     "headline": "From zero to license in 4 steps",
     "subtitle": "We guide you through every part. Clear, personal and at your own pace.",
+    "startCta": "Start today",
     "steps": [
       {
         "number": "01",
@@ -591,6 +592,9 @@
       "privacy": "I agree to the processing of my data for handling my enrollment request.",
       "required": "Required field"
     }
+  },
+  "photoStrip": {
+    "captions": ["Our Audi A3", "Theory course", "Driving in Leuven", "Online study materials"]
   },
   "trustBar": {
     "items": ["Accredited driving school #2863","4.9/5 Google Reviews","Modern Audi training vehicles","Next to Leuven station","WhatsApp available","Short waiting times","Manual & automatic","Flexible scheduling"]

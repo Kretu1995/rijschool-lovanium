@@ -1,32 +1,20 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const photos = [
-  {
-    src: '/audi-lovanium.jpg',
-    alt: 'Rijschool Lovanium Audi A3',
-    caption: 'Onze Audi A3',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80&fit=crop',
-    alt: 'Theorieles',
-    caption: 'Theorieopleiding',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&q=80&fit=crop',
-    alt: 'Rijden in Leuven',
-    caption: 'Rijles in Leuven',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&q=80&fit=crop',
-    alt: 'Online theorie',
-    caption: 'Online leermateriaal',
-  },
+  { src: '/audi-lovanium.jpg', alt: 'Rijschool Lovanium Audi A3' },
+  { src: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80&fit=crop', alt: 'Theorieles' },
+  { src: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&q=80&fit=crop', alt: 'Rijden in Leuven' },
+  { src: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&q=80&fit=crop', alt: 'Online theorie' },
 ];
 
 export default function PhotoStrip() {
+  const t = useTranslations('photoStrip');
+  const captions = t.raw('captions') as string[];
+
   return (
     <div className="bg-white py-8 md:py-10">
       <div className="max-w-7xl mx-auto px-6">
@@ -48,7 +36,7 @@ export default function PhotoStrip() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
               <div className="absolute bottom-3 left-3">
-                <p className="text-white text-xs font-bold drop-shadow">{photo.caption}</p>
+                <p className="text-white text-xs font-bold drop-shadow">{captions[i]}</p>
               </div>
             </motion.div>
           ))}
