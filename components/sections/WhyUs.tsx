@@ -69,14 +69,14 @@ export default function WhyUs() {
               </div>
               <div className="col-span-2 relative rounded-2xl overflow-hidden aspect-[16/7]">
                 <Image
-                  src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=700&q=80&fit=crop"
-                  alt="Lesvoertuig"
+                  src="/audi-lovanium.jpg"
+                  alt="Rijschool Lovanium Audi A3"
                   fill
-                  className="object-cover opacity-75"
+                  className="object-cover object-center opacity-90"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-navy/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-navy/70 to-transparent" />
                 <div className="absolute bottom-3 left-4">
-                  <p className="text-white text-xs font-bold">Audi lesvoertuigen</p>
+                  <p className="text-white text-xs font-bold">Rijschool Lovanium · Audi A3</p>
                   <p className="text-white/60 text-[10px]">Manueel & automaat</p>
                 </div>
               </div>

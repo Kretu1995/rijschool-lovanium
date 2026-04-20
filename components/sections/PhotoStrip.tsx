@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 const photos = [
   {
-    src: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80&fit=crop',
-    alt: 'Lesvoertuig Lovanium',
-    caption: 'Moderne Audi\'s',
+    src: '/audi-lovanium.jpg',
+    alt: 'Rijschool Lovanium Audi A3',
+    caption: 'Onze Audi A3',
   },
   {
     src: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80&fit=crop',
