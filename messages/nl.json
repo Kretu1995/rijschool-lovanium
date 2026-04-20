@@ -1,0 +1,231 @@
+{
+  "nav": {
+    "services": "Diensten",
+    "whyUs": "Waarom wij",
+    "pricing": "Pakketten",
+    "booking": "Inschrijven",
+    "contact": "Contact",
+    "bookCta": "Start je rijbewijs"
+  },
+  "hero": {
+    "eyebrow": "Rijschool Lovanium · Leuven",
+    "headline1": "Jouw rijbewijs.",
+    "headline2": "Jouw vrijheid.",
+    "subtitle": "Bij Rijschool Lovanium begeleiden ervaren instructeurs je stap voor stap — zonder stress, met vertrouwen, naar jouw rijbewijs.",
+    "cta1": "Start je rijopleiding",
+    "cta2": "Bekijk pakketten",
+    "stat1Value": "97%",
+    "stat1Label": "Slaagpercentage",
+    "stat2Value": "600+",
+    "stat2Label": "Geslaagde leerlingen",
+    "stat3Value": "15+",
+    "stat3Label": "Jaar ervaring",
+    "scrollHint": "Scroll om te ontdekken"
+  },
+  "proof": {
+    "eyebrow": "Wat onze leerlingen zeggen",
+    "headline": "Meer dan 600 tevreden rijbewijshouders",
+    "ratingLabel": "gemiddelde score",
+    "reviewsLabel": "Google reviews",
+    "testimonials": [
+      {
+        "name": "Sarah Vandenbroeck",
+        "age": 19,
+        "text": "In slechts drie maanden mijn rijbewijs gehaald! De instructeurs zijn geduldig, duidelijk en stellen je echt op je gemak. Absoluut aanrader voor iedereen die zenuwachtig is.",
+        "rating": 5
+      },
+      {
+        "name": "Thomas De Smedt",
+        "age": 22,
+        "text": "Was eerst erg nerveus maar na de eerste les voelde ik me al veel beter. De persoonlijke aanpak maakt echt het verschil. Eerste keer geslaagd!",
+        "rating": 5
+      },
+      {
+        "name": "Emma Claes",
+        "age": 18,
+        "text": "Uitstekende prijs-kwaliteitverhouding. Moderne Audi, geduldige instructeur en flexibele uren. Ik zou Rijschool Lovanium aan iedereen aanraden.",
+        "rating": 5
+      },
+      {
+        "name": "Luca Martens",
+        "age": 24,
+        "text": "Na twee mislukte pogingen bij een andere rijschool ben ik hier geslaagd. De begeleiding is compleet anders — veel rustiger en doelgerichter.",
+        "rating": 5
+      },
+      {
+        "name": "Julie Peeters",
+        "age": 17,
+        "text": "Mijn instructeur was super professioneel en vriendelijk. De theorieles hielp me enorm voor het examen. Top rijschool in Leuven!",
+        "rating": 5
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Onze diensten",
+    "headline": "Alles voor jouw rijbewijs",
+    "subtitle": "Van theorie tot praktijk — wij begeleiden je door elk onderdeel van je rijopleiding.",
+    "items": [
+      {
+        "icon": "BookOpen",
+        "title": "Theorieles",
+        "description": "Interactieve theorielessen die je volledig voorbereiden op het theoretisch verkeersexamen. Leer de verkeersregels op een begrijpelijke manier.",
+        "badge": "Inclusief in elk pakket"
+      },
+      {
+        "icon": "Car",
+        "title": "Praktijkles",
+        "description": "Rij aan het stuur van een moderne Audi met een ervaren instructeur naast je. We leren je rijden op echte Leuvense wegen.",
+        "badge": "Meest populair"
+      },
+      {
+        "icon": "RefreshCw",
+        "title": "Terugkommoment",
+        "description": "Al geslaagd maar toch een opfrissessie nodig? Ons terugkommoment helpt je om je rijvaardigheden scherp te houden.",
+        "badge": "Na je rijbewijs"
+      }
+    ],
+    "cta": "Plan een gratis gesprek"
+  },
+  "whyUs": {
+    "eyebrow": "Waarom Lovanium",
+    "headline": "Niet zomaar een rijschool",
+    "subtitle": "We zetten de standaard voor rijopleidingen in Leuven. Hier is waarom onze leerlingen ons kiezen.",
+    "items": [
+      {
+        "icon": "Trophy",
+        "title": "97% slaagpercentage",
+        "description": "Onze resultaten spreken voor zich. Bijna al onze leerlingen slagen bij de eerste poging."
+      },
+      {
+        "icon": "Zap",
+        "title": "Korte wachttijden",
+        "description": "Je start snel met rijden. Geen maanden wachten — we plannen lessen naar jouw ritme."
+      },
+      {
+        "icon": "Car",
+        "title": "Moderne Audi-wagens",
+        "description": "Rij in comfort en veiligheid. Onze vloot bestaat uit recente Audi-modellen met dubbele bediening."
+      },
+      {
+        "icon": "MapPin",
+        "title": "Nabij station Leuven",
+        "description": "Centraal gelegen op wandelafstand van het station. Gemakkelijk bereikbaar met tram, bus of trein."
+      },
+      {
+        "icon": "User",
+        "title": "Persoonlijke begeleiding",
+        "description": "Elke leerling krijgt een vaste instructeur. Zo bouwen we vertrouwen en gaan we op jouw tempo."
+      },
+      {
+        "icon": "Shield",
+        "title": "Gecertificeerde instructeurs",
+        "description": "Al onze instructeurs zijn officieel erkend door het Vlaams Departement Mobiliteit en Openbare Werken."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Pakketten & Prijzen",
+    "headline": "Transparant. Eerlijk. Zonder verrassingen.",
+    "subtitle": "Kies het pakket dat bij jouw situatie past. Elke formule is inclusief theorieopleiding.",
+    "popular": "Meest gekozen",
+    "perLesson": "per les",
+    "included": "Inbegrepen",
+    "bookPackage": "Kies dit pakket",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "52",
+        "lessons": "10",
+        "description": "Ideaal als je al enige rijervaring hebt of snel wil kennismaken.",
+        "features": [
+          "10 praktijklessen (50 min)",
+          "Theorieopleiding online",
+          "1 examenaangifte inbegrepen",
+          "Persoonlijke rijcoach",
+          "Flexibele planning"
+        ]
+      },
+      {
+        "name": "Populair",
+        "price": "47",
+        "lessons": "20",
+        "description": "Onze bestseller. Geschikt voor de meeste beginners die comfortabel willen rijden.",
+        "features": [
+          "20 praktijklessen (50 min)",
+          "Theorieopleiding online",
+          "2 examenaan­giftes inbegrepen",
+          "Persoonlijke rijcoach",
+          "Flexibele planning",
+          "1 terugkommoment gratis"
+        ]
+      },
+      {
+        "name": "Intensief",
+        "price": "43",
+        "lessons": "30",
+        "description": "Voor wie snel wil slagen met maximale voorbereiding en ondersteuning.",
+        "features": [
+          "30 praktijklessen (50 min)",
+          "Theorieopleiding online",
+          "Onbeperkte examen­aangiftes",
+          "Persoonlijke rijcoach",
+          "Prioriteitsplanning",
+          "2 terugkommomenten gratis",
+          "Examenvoorbereiding sessie"
+        ]
+      }
+    ],
+    "note": "Alle prijzen zijn inclusief BTW. Examenkosten zijn niet inbegrepen. Vraag naar onze gespreide betalingsopties.",
+    "customTitle": "Op zoek naar iets specifieks?",
+    "customText": "Wij stellen ook maatwerkaanbiedingen op. Neem contact op voor een persoonlijk gesprek.",
+    "customCta": "Contacteer ons"
+  },
+  "booking": {
+    "eyebrow": "Inschrijven",
+    "headline": "Klaar om te starten?",
+    "subtitle": "Vul het formulier in en wij nemen binnen 24 uur contact met je op om alles te bespreken.",
+    "form": {
+      "name": "Volledige naam",
+      "namePlaceholder": "Jan Janssen",
+      "phone": "Telefoonnummer",
+      "phonePlaceholder": "+32 470 00 00 00",
+      "email": "E-mailadres",
+      "emailPlaceholder": "jan@voorbeeld.be",
+      "package": "Welk pakket interesseert je?",
+      "packageDefault": "Kies een pakket...",
+      "packageOptions": ["Starter (10 lessen)", "Populair (20 lessen)", "Intensief (30 lessen)", "Nog niet zeker"],
+      "message": "Bericht (optioneel)",
+      "messagePlaceholder": "Vertel ons iets over jezelf of stel een vraag...",
+      "submit": "Verstuur aanvraag",
+      "submitting": "Versturen...",
+      "successTitle": "Aanvraag ontvangen!",
+      "successText": "We nemen binnen 24 uur contact met je op. Tot snel!",
+      "errorText": "Er is iets misgegaan. Probeer opnieuw of bel ons direct."
+    },
+    "contactInfo": {
+      "title": "Liever direct contact?",
+      "phone": "+32 16 00 00 00",
+      "email": "info@rijschoollovanium.be",
+      "address": "Bondgenotenlaan 1, 3000 Leuven",
+      "hours": "Ma–Za: 8:00–20:00"
+    }
+  },
+  "footer": {
+    "tagline": "Jouw rijbewijs. Jouw vrijheid.",
+    "description": "Rijschool Lovanium begeleidt jongeren in Leuven en omgeving naar hun rijbewijs. Professioneel, persoonlijk en met een bewezen aanpak.",
+    "links": {
+      "title": "Navigatie",
+      "items": ["Diensten", "Waarom wij", "Pakketten", "Inschrijven", "Contact"]
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "legal": {
+      "privacy": "Privacybeleid",
+      "terms": "Gebruiksvoorwaarden",
+      "cookies": "Cookiebeleid"
+    },
+    "copyright": "© 2024 Rijschool Lovanium. Alle rechten voorbehouden.",
+    "vat": "BTW BE 0000.000.000 · Erkend door VMO Vlaanderen"
+  }
+}

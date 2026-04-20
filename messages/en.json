@@ -1,0 +1,231 @@
+{
+  "nav": {
+    "services": "Services",
+    "whyUs": "Why Us",
+    "pricing": "Packages",
+    "booking": "Enroll",
+    "contact": "Contact",
+    "bookCta": "Start your license"
+  },
+  "hero": {
+    "eyebrow": "Rijschool Lovanium · Leuven",
+    "headline1": "Your license.",
+    "headline2": "Your freedom.",
+    "subtitle": "At Rijschool Lovanium, experienced instructors guide you step by step — without stress, with confidence, to your driver's license.",
+    "cta1": "Start your training",
+    "cta2": "View packages",
+    "stat1Value": "97%",
+    "stat1Label": "Pass rate",
+    "stat2Value": "600+",
+    "stat2Label": "Licensed students",
+    "stat3Value": "15+",
+    "stat3Label": "Years experience",
+    "scrollHint": "Scroll to discover"
+  },
+  "proof": {
+    "eyebrow": "What our students say",
+    "headline": "Over 600 satisfied license holders",
+    "ratingLabel": "average score",
+    "reviewsLabel": "Google reviews",
+    "testimonials": [
+      {
+        "name": "Sarah Vandenbroeck",
+        "age": 19,
+        "text": "Got my license in just three months! The instructors are patient, clear and really put you at ease. Absolutely recommended for anyone who is nervous.",
+        "rating": 5
+      },
+      {
+        "name": "Thomas De Smedt",
+        "age": 22,
+        "text": "I was very nervous at first, but after the first lesson I already felt much better. The personal approach really makes the difference. Passed first time!",
+        "rating": 5
+      },
+      {
+        "name": "Emma Claes",
+        "age": 18,
+        "text": "Excellent value for money. Modern Audi, patient instructor and flexible hours. I would recommend Rijschool Lovanium to everyone.",
+        "rating": 5
+      },
+      {
+        "name": "Luca Martens",
+        "age": 24,
+        "text": "After two failed attempts at another driving school, I passed here. The guidance is completely different — much calmer and more targeted.",
+        "rating": 5
+      },
+      {
+        "name": "Julie Peeters",
+        "age": 17,
+        "text": "My instructor was super professional and friendly. The theory lesson helped me enormously for the exam. Top driving school in Leuven!",
+        "rating": 5
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Our services",
+    "headline": "Everything for your license",
+    "subtitle": "From theory to practice — we guide you through every part of your driving education.",
+    "items": [
+      {
+        "icon": "BookOpen",
+        "title": "Theory Lessons",
+        "description": "Interactive theory lessons that fully prepare you for the theoretical traffic exam. Learn traffic rules in a clear and accessible way.",
+        "badge": "Included in every package"
+      },
+      {
+        "icon": "Car",
+        "title": "Driving Lessons",
+        "description": "Get behind the wheel of a modern Audi with an experienced instructor beside you. We teach you to drive on real Leuven roads.",
+        "badge": "Most popular"
+      },
+      {
+        "icon": "RefreshCw",
+        "title": "Refresher Session",
+        "description": "Already licensed but need a refresher? Our follow-up session helps you keep your driving skills sharp.",
+        "badge": "After your license"
+      }
+    ],
+    "cta": "Schedule a free consultation"
+  },
+  "whyUs": {
+    "eyebrow": "Why Lovanium",
+    "headline": "Not just a driving school",
+    "subtitle": "We set the standard for driving education in Leuven. Here's why our students choose us.",
+    "items": [
+      {
+        "icon": "Trophy",
+        "title": "97% pass rate",
+        "description": "Our results speak for themselves. Almost all our students pass on their first attempt."
+      },
+      {
+        "icon": "Zap",
+        "title": "Short waiting times",
+        "description": "Start driving quickly. No months of waiting — we schedule lessons at your pace."
+      },
+      {
+        "icon": "Car",
+        "title": "Modern Audi vehicles",
+        "description": "Drive in comfort and safety. Our fleet consists of recent Audi models with dual controls."
+      },
+      {
+        "icon": "MapPin",
+        "title": "Near Leuven station",
+        "description": "Centrally located within walking distance of the station. Easily accessible by tram, bus or train."
+      },
+      {
+        "icon": "User",
+        "title": "Personal coaching",
+        "description": "Every student gets a dedicated instructor. We build trust and go at your own pace."
+      },
+      {
+        "icon": "Shield",
+        "title": "Certified instructors",
+        "description": "All our instructors are officially recognized by the Flemish Department of Mobility and Public Works."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Packages & Pricing",
+    "headline": "Transparent. Fair. No surprises.",
+    "subtitle": "Choose the package that suits your situation. Every formula includes theory education.",
+    "popular": "Most chosen",
+    "perLesson": "per lesson",
+    "included": "Included",
+    "bookPackage": "Choose this package",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "52",
+        "lessons": "10",
+        "description": "Ideal if you already have some driving experience or want to get started quickly.",
+        "features": [
+          "10 driving lessons (50 min)",
+          "Online theory education",
+          "1 exam registration included",
+          "Personal driving coach",
+          "Flexible scheduling"
+        ]
+      },
+      {
+        "name": "Popular",
+        "price": "47",
+        "lessons": "20",
+        "description": "Our bestseller. Suitable for most beginners who want to drive comfortably.",
+        "features": [
+          "20 driving lessons (50 min)",
+          "Online theory education",
+          "2 exam registrations included",
+          "Personal driving coach",
+          "Flexible scheduling",
+          "1 refresher session free"
+        ]
+      },
+      {
+        "name": "Intensive",
+        "price": "43",
+        "lessons": "30",
+        "description": "For those who want to pass quickly with maximum preparation and support.",
+        "features": [
+          "30 driving lessons (50 min)",
+          "Online theory education",
+          "Unlimited exam registrations",
+          "Personal driving coach",
+          "Priority scheduling",
+          "2 refresher sessions free",
+          "Exam preparation session"
+        ]
+      }
+    ],
+    "note": "All prices include VAT. Exam fees are not included. Ask about our installment payment options.",
+    "customTitle": "Looking for something specific?",
+    "customText": "We also create custom offers. Contact us for a personal consultation.",
+    "customCta": "Contact us"
+  },
+  "booking": {
+    "eyebrow": "Enroll",
+    "headline": "Ready to start?",
+    "subtitle": "Fill in the form and we will contact you within 24 hours to discuss everything.",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "John Smith",
+      "phone": "Phone number",
+      "phonePlaceholder": "+32 470 00 00 00",
+      "email": "Email address",
+      "emailPlaceholder": "john@example.com",
+      "package": "Which package interests you?",
+      "packageDefault": "Choose a package...",
+      "packageOptions": ["Starter (10 lessons)", "Popular (20 lessons)", "Intensive (30 lessons)", "Not sure yet"],
+      "message": "Message (optional)",
+      "messagePlaceholder": "Tell us something about yourself or ask a question...",
+      "submit": "Send request",
+      "submitting": "Sending...",
+      "successTitle": "Request received!",
+      "successText": "We will contact you within 24 hours. See you soon!",
+      "errorText": "Something went wrong. Please try again or call us directly."
+    },
+    "contactInfo": {
+      "title": "Prefer direct contact?",
+      "phone": "+32 16 00 00 00",
+      "email": "info@rijschoollovanium.be",
+      "address": "Bondgenotenlaan 1, 3000 Leuven",
+      "hours": "Mon–Sat: 8:00–20:00"
+    }
+  },
+  "footer": {
+    "tagline": "Your license. Your freedom.",
+    "description": "Rijschool Lovanium guides young people in Leuven and surroundings to their driver's license. Professional, personal and with a proven approach.",
+    "links": {
+      "title": "Navigation",
+      "items": ["Services", "Why Us", "Packages", "Enroll", "Contact"]
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "cookies": "Cookie Policy"
+    },
+    "copyright": "© 2024 Rijschool Lovanium. All rights reserved.",
+    "vat": "VAT BE 0000.000.000 · Recognized by VMO Flanders"
+  }
+}
