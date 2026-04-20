@@ -8,11 +8,7 @@
     --font-outfit: 'Outfit', system-ui, sans-serif;
   }
 
-  * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+  * { box-sizing: border-box; padding: 0; margin: 0; }
 
   html {
     scroll-behavior: smooth;
@@ -21,38 +17,26 @@
   }
 
   body {
-    background-color: #08080A;
-    color: #F4F4F5;
+    background-color: #FFFFFF;
+    color: #0F172A;
     font-family: var(--font-inter);
     overflow-x: hidden;
   }
 
   ::selection {
-    background-color: rgba(200, 150, 62, 0.3);
-    color: #F4F4F5;
+    background-color: rgba(11, 45, 94, 0.15);
+    color: #0B2D5E;
   }
 
-  ::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #111114;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #27272A;
-    border-radius: 2px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #C8963E;
-  }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #F5F7FA; }
+  ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 2px; }
+  ::-webkit-scrollbar-thumb:hover { background: #0B2D5E; }
 }
 
 @layer components {
   .section-padding {
-    @apply px-6 py-24 md:py-32 lg:py-40;
+    @apply px-6 py-20 md:py-28 lg:py-36;
   }
 
   .container-wide {
@@ -64,66 +48,76 @@
   }
 
   .eyebrow {
-    @apply text-xs font-semibold tracking-[0.2em] uppercase text-gold;
+    @apply text-xs font-bold tracking-[0.2em] uppercase text-gold;
   }
 
   .heading-xl {
-    @apply text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05];
+    @apply text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] text-navy;
   }
 
   .heading-lg {
-    @apply text-4xl md:text-5xl font-black tracking-tight leading-tight;
+    @apply text-4xl md:text-5xl font-black tracking-tight leading-tight text-navy;
   }
 
   .heading-md {
-    @apply text-3xl md:text-4xl font-bold tracking-tight;
+    @apply text-3xl md:text-4xl font-bold tracking-tight text-navy;
   }
 
-  .text-muted {
-    @apply text-zinc-400 leading-relaxed;
+  .text-body {
+    @apply text-slate-600 leading-relaxed;
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gold text-ink font-semibold text-sm tracking-wide transition-all duration-300 hover:bg-gold-light hover:shadow-gold hover:scale-[1.02] active:scale-[0.98];
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-navy text-white font-semibold text-sm tracking-wide transition-all duration-300 hover:bg-navy-light hover:shadow-navy hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gold text-white font-semibold text-sm tracking-wide transition-all duration-300 hover:bg-gold-light hover:shadow-gold hover:scale-[1.02] active:scale-[0.98];
   }
 
   .btn-outline {
-    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-zinc-700 text-zinc-200 font-semibold text-sm tracking-wide transition-all duration-300 hover:border-zinc-500 hover:text-white hover:bg-white/5 active:scale-[0.98];
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-navy text-navy font-semibold text-sm tracking-wide transition-all duration-300 hover:bg-navy hover:text-white active:scale-[0.98];
   }
 
-  .card-dark {
-    @apply bg-ink-card border border-ink-border rounded-2xl shadow-card;
+  .btn-outline-white {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-white/40 text-white font-semibold text-sm tracking-wide transition-all duration-300 hover:bg-white/10 hover:border-white/60 active:scale-[0.98];
   }
 
-  .noise-overlay {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
+  .card-light {
+    @apply bg-white border border-surface-border rounded-2xl shadow-card;
   }
 
-  .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-light via-gold to-gold-dark;
+  .card-light-hover {
+    @apply bg-white border border-surface-border rounded-2xl shadow-card hover:shadow-card-hover hover:border-navy/20 transition-all duration-300;
+  }
+
+  .section-light {
+    @apply bg-white;
+  }
+
+  .section-surface {
+    @apply bg-surface;
+  }
+
+  .section-navy {
+    @apply bg-navy text-white;
+  }
+
+  .tag {
+    @apply inline-block text-[11px] font-bold tracking-widest uppercase text-gold bg-gold-bg px-3 py-1 rounded-full;
+  }
+
+  .tag-navy {
+    @apply inline-block text-[11px] font-bold tracking-widest uppercase text-navy bg-navy-50 px-3 py-1 rounded-full;
   }
 }
 
 @layer utilities {
-  .glow-gold {
-    box-shadow: 0 0 60px rgba(200, 150, 62, 0.2), 0 0 120px rgba(200, 150, 62, 0.05);
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold to-gold-dark;
   }
 
-  .border-gradient {
-    border: 1px solid transparent;
-    background: linear-gradient(#16161A, #16161A) padding-box,
-                linear-gradient(135deg, rgba(200,150,62,0.4), rgba(200,150,62,0.05)) border-box;
+  .divider {
+    @apply h-px bg-surface-border w-full;
   }
-}
-
-/* Marquee animation for trust bar */
-.marquee-inner {
-  display: flex;
-  width: max-content;
-  animation: marquee 40s linear infinite;
-}
-
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
 }

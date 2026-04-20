@@ -1,89 +1,116 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import { BookOpen, Car, RefreshCw, ArrowRight, type LucideIcon } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
+import { BookOpen, Car, RefreshCw, ArrowRight, Check, type LucideIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
+import Link from 'next/link';
 
-const iconMap: Record<string, LucideIcon> = {
-  BookOpen,
-  Car,
-  RefreshCw,
-};
+const iconMap: Record<string, LucideIcon> = { BookOpen, Car, RefreshCw };
 
 interface ServiceItem {
   icon: string;
   title: string;
+  price: string;
+  priceNote: string;
   description: string;
+  features: string[];
   badge: string;
 }
 
 function ServiceCard({ item, index }: { item: ServiceItem; index: number }) {
   const Icon = iconMap[item.icon] || Car;
+  const isMiddle = index === 1;
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.7, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
-      className="relative group border-gradient rounded-2xl p-8 hover:shadow-gold transition-all duration-500 cursor-default"
+      transition={{ duration: 0.7, delay: index * 0.12, ease: [0.16, 1, 0.3, 1] }}
+      className={`relative flex flex-col rounded-3xl p-8 transition-all duration-300 ${
+        isMiddle
+          ? 'bg-navy text-white shadow-navy'
+          : 'card-light-hover'
+      }`}
     >
       {/* Badge */}
-      <span className="inline-block mb-6 text-[11px] font-semibold tracking-widest uppercase text-gold bg-gold-muted px-3 py-1 rounded-full">
+      <span className={`tag mb-6 self-start ${isMiddle ? 'bg-white/10 text-gold border-0' : ''}`}>
         {item.badge}
       </span>
 
       {/* Icon */}
-      <div className="w-14 h-14 rounded-2xl bg-ink-hover border border-ink-border flex items-center justify-center mb-6 group-hover:border-gold/30 group-hover:bg-gold-muted transition-all duration-300">
-        <Icon size={24} className="text-gold" />
+      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 ${
+        isMiddle ? 'bg-white/10' : 'bg-navy-50'
+      }`}>
+        <Icon size={24} className={isMiddle ? 'text-gold' : 'text-navy'} />
       </div>
 
-      {/* Content */}
-      <h3 className="text-xl font-bold text-zinc-100 mb-3">{item.title}</h3>
-      <p className="text-zinc-400 leading-relaxed text-sm">{item.description}</p>
-
-      {/* Hover arrow */}
-      <div className="flex items-center gap-2 mt-6 text-gold text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <span>Meer info</span>
-        <ArrowRight size={14} />
+      {/* Title + price */}
+      <h3 className={`text-xl font-bold mb-1 ${isMiddle ? 'text-white' : 'text-navy'}`}>
+        {item.title}
+      </h3>
+      <div className="flex items-baseline gap-2 mb-4">
+        <span className={`text-2xl font-black ${isMiddle ? 'text-gold' : 'text-navy'}`}>
+          {item.price}
+        </span>
+        <span className={`text-xs ${isMiddle ? 'text-white/50' : 'text-slate-400'}`}>
+          {item.priceNote}
+        </span>
       </div>
 
-      {/* Subtle glow on hover */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      {/* Description */}
+      <p className={`text-sm leading-relaxed mb-6 ${isMiddle ? 'text-white/70' : 'text-slate-500'}`}>
+        {item.description}
+      </p>
+
+      {/* Features */}
+      <ul className="space-y-2.5 flex-1 mb-6">
+        {item.features.map((f, i) => (
+          <li key={i} className="flex items-center gap-3 text-sm">
+            <div className={`w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 ${
+              isMiddle ? 'bg-gold/20' : 'bg-navy-50'
+            }`}>
+              <Check size={10} className={isMiddle ? 'text-gold' : 'text-navy'} />
+            </div>
+            <span className={isMiddle ? 'text-white/80' : 'text-slate-600'}>{f}</span>
+          </li>
+        ))}
+      </ul>
     </motion.div>
   );
 }
 
 export default function Services() {
   const t = useTranslations('services');
+  const locale = useLocale();
   const items = t.raw('items') as ServiceItem[];
 
   return (
-    <section id="services" className="section-padding bg-ink">
+    <section id="services" className="section-padding bg-white">
       <div className="container-wide">
-        {/* Header */}
-        <AnimatedSection className="max-w-2xl mb-16">
-          <p className="eyebrow mb-4">{t('eyebrow')}</p>
-          <h2 className="heading-lg text-zinc-50 mb-5">{t('headline')}</h2>
-          <p className="text-muted text-lg">{t('subtitle')}</p>
+        <AnimatedSection className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14">
+          <div>
+            <p className="eyebrow mb-3">{t('eyebrow')}</p>
+            <h2 className="heading-lg">{t('headline')}</h2>
+          </div>
+          <p className="text-slate-500 max-w-sm text-sm leading-relaxed">{t('subtitle')}</p>
         </AnimatedSection>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {items.map((item, i) => (
             <ServiceCard key={i} item={item} index={i} />
           ))}
         </div>
 
-        {/* CTA */}
-        <AnimatedSection className="text-center">
-          <button
-            onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
-            className="btn-primary text-base px-8 py-4"
+        <AnimatedSection className="mt-10 text-center">
+          <Link
+            href={`/${locale}/diensten`}
+            className="btn-outline inline-flex items-center gap-2"
           >
-            {t('cta')}
-          </button>
+            {t('learnMore')}
+            <ArrowRight size={15} />
+          </Link>
         </AnimatedSection>
       </div>
     </section>

@@ -31,23 +31,16 @@ export default function LanguageSwitcher() {
     <div className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-ink-border hover:border-zinc-600 text-zinc-400 hover:text-zinc-200 text-sm font-medium transition-all duration-200"
-        aria-label="Select language"
+        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-surface-border hover:border-navy/30 text-slate-500 hover:text-navy text-sm font-medium transition-all duration-200"
       >
         <span>{current.label}</span>
-        <ChevronDown
-          size={12}
-          className={cn('transition-transform duration-200', open && 'rotate-180')}
-        />
+        <ChevronDown size={12} className={cn('transition-transform duration-200', open && 'rotate-180')} />
       </button>
 
       {open && (
         <>
-          <div
-            className="fixed inset-0 z-40"
-            onClick={() => setOpen(false)}
-          />
-          <div className="absolute right-0 top-full mt-2 z-50 bg-ink-card border border-ink-border rounded-xl shadow-2xl overflow-hidden min-w-[130px]">
+          <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} />
+          <div className="absolute right-0 top-full mt-2 z-50 bg-white border border-surface-border rounded-xl shadow-card-hover overflow-hidden min-w-[130px]">
             {languages.map((lang) => (
               <button
                 key={lang.code}
@@ -55,11 +48,11 @@ export default function LanguageSwitcher() {
                 className={cn(
                   'w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors duration-150',
                   lang.code === locale
-                    ? 'text-gold bg-gold-muted'
-                    : 'text-zinc-400 hover:text-zinc-200 hover:bg-ink-hover'
+                    ? 'text-navy bg-navy-50 font-semibold'
+                    : 'text-slate-500 hover:text-navy hover:bg-surface'
                 )}
               >
-                <span className="font-semibold text-xs tracking-wider w-6">{lang.label}</span>
+                <span className="font-bold text-xs tracking-wider w-6">{lang.label}</span>
                 <span>{lang.full}</span>
               </button>
             ))}

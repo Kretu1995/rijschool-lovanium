@@ -10,16 +10,10 @@ export default function StickyMobileCTA() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      setVisible(window.scrollY > window.innerHeight * 0.7);
-    };
+    const onScroll = () => setVisible(window.scrollY > window.innerHeight * 0.6);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
-  const scrollToBooking = () => {
-    document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <AnimatePresence>
@@ -31,13 +25,13 @@ export default function StickyMobileCTA() {
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           className="fixed bottom-0 left-0 right-0 z-50 p-4 md:hidden"
         >
-          <div className="bg-ink-card/80 backdrop-blur-lg border border-ink-border rounded-2xl p-1 shadow-2xl">
+          <div className="bg-white/95 backdrop-blur-lg border border-surface-border rounded-2xl p-1.5 shadow-card-hover">
             <button
-              onClick={scrollToBooking}
-              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-gold text-ink font-semibold text-sm tracking-wide"
+              onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-navy text-white font-semibold text-sm"
             >
               {t('bookCta')}
-              <ArrowRight size={16} />
+              <ArrowRight size={15} />
             </button>
           </div>
         </motion.div>

@@ -1,231 +1,311 @@
 {
   "nav": {
     "services": "Services",
-    "whyUs": "Pourquoi nous",
-    "pricing": "Forfaits",
+    "team": "Équipe",
+    "pricing": "Tarifs",
     "booking": "S'inscrire",
     "contact": "Contact",
-    "bookCta": "Commencer le permis"
+    "bookCta": "S'inscrire"
   },
   "hero": {
-    "eyebrow": "Rijschool Lovanium · Louvain",
-    "headline1": "Votre permis.",
-    "headline2": "Votre liberté.",
-    "subtitle": "Chez Rijschool Lovanium, des moniteurs expérimentés vous guident pas à pas — sans stress, avec confiance, vers votre permis de conduire.",
-    "cta1": "Commencer ma formation",
-    "cta2": "Voir les forfaits",
-    "stat1Value": "97%",
-    "stat1Label": "Taux de réussite",
-    "stat2Value": "600+",
-    "stat2Label": "Élèves diplômés",
-    "stat3Value": "15+",
-    "stat3Label": "Ans d'expérience",
-    "scrollHint": "Défiler pour découvrir"
+    "eyebrow": "Auto-école agréée · Agrément #2863",
+    "headline1": "Votre permis,",
+    "headline2": "sans stress.",
+    "subtitle": "À Rijschool Lovanium à Louvain, des moniteurs expérimentés vous guident pas à pas. Personnel, patient et à votre rythme.",
+    "cta1": "S'inscrire",
+    "cta2": "Voir les tarifs",
+    "stat1Value": "€85",
+    "stat1Label": "Par cours de conduite",
+    "stat2Value": "€170",
+    "stat2Label": "Formation théorique (12h)",
+    "stat3Value": "#2863",
+    "stat3Label": "Agréé par l'État",
+    "badge": "Manuel & automatique · Véhicules Audi",
+    "scrollHint": "Découvrir plus"
   },
   "proof": {
     "eyebrow": "Ce que disent nos élèves",
-    "headline": "Plus de 600 titulaires du permis satisfaits",
-    "ratingLabel": "score moyen",
-    "reviewsLabel": "avis Google",
+    "headline": "Vraies histoires, vrais résultats",
+    "ratingLabel": "moyenne sur Google",
+    "reviewsLabel": "avis",
     "testimonials": [
       {
-        "name": "Sarah Vandenbroeck",
-        "age": 19,
-        "text": "Permis obtenu en seulement trois mois ! Les moniteurs sont patients, clairs et vous mettent vraiment à l'aise. Absolument recommandé pour ceux qui sont nerveux.",
-        "rating": 5
+        "name": "Tibeau Reynaerts",
+        "text": "Gert a immédiatement créé un environnement sans stress. Grâce à son approche, j'ai réussi mon examen de conduite. Absolument recommandé !",
+        "rating": 5,
+        "date": "Juin 2021"
       },
       {
-        "name": "Thomas De Smedt",
-        "age": 22,
-        "text": "J'étais très nerveux au début, mais après le premier cours je me sentais déjà beaucoup mieux. L'approche personnelle fait vraiment la différence. Réussi du premier coup !",
-        "rating": 5
+        "name": "Hanna Myklebust",
+        "text": "J'ai énormément appris dès la première leçon. Le stress est littéralement tombé de mes épaules. La planification flexible est un grand avantage.",
+        "rating": 5,
+        "date": "Juin 2021"
       },
       {
-        "name": "Emma Claes",
-        "age": 18,
-        "text": "Excellent rapport qualité-prix. Audi moderne, moniteur patient et horaires flexibles. Je recommande Rijschool Lovanium à tout le monde.",
-        "rating": 5
+        "name": "Pauline Marbaix",
+        "text": "L'approche par feedback positif et les insights sur la sécurité routière rendent Rijschool Lovanium unique. Excellente expérience !",
+        "rating": 5,
+        "date": "Juin 2021"
       },
       {
-        "name": "Luca Martens",
-        "age": 24,
-        "text": "Après deux échecs dans une autre auto-école, j'ai réussi ici. L'encadrement est complètement différent — beaucoup plus calme et ciblé.",
-        "rating": 5
+        "name": "Noémie Kamdem",
+        "text": "Grâce à l'approche calme et la planification efficace par e-mail, je me suis sentie à l'aise dès le début. Réussi du premier coup !",
+        "rating": 5,
+        "date": "Juin 2021"
       },
       {
-        "name": "Julie Peeters",
-        "age": 17,
-        "text": "Mon moniteur était super professionnel et sympathique. Le cours de théorie m'a énormément aidé pour l'examen. Meilleure auto-école de Louvain !",
-        "rating": 5
+        "name": "Adinda Van Bé",
+        "text": "À Lovanium, ils sont super sympathiques, vous mettent à l'aise et on ne conduit pas seulement à Louvain mais aussi sur l'autoroute. Super !",
+        "rating": 5,
+        "date": "Septembre 2021"
+      },
+      {
+        "name": "Si-Yuan Shen",
+        "text": "Gert and Hugo are both really great driving instructors. They are professional and give really good cues to teach me how to drive correctly and safely.",
+        "rating": 5,
+        "date": "Septembre 2021"
+      },
+      {
+        "name": "Steffi Mercie",
+        "text": "Gert est un moniteur très calme et structuré. Il donne des explications claires et vous aide étape par étape. Très satisfaite !",
+        "rating": 5,
+        "date": "Mars 2022"
       }
     ]
   },
   "services": {
     "eyebrow": "Nos services",
-    "headline": "Tout pour votre permis",
-    "subtitle": "De la théorie à la pratique — nous vous guidons à travers chaque étape de votre formation.",
+    "headline": "Tout pour votre permis B",
+    "subtitle": "De la première règle de circulation à l'examen — nous vous guidons à travers chaque étape.",
+    "learnMore": "En savoir plus",
     "items": [
       {
         "icon": "BookOpen",
-        "title": "Cours théoriques",
-        "description": "Des cours de théorie interactifs qui vous préparent pleinement à l'examen théorique de la circulation. Apprenez le code de la route de manière accessible.",
-        "badge": "Inclus dans chaque forfait"
+        "title": "Formation théorique",
+        "price": "€170",
+        "priceNote": "12 heures de formation",
+        "description": "Réussissez votre examen théorique du premier coup. Notre formation interactive de 12 heures vous prépare complètement à l'examen officiel à Louvain.",
+        "features": ["12h de formation intensive", "Curriculum officiellement agréé", "En petit groupe", "Conseils & stratégie d'examen"],
+        "badge": "Obligatoire pour débutants"
       },
       {
         "icon": "Car",
         "title": "Cours de conduite",
-        "description": "Prenez le volant d'une Audi moderne avec un moniteur expérimenté à vos côtés. Nous vous apprenons à conduire sur les vraies routes de Louvain.",
+        "price": "€85",
+        "priceNote": "par heure (TVA incluse)",
+        "description": "Prenez la route en toute sécurité avec un moniteur expérimenté. Conduisez une Audi moderne avec double commande — boîte manuelle ou automatique.",
+        "features": ["Audi de formation moderne", "Manuel & automatique", "Double commande", "Coach de conduite personnel"],
         "badge": "Le plus populaire"
       },
       {
         "icon": "RefreshCw",
         "title": "Séance de rappel",
-        "description": "Déjà titulaire du permis mais besoin d'une remise à niveau ? Notre séance de rappel vous aide à garder vos compétences au top.",
+        "price": "Sur demande",
+        "priceNote": "pour titulaires du permis",
+        "description": "Déjà titulaire du permis mais vous souhaitez rafraîchir vos compétences ? Notre séance de rappel est idéale pour les nouveaux conducteurs.",
+        "features": ["Pour nouveaux titulaires", "Renforcer la confiance", "Exercer des situations spécifiques", "Planning flexible"],
         "badge": "Après le permis"
       }
-    ],
-    "cta": "Planifier une consultation gratuite"
+    ]
   },
   "whyUs": {
-    "eyebrow": "Pourquoi Lovanium",
-    "headline": "Pas seulement une auto-école",
-    "subtitle": "Nous établissons le standard de la formation à la conduite à Louvain. Voici pourquoi nos élèves nous choisissent.",
+    "eyebrow": "Pourquoi Rijschool Lovanium",
+    "headline": "Ce qui nous différencie",
+    "subtitle": "Plus qu'une auto-école. Nous investissons dans votre réussite — avec des spécialisations introuvables ailleurs.",
     "items": [
       {
-        "icon": "Trophy",
-        "title": "97% de réussite",
-        "description": "Nos résultats parlent d'eux-mêmes. Presque tous nos élèves réussissent du premier coup."
+        "icon": "MapPin",
+        "title": "Au cœur de Louvain",
+        "description": "Situé au centre d'affaires Regus, Martelarenplein 20E — à côté de la gare, des arrêts de bus et de la zone kiss & ride."
       },
       {
-        "icon": "Zap",
-        "title": "Délais d'attente courts",
-        "description": "Commencez à conduire rapidement. Pas de mois d'attente — nous planifions les cours à votre rythme."
+        "icon": "Brain",
+        "title": "Spécialiste de l'anxiété",
+        "description": "Nos moniteurs sont spécialisés dans l'accompagnement des élèves souffrant d'anxiété de conduite, de TDAH, de TDA et de troubles d'apprentissage."
       },
       {
         "icon": "Car",
-        "title": "Véhicules Audi modernes",
-        "description": "Conduisez dans le confort et la sécurité. Notre flotte se compose de modèles Audi récents avec double commande."
-      },
-      {
-        "icon": "MapPin",
-        "title": "Près de la gare de Louvain",
-        "description": "Idéalement situé à deux pas de la gare. Facilement accessible en tram, bus ou train."
-      },
-      {
-        "icon": "User",
-        "title": "Accompagnement personnalisé",
-        "description": "Chaque élève a un moniteur dédié. Nous construisons la confiance et avançons à votre rythme."
+        "title": "Flotte Audi premium",
+        "description": "Conduisez une Audi moderne avec les dernières technologies de sécurité. Boîte manuelle et automatique disponibles."
       },
       {
         "icon": "Shield",
-        "title": "Moniteurs certifiés",
-        "description": "Tous nos moniteurs sont officiellement agréés par le Département flamand de la Mobilité et des Travaux Publics."
+        "title": "Agréé par le gouvernement",
+        "description": "Rijschool Lovanium est agréée par le gouvernement fédéral avec le numéro d'agrément 2863. Moniteurs entièrement certifiés."
+      },
+      {
+        "icon": "Clock",
+        "title": "Délais d'attente courts",
+        "description": "Pas de mois d'attente. Nous planifions vos cours rapidement pour que vous puissiez commencer le plus tôt possible."
+      },
+      {
+        "icon": "MessageCircle",
+        "title": "Disponible via WhatsApp",
+        "description": "Contact facile via WhatsApp au +32 492 48 28 53. Réponses rapides, service personnalisé."
       }
     ]
   },
   "pricing": {
-    "eyebrow": "Forfaits & Tarifs",
-    "headline": "Transparent. Équitable. Sans surprises.",
-    "subtitle": "Choisissez le forfait adapté à votre situation. Chaque formule comprend la formation théorique.",
+    "eyebrow": "Tarifs",
+    "headline": "Prix clairs, pas de surprises",
+    "subtitle": "Tous les prix sont TVA comprise. Transparent et honnête.",
     "popular": "Le plus choisi",
-    "perLesson": "par cours",
-    "included": "Inclus",
-    "bookPackage": "Choisir ce forfait",
-    "plans": [
+    "cta": "S'inscrire",
+    "note": "Tous les prix sont TVA comprise. Les frais d'inscription (€35) sont uniques. Les frais d'examen du centre d'examen ne sont pas inclus.",
+    "packages": [
       {
-        "name": "Starter",
-        "price": "52",
-        "lessons": "10",
-        "description": "Idéal si vous avez déjà une certaine expérience de conduite ou si vous voulez démarrer rapidement.",
-        "features": [
-          "10 cours de conduite (50 min)",
-          "Formation théorique en ligne",
-          "1 inscription à l'examen incluse",
-          "Coach de conduite personnel",
-          "Planning flexible"
-        ]
+        "name": "Inscription",
+        "price": "35",
+        "unit": "unique",
+        "description": "Inscription unique à Rijschool Lovanium. Obligatoire pour les nouveaux élèves.",
+        "features": ["Inscription comme élève", "Dossier de conduite personnel", "Accès à la planification", "Entretien d'accueil"],
+        "highlight": false
       },
       {
-        "name": "Populaire",
-        "price": "47",
-        "lessons": "20",
-        "description": "Notre best-seller. Convient à la plupart des débutants qui veulent conduire confortablement.",
-        "features": [
-          "20 cours de conduite (50 min)",
-          "Formation théorique en ligne",
-          "2 inscriptions à l'examen incluses",
-          "Coach de conduite personnel",
-          "Planning flexible",
-          "1 séance de rappel offerte"
-        ]
+        "name": "Formation théorique",
+        "price": "170",
+        "unit": "12 heures",
+        "description": "Formation théorique complète de 12 heures. Recommandée pour ceux qui veulent réussir du premier coup.",
+        "features": ["12h de cours théoriques", "Curriculum officiellement agréé", "Règles et signaux routiers", "Préparation à l'examen", "Support de cours inclus"],
+        "highlight": false
       },
       {
-        "name": "Intensif",
-        "price": "43",
-        "lessons": "30",
-        "description": "Pour ceux qui veulent réussir rapidement avec une préparation et un soutien maximum.",
-        "features": [
-          "30 cours de conduite (50 min)",
-          "Formation théorique en ligne",
-          "Inscriptions illimitées aux examens",
-          "Coach de conduite personnel",
-          "Planning prioritaire",
-          "2 séances de rappel offertes",
-          "Session de préparation à l'examen"
-        ]
+        "name": "Cours de conduite",
+        "price": "85",
+        "unit": "par heure",
+        "description": "Cours de conduite individuel avec un moniteur certifié dans une Audi moderne.",
+        "features": ["1 heure de cours individuel", "Audi de formation moderne", "Manuel ou automatique", "Double commande", "Feedback personnalisé"],
+        "highlight": true
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "Notre équipe",
+    "headline": "Les personnes derrière le volant",
+    "subtitle": "Notre équipe de moniteurs certifiés est prête à vous guider. Avec des spécialisations en anxiété de conduite, TDAH et troubles d'apprentissage, nous offrons une approche sur mesure.",
+    "specializations": "Spécialisations",
+    "hobbies": "Intérêts",
+    "experience": "Expérience",
+    "members": [
+      {
+        "name": "Gert",
+        "role": "Directeur & Moniteur",
+        "initials": "G",
+        "color": "#0B2D5E",
+        "bio": "En tant que fondateur et directeur, Gert dirige Rijschool Lovanium. Il combine sa passion pour l'enseignement avec une connaissance approfondie de la sécurité routière.",
+        "specializations": ["Anxiété de conduite", "TDAH & TDA", "Troubles d'apprentissage", "Éco-conduite", "Premiers secours"],
+        "hobbies": "Musique & sport",
+        "experience": "Fondateur"
+      },
+      {
+        "name": "Hugo",
+        "role": "Moniteur",
+        "initials": "H",
+        "color": "#1A4080",
+        "bio": "Avec plus de 9 ans d'expérience, Hugo a guidé des centaines d'élèves vers leur permis. Connu pour son approche calme et structurée.",
+        "specializations": ["Anxiété de conduite", "Troubles d'apprentissage", "Éco-conduite"],
+        "hobbies": "Photographie",
+        "experience": "9+ ans"
+      },
+      {
+        "name": "Sandra",
+        "role": "Moniteur",
+        "initials": "S",
+        "color": "#C8963E",
+        "bio": "Sandra apporte plus de 3 ans d'expérience et est spécialisée dans l'accompagnement des élèves atteints de TDAH et d'autisme.",
+        "specializations": ["TDAH & Autisme", "Séances de rappel"],
+        "hobbies": "Moto, cuisine & convivialité",
+        "experience": "3+ ans"
+      },
+      {
+        "name": "Edward",
+        "role": "Moniteur",
+        "initials": "E",
+        "color": "#2D6A4F",
+        "bio": "Edward a plus de 12 ans d'expérience dans l'enseignement de la conduite. Il anime également des séances de rappel et de formation.",
+        "specializations": ["Anxiété de conduite", "Troubles d'apprentissage", "Éco-conduite"],
+        "hobbies": "Voyages, musique & culture",
+        "experience": "12+ ans"
+      },
+      {
+        "name": "Joris",
+        "role": "Moniteur",
+        "initials": "J",
+        "color": "#7B3F00",
+        "bio": "Avec 12+ ans d'expérience, Joris est l'un de nos moniteurs les plus expérimentés. Il gère également les programmes théoriques.",
+        "specializations": ["Autisme", "Anxiété de conduite", "Troubles d'apprentissage", "Éco-conduite"],
+        "hobbies": "Musique",
+        "experience": "12+ ans"
+      },
+      {
+        "name": "Johan",
+        "role": "Moniteur",
+        "initials": "J",
+        "color": "#6B21A8",
+        "bio": "Johan a plus de 10 ans d'expérience en tant que moniteur, guidant les élèves avec une attention particulière à l'anxiété de conduite.",
+        "specializations": ["Anxiété de conduite", "Éco-conduite"],
+        "hobbies": "Cyclisme & voyages",
+        "experience": "10+ ans"
+      },
+      {
+        "name": "Ludo",
+        "role": "Moniteur",
+        "initials": "L",
+        "color": "#065F46",
+        "bio": "Ludo est notre nouvel enthousiaste avec une formation en premiers secours. Il apporte un regard frais et beaucoup de motivation.",
+        "specializations": ["Premiers secours"],
+        "hobbies": "Jardinage & antiquités",
+        "experience": "2 ans"
       }
     ],
-    "note": "Tous les prix sont TVA comprise. Les frais d'examen ne sont pas inclus. Renseignez-vous sur nos options de paiement échelonné.",
-    "customTitle": "Vous cherchez quelque chose de spécifique ?",
-    "customText": "Nous créons également des offres sur mesure. Contactez-nous pour un entretien personnalisé.",
-    "customCta": "Nous contacter"
+    "vacancyTitle": "Rejoignez l'équipe",
+    "vacancyText": "Nous recherchons un nouveau moniteur de conduite. Envoyez votre CV et lettre de motivation à info@rijschoollovanium.be.",
+    "vacancyCta": "Postuler"
   },
   "booking": {
     "eyebrow": "S'inscrire",
     "headline": "Prêt à commencer ?",
-    "subtitle": "Remplissez le formulaire et nous vous contacterons dans les 24 heures pour tout discuter.",
+    "subtitle": "Envoyez-nous un message et nous vous contacterons dès que possible.",
     "form": {
-      "name": "Nom complet",
+      "name": "Nom",
       "namePlaceholder": "Jean Dupont",
       "phone": "Numéro de téléphone",
-      "phonePlaceholder": "+32 470 00 00 00",
+      "phonePlaceholder": "+32 492 48 28 53",
       "email": "Adresse e-mail",
       "emailPlaceholder": "jean@exemple.be",
-      "package": "Quel forfait vous intéresse ?",
-      "packageDefault": "Choisir un forfait...",
-      "packageOptions": ["Starter (10 cours)", "Populaire (20 cours)", "Intensif (30 cours)", "Pas encore sûr(e)"],
+      "service": "Service souhaité",
+      "serviceDefault": "Choisir un service...",
+      "serviceOptions": ["Formation théorique (€170)", "Cours de conduite (€85/h)", "Séance de rappel", "Inscription + Théorie + Pratique", "Inscription seulement (€35)"],
       "message": "Message (facultatif)",
-      "messagePlaceholder": "Parlez-nous de vous ou posez une question...",
+      "messagePlaceholder": "Posez une question ou parlez-nous de vous...",
       "submit": "Envoyer la demande",
       "submitting": "Envoi en cours...",
-      "successTitle": "Demande reçue !",
-      "successText": "Nous vous contacterons dans les 24 heures. À bientôt !",
-      "errorText": "Une erreur s'est produite. Veuillez réessayer ou nous appeler directement."
+      "successTitle": "Message reçu !",
+      "successText": "Nous vous contacterons dès que possible. À bientôt à Rijschool Lovanium !",
+      "errorText": "Une erreur s'est produite. Réessayez ou contactez-nous via WhatsApp."
     },
     "contactInfo": {
-      "title": "Vous préférez un contact direct ?",
-      "phone": "+32 16 00 00 00",
+      "title": "Contact direct",
+      "phone": "+32 492 48 28 53",
       "email": "info@rijschoollovanium.be",
-      "address": "Bondgenotenlaan 1, 3000 Louvain",
-      "hours": "Lun–Sam : 8h00–20h00"
+      "address": "Martelarenplein 20E, 3000 Louvain",
+      "addressNote": "Centre d'affaires Regus · À côté de la gare",
+      "hours": "Lun–Ven : 10h00–17h00",
+      "hoursNote": "Sur rendez-vous",
+      "whatsapp": "WhatsApp disponible"
     }
   },
   "footer": {
     "tagline": "Votre permis. Votre liberté.",
-    "description": "Rijschool Lovanium guide les jeunes de Louvain et environs vers leur permis de conduire. Professionnel, personnel et avec une approche éprouvée.",
-    "links": {
-      "title": "Navigation",
-      "items": ["Services", "Pourquoi nous", "Forfaits", "S'inscrire", "Contact"]
-    },
-    "contact": {
-      "title": "Contact"
-    },
+    "description": "Auto-école agréée à Louvain (agrément #2863). Cours théoriques, cours de conduite et séances de rappel. Spécialisée en anxiété de conduite, TDAH et troubles d'apprentissage.",
+    "navTitle": "Navigation",
+    "navLinks": ["Accueil", "Services", "Équipe", "Tarifs", "S'inscrire"],
+    "contactTitle": "Contact",
     "legal": {
       "privacy": "Politique de confidentialité",
-      "terms": "Conditions d'utilisation",
-      "cookies": "Politique des cookies"
+      "terms": "Conditions d'utilisation"
     },
     "copyright": "© 2024 Rijschool Lovanium. Tous droits réservés.",
-    "vat": "TVA BE 0000.000.000 · Agréé par VMO Flandre"
+    "recognition": "Agréée par le Gouvernement Fédéral · Numéro d'agrément 2863"
   }
 }

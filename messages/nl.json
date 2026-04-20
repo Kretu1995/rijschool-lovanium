@@ -1,231 +1,328 @@
 {
   "nav": {
     "services": "Diensten",
-    "whyUs": "Waarom wij",
-    "pricing": "Pakketten",
+    "team": "Team",
+    "pricing": "Tarieven",
     "booking": "Inschrijven",
     "contact": "Contact",
-    "bookCta": "Start je rijbewijs"
+    "bookCta": "Inschrijven"
   },
   "hero": {
-    "eyebrow": "Rijschool Lovanium · Leuven",
-    "headline1": "Jouw rijbewijs.",
-    "headline2": "Jouw vrijheid.",
-    "subtitle": "Bij Rijschool Lovanium begeleiden ervaren instructeurs je stap voor stap — zonder stress, met vertrouwen, naar jouw rijbewijs.",
-    "cta1": "Start je rijopleiding",
-    "cta2": "Bekijk pakketten",
-    "stat1Value": "97%",
-    "stat1Label": "Slaagpercentage",
-    "stat2Value": "600+",
-    "stat2Label": "Geslaagde leerlingen",
-    "stat3Value": "15+",
-    "stat3Label": "Jaar ervaring",
-    "scrollHint": "Scroll om te ontdekken"
+    "eyebrow": "Erkende rijschool · Erkenning #2863",
+    "headline1": "Jouw rijbewijs,",
+    "headline2": "zonder stress.",
+    "subtitle": "Bij Rijschool Lovanium in Leuven word je stap voor stap begeleid door ervaren instructeurs. Persoonlijk, geduldig en op jouw tempo.",
+    "cta1": "Schrijf je in",
+    "cta2": "Bekijk tarieven",
+    "stat1Value": "€85",
+    "stat1Label": "Per praktijkles",
+    "stat2Value": "€170",
+    "stat2Label": "Theorieopleiding (12u)",
+    "stat3Value": "#2863",
+    "stat3Label": "Erkend door de overheid",
+    "badge": "Manueel & automaat · Audi lesvoertuigen",
+    "scrollHint": "Ontdek meer"
   },
   "proof": {
     "eyebrow": "Wat onze leerlingen zeggen",
-    "headline": "Meer dan 600 tevreden rijbewijshouders",
-    "ratingLabel": "gemiddelde score",
-    "reviewsLabel": "Google reviews",
+    "headline": "Echte verhalen, echte resultaten",
+    "ratingLabel": "gemiddeld op Google",
+    "reviewsLabel": "beoordelingen",
     "testimonials": [
       {
-        "name": "Sarah Vandenbroeck",
-        "age": 19,
-        "text": "In slechts drie maanden mijn rijbewijs gehaald! De instructeurs zijn geduldig, duidelijk en stellen je echt op je gemak. Absoluut aanrader voor iedereen die zenuwachtig is.",
-        "rating": 5
+        "name": "Tibeau Reynaerts",
+        "text": "Gert creëerde meteen een stressvrije omgeving. Dankzij zijn aanpak ben ik geslaagd voor mijn rijexamen. Absoluut aanrader!",
+        "rating": 5,
+        "date": "Juni 2021"
       },
       {
-        "name": "Thomas De Smedt",
-        "age": 22,
-        "text": "Was eerst erg nerveus maar na de eerste les voelde ik me al veel beter. De persoonlijke aanpak maakt echt het verschil. Eerste keer geslaagd!",
-        "rating": 5
+        "name": "Hanna Myklebust",
+        "text": "Ik heb vanaf de eerste les enorm veel bijgeleerd. De stress viel letterlijk van mijn schouders. Flexibele planning is een groot pluspunt.",
+        "rating": 5,
+        "date": "Juni 2021"
       },
       {
-        "name": "Emma Claes",
-        "age": 18,
-        "text": "Uitstekende prijs-kwaliteitverhouding. Moderne Audi, geduldige instructeur en flexibele uren. Ik zou Rijschool Lovanium aan iedereen aanraden.",
-        "rating": 5
+        "name": "Pauline Marbaix",
+        "text": "De positieve feedback aanpak en de inzichten in verkeersveiligheid en wagenmechanica maken Rijschool Lovanium uniek. Top ervaring!",
+        "rating": 5,
+        "date": "Juni 2021"
       },
       {
-        "name": "Luca Martens",
-        "age": 24,
-        "text": "Na twee mislukte pogingen bij een andere rijschool ben ik hier geslaagd. De begeleiding is compleet anders — veel rustiger en doelgerichter.",
-        "rating": 5
+        "name": "Noémie Kamdem",
+        "text": "Dankzij de rustige aanpak en efficiënte planning via mail voelde ik me meteen op mijn gemak. Geslaagd bij de eerste poging!",
+        "rating": 5,
+        "date": "Juni 2021"
       },
       {
-        "name": "Julie Peeters",
-        "age": 17,
-        "text": "Mijn instructeur was super professioneel en vriendelijk. De theorieles hielp me enorm voor het examen. Top rijschool in Leuven!",
-        "rating": 5
+        "name": "Adinda Van Bé",
+        "text": "Bij Lovanium zijn ze super vriendelijk, stellen ze je op je gemak en rijden we niet enkel in Leuven maar ook op de autostrade. Super!",
+        "rating": 5,
+        "date": "September 2021"
+      },
+      {
+        "name": "Si-Yuan Shen",
+        "text": "Gert and Hugo are both really great driving instructors. They are professional and give really good cues to teach me how to drive correctly and safely.",
+        "rating": 5,
+        "date": "September 2021"
+      },
+      {
+        "name": "Steffi Mercie",
+        "text": "Gert is een hele rustige en gestructureerde rij-instructeur. Hij geeft duidelijke uitleg en helpt je stap voor stap. Zeer tevreden!",
+        "rating": 5,
+        "date": "Maart 2022"
       }
     ]
   },
   "services": {
     "eyebrow": "Onze diensten",
-    "headline": "Alles voor jouw rijbewijs",
-    "subtitle": "Van theorie tot praktijk — wij begeleiden je door elk onderdeel van je rijopleiding.",
+    "headline": "Alles voor jouw rijbewijs B",
+    "subtitle": "Van de eerste verkeersregel tot het rijexamen — wij begeleiden je door elk onderdeel van je rijopleiding.",
+    "learnMore": "Meer info",
     "items": [
       {
         "icon": "BookOpen",
-        "title": "Theorieles",
-        "description": "Interactieve theorielessen die je volledig voorbereiden op het theoretisch verkeersexamen. Leer de verkeersregels op een begrijpelijke manier.",
-        "badge": "Inclusief in elk pakket"
+        "title": "Theorieopleiding",
+        "price": "€170",
+        "priceNote": "12 uur opleiding",
+        "description": "Slaag vanaf de eerste keer voor je theorie-examen. Onze interactieve opleiding van 12 uur bereidt je volledig voor op het officiële verkeersexamen in Leuven.",
+        "features": ["12 uur intensieve opleiding", "Officieel erkend curriculum", "In klein groepsverband", "Examentips & -strategie"],
+        "badge": "Verplicht voor beginners"
       },
       {
         "icon": "Car",
         "title": "Praktijkles",
-        "description": "Rij aan het stuur van een moderne Audi met een ervaren instructeur naast je. We leren je rijden op echte Leuvense wegen.",
-        "badge": "Meest populair"
+        "price": "€85",
+        "priceNote": "per uur (incl. btw)",
+        "description": "Ga veilig de weg op met een ervaren lesgever. Rij op moderne Audi-lesvoertuigen met dubbele bediening, zowel manueel als automaat beschikbaar.",
+        "features": ["Moderne Audi-lesvoertuigen", "Manueel & automaat", "Dubbele bediening", "Persoonlijke rijcoach"],
+        "badge": "Populairste keuze"
       },
       {
         "icon": "RefreshCw",
         "title": "Terugkommoment",
-        "description": "Al geslaagd maar toch een opfrissessie nodig? Ons terugkommoment helpt je om je rijvaardigheden scherp te houden.",
+        "price": "Op aanvraag",
+        "priceNote": "voor rijbewijshouders",
+        "description": "Al geslaagd maar wil je je rijvaardigheden opfrissen? Ons terugkommoment is ideaal voor nieuwe rijbewijshouders die zelfvertrouwen willen opbouwen.",
+        "features": ["Voor nieuwe rijbewijshouders", "Zelfvertrouwen opbouwen", "Specifieke situaties oefenen", "Flexibele planning"],
         "badge": "Na je rijbewijs"
       }
-    ],
-    "cta": "Plan een gratis gesprek"
+    ]
   },
   "whyUs": {
-    "eyebrow": "Waarom Lovanium",
-    "headline": "Niet zomaar een rijschool",
-    "subtitle": "We zetten de standaard voor rijopleidingen in Leuven. Hier is waarom onze leerlingen ons kiezen.",
+    "eyebrow": "Waarom Rijschool Lovanium",
+    "headline": "Wat ons anders maakt",
+    "subtitle": "Meer dan een rijschool. Wij investeren in jouw succes — met specialisaties die je nergens anders vindt.",
     "items": [
       {
-        "icon": "Trophy",
-        "title": "97% slaagpercentage",
-        "description": "Onze resultaten spreken voor zich. Bijna al onze leerlingen slagen bij de eerste poging."
+        "icon": "MapPin",
+        "title": "Centraal in Leuven",
+        "description": "Gevestigd in het Regus businesscenter op Martelarenplein 20E — vlakbij het station, bus en kiss & ride zone."
       },
       {
-        "icon": "Zap",
-        "title": "Korte wachttijden",
-        "description": "Je start snel met rijden. Geen maanden wachten — we plannen lessen naar jouw ritme."
+        "icon": "Brain",
+        "title": "Specialisatie rijangst",
+        "description": "Onze instructeurs zijn gespecialiseerd in het begeleiden van leerlingen met rijangst, ADHD, ADD en leerstoornissen."
       },
       {
         "icon": "Car",
-        "title": "Moderne Audi-wagens",
-        "description": "Rij in comfort en veiligheid. Onze vloot bestaat uit recente Audi-modellen met dubbele bediening."
-      },
-      {
-        "icon": "MapPin",
-        "title": "Nabij station Leuven",
-        "description": "Centraal gelegen op wandelafstand van het station. Gemakkelijk bereikbaar met tram, bus of trein."
-      },
-      {
-        "icon": "User",
-        "title": "Persoonlijke begeleiding",
-        "description": "Elke leerling krijgt een vaste instructeur. Zo bouwen we vertrouwen en gaan we op jouw tempo."
+        "title": "Premium Audi-vloot",
+        "description": "Rij in een moderne Audi met de nieuwste veiligheidstechnologie. Zowel manueel als automaat beschikbaar."
       },
       {
         "icon": "Shield",
-        "title": "Gecertificeerde instructeurs",
-        "description": "Al onze instructeurs zijn officieel erkend door het Vlaams Departement Mobiliteit en Openbare Werken."
+        "title": "Officieel erkend",
+        "description": "Rijschool Lovanium is erkend door de Federale Overheid met erkenningsnummer 2863. Volledig gecertificeerde instructeurs."
+      },
+      {
+        "icon": "Clock",
+        "title": "Korte wachttijden",
+        "description": "Geen maandenlang wachten. We plannen je lessen snel in, zodat je zo vlug mogelijk kunt starten."
+      },
+      {
+        "icon": "MessageCircle",
+        "title": "Bereikbaar via WhatsApp",
+        "description": "Makkelijk contact opnemen via WhatsApp op +32 492 48 28 53. Snel antwoord, persoonlijke service."
       }
     ]
   },
   "pricing": {
-    "eyebrow": "Pakketten & Prijzen",
-    "headline": "Transparant. Eerlijk. Zonder verrassingen.",
-    "subtitle": "Kies het pakket dat bij jouw situatie past. Elke formule is inclusief theorieopleiding.",
+    "eyebrow": "Tarieven",
+    "headline": "Duidelijke prijzen, geen verrassingen",
+    "subtitle": "Alle prijzen zijn inclusief btw. Transparant en eerlijk.",
     "popular": "Meest gekozen",
-    "perLesson": "per les",
-    "included": "Inbegrepen",
-    "bookPackage": "Kies dit pakket",
-    "plans": [
+    "cta": "Schrijf je in",
+    "note": "Alle prijzen zijn inclusief btw. Inschrijvingskosten (€35) zijn eenmalig. Examenkosten van het examencentrum zijn niet inbegrepen.",
+    "packages": [
       {
-        "name": "Starter",
-        "price": "52",
-        "lessons": "10",
-        "description": "Ideaal als je al enige rijervaring hebt of snel wil kennismaken.",
+        "name": "Inschrijving",
+        "price": "35",
+        "unit": "eenmalig",
+        "description": "Eenmalige inschrijving bij Rijschool Lovanium. Verplicht voor nieuwe leerlingen.",
         "features": [
-          "10 praktijklessen (50 min)",
-          "Theorieopleiding online",
-          "1 examenaangifte inbegrepen",
-          "Persoonlijke rijcoach",
-          "Flexibele planning"
-        ]
+          "Registratie als leerling",
+          "Persoonlijk rijdossier",
+          "Toegang tot lesplanning",
+          "Intake gesprek"
+        ],
+        "highlight": false
       },
       {
-        "name": "Populair",
-        "price": "47",
-        "lessons": "20",
-        "description": "Onze bestseller. Geschikt voor de meeste beginners die comfortabel willen rijden.",
+        "name": "Theorieopleiding",
+        "price": "170",
+        "unit": "12 uur",
+        "description": "Complete theorieopleiding van 12 uur. Aanbevolen voor wie wil slagen bij de eerste poging.",
         "features": [
-          "20 praktijklessen (50 min)",
-          "Theorieopleiding online",
-          "2 examenaan­giftes inbegrepen",
-          "Persoonlijke rijcoach",
-          "Flexibele planning",
-          "1 terugkommoment gratis"
-        ]
+          "12 uur theorieles",
+          "Officieel erkend curriculum",
+          "Verkeersregels & -tekens",
+          "Examenvoorbereiding",
+          "Cursusmateriaal inbegrepen"
+        ],
+        "highlight": false
       },
       {
-        "name": "Intensief",
-        "price": "43",
-        "lessons": "30",
-        "description": "Voor wie snel wil slagen met maximale voorbereiding en ondersteuning.",
+        "name": "Praktijkles",
+        "price": "85",
+        "unit": "per uur",
+        "description": "Individuele praktijkles met een gecertificeerde instructeur op een moderne Audi.",
         "features": [
-          "30 praktijklessen (50 min)",
-          "Theorieopleiding online",
-          "Onbeperkte examen­aangiftes",
-          "Persoonlijke rijcoach",
-          "Prioriteitsplanning",
-          "2 terugkommomenten gratis",
-          "Examenvoorbereiding sessie"
-        ]
+          "1 uur individuele les",
+          "Moderne Audi-lesvoertuig",
+          "Manueel of automaat",
+          "Dubbele bediening",
+          "Persoonlijke feedback"
+        ],
+        "highlight": true
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "Ons team",
+    "headline": "De mensen achter het stuur",
+    "subtitle": "Ons team van gecertificeerde instructeurs staat klaar om jou te begeleiden. Met specialisaties in rijangst, ADHD en leerstoornissen bieden we een aanpak op maat voor elke leerling.",
+    "specializations": "Specialisaties",
+    "hobbies": "Interesses",
+    "experience": "Ervaring",
+    "members": [
+      {
+        "name": "Gert",
+        "role": "Directeur & Instructeur",
+        "initials": "G",
+        "color": "#0B2D5E",
+        "bio": "Als oprichter en directeur staat Gert aan het hoofd van Rijschool Lovanium. Hij combineert zijn passie voor onderwijs met een grondige kennis van verkeersveiligheid.",
+        "specializations": ["Rijangst", "ADHD & ADD", "Leerstoornissen", "Eco-rijden", "EHBO"],
+        "hobbies": "Muziek & sport",
+        "experience": "Oprichter"
+      },
+      {
+        "name": "Hugo",
+        "role": "Instructeur",
+        "initials": "H",
+        "color": "#1A4080",
+        "bio": "Met meer dan 9 jaar ervaring heeft Hugo al honderden leerlingen begeleid naar hun rijbewijs. Hij staat bekend om zijn rustige, gestructureerde aanpak.",
+        "specializations": ["Rijangst", "Leerstoornissen", "Eco-rijden"],
+        "hobbies": "Fotografie",
+        "experience": "9+ jaar"
+      },
+      {
+        "name": "Sandra",
+        "role": "Instructeur",
+        "initials": "S",
+        "color": "#C8963E",
+        "bio": "Sandra brengt meer dan 3 jaar ervaring mee en is gespecialiseerd in het begeleiden van leerlingen met ADHD en autisme. Ze verzorgt ook terugkommomenten.",
+        "specializations": ["ADHD & Autisme", "Terugkommomenten"],
+        "hobbies": "Motorrijden, koken & gezelligheid",
+        "experience": "3+ jaar"
+      },
+      {
+        "name": "Edward",
+        "role": "Instructeur",
+        "initials": "E",
+        "color": "#2D6A4F",
+        "bio": "Edward heeft meer dan 12 jaar ervaring in het rijonderricht. Hij leidt ook terugkom- en opleidingssessies voor rijbewijshouders.",
+        "specializations": ["Rijangst", "Leerstoornissen", "Eco-rijden"],
+        "hobbies": "Reizen, muziek & cultuur",
+        "experience": "12+ jaar"
+      },
+      {
+        "name": "Joris",
+        "role": "Instructeur",
+        "initials": "J",
+        "color": "#7B3F00",
+        "bio": "Met 12+ jaar ervaring is Joris een van onze meest ervaren instructeurs. Hij beheert ook de theorie- en schoolrijbewijsprogramma's.",
+        "specializations": ["Autisme", "Rijangst", "Leerstoornissen", "Eco-rijden"],
+        "hobbies": "Muziek",
+        "experience": "12+ jaar"
+      },
+      {
+        "name": "Johan",
+        "role": "Instructeur",
+        "initials": "J",
+        "color": "#6B21A8",
+        "bio": "Johan heeft meer dan 10 jaar rijervaring als instructeur en begeleidt leerlingen met bijzondere aandacht voor rijangst en eco-rijgedrag.",
+        "specializations": ["Rijangst", "Eco-rijden"],
+        "hobbies": "Fietsen & reizen",
+        "experience": "10+ jaar"
+      },
+      {
+        "name": "Ludo",
+        "role": "Instructeur",
+        "initials": "L",
+        "color": "#065F46",
+        "bio": "Ludo is onze enthousiaste nieuwkomer met een achtergrond in EHBO. Hij brengt een frisse blik en veel motivatie mee in zijn lessen.",
+        "specializations": ["EHBO"],
+        "hobbies": "Tuinieren & antiquiteiten",
+        "experience": "2 jaar"
       }
     ],
-    "note": "Alle prijzen zijn inclusief BTW. Examenkosten zijn niet inbegrepen. Vraag naar onze gespreide betalingsopties.",
-    "customTitle": "Op zoek naar iets specifieks?",
-    "customText": "Wij stellen ook maatwerkaanbiedingen op. Neem contact op voor een persoonlijk gesprek.",
-    "customCta": "Contacteer ons"
+    "vacancyTitle": "Word collega bij Rijschool Lovanium",
+    "vacancyText": "We zijn op zoek naar een nieuwe rijinstructeur. Stuur je cv en motivatiebrief naar info@rijschoollovanium.be.",
+    "vacancyCta": "Solliciteer nu"
   },
   "booking": {
     "eyebrow": "Inschrijven",
     "headline": "Klaar om te starten?",
-    "subtitle": "Vul het formulier in en wij nemen binnen 24 uur contact met je op om alles te bespreken.",
+    "subtitle": "Stuur ons een berichtje en we nemen zo snel mogelijk contact met je op.",
     "form": {
-      "name": "Volledige naam",
+      "name": "Naam",
       "namePlaceholder": "Jan Janssen",
       "phone": "Telefoonnummer",
-      "phonePlaceholder": "+32 470 00 00 00",
+      "phonePlaceholder": "+32 492 48 28 53",
       "email": "E-mailadres",
       "emailPlaceholder": "jan@voorbeeld.be",
-      "package": "Welk pakket interesseert je?",
-      "packageDefault": "Kies een pakket...",
-      "packageOptions": ["Starter (10 lessen)", "Populair (20 lessen)", "Intensief (30 lessen)", "Nog niet zeker"],
+      "service": "Gewenste dienst",
+      "serviceDefault": "Kies een dienst...",
+      "serviceOptions": ["Theorieopleiding (€170)", "Praktijklessen (€85/u)", "Terugkommoment", "Inschrijving + Theorie + Praktijk", "Enkel inschrijven (€35)"],
       "message": "Bericht (optioneel)",
-      "messagePlaceholder": "Vertel ons iets over jezelf of stel een vraag...",
+      "messagePlaceholder": "Stel een vraag of vertel iets over jezelf...",
       "submit": "Verstuur aanvraag",
       "submitting": "Versturen...",
-      "successTitle": "Aanvraag ontvangen!",
-      "successText": "We nemen binnen 24 uur contact met je op. Tot snel!",
-      "errorText": "Er is iets misgegaan. Probeer opnieuw of bel ons direct."
+      "successTitle": "Bericht ontvangen!",
+      "successText": "We nemen zo snel mogelijk contact met je op. Tot snel bij Rijschool Lovanium!",
+      "errorText": "Er is iets misgegaan. Probeer opnieuw of contacteer ons via WhatsApp."
     },
     "contactInfo": {
-      "title": "Liever direct contact?",
-      "phone": "+32 16 00 00 00",
+      "title": "Direct contact",
+      "phone": "+32 492 48 28 53",
       "email": "info@rijschoollovanium.be",
-      "address": "Bondgenotenlaan 1, 3000 Leuven",
-      "hours": "Ma–Za: 8:00–20:00"
+      "address": "Martelarenplein 20E, 3000 Leuven",
+      "addressNote": "Regus businesscenter · Naast het station",
+      "hours": "Ma–Vr: 10:00–17:00",
+      "hoursNote": "Op afspraak",
+      "whatsapp": "WhatsApp beschikbaar"
     }
   },
   "footer": {
     "tagline": "Jouw rijbewijs. Jouw vrijheid.",
-    "description": "Rijschool Lovanium begeleidt jongeren in Leuven en omgeving naar hun rijbewijs. Professioneel, persoonlijk en met een bewezen aanpak.",
-    "links": {
-      "title": "Navigatie",
-      "items": ["Diensten", "Waarom wij", "Pakketten", "Inschrijven", "Contact"]
-    },
-    "contact": {
-      "title": "Contact"
-    },
+    "description": "Erkende rijschool in Leuven (erkenning #2863). Theorielessen, praktijklessen en terugkommomenten. Gespecialiseerd in rijangst, ADHD en leerstoornissen.",
+    "navTitle": "Navigatie",
+    "navLinks": ["Home", "Diensten", "Team", "Tarieven", "Inschrijven"],
+    "contactTitle": "Contact",
     "legal": {
       "privacy": "Privacybeleid",
-      "terms": "Gebruiksvoorwaarden",
-      "cookies": "Cookiebeleid"
+      "terms": "Gebruiksvoorwaarden"
     },
     "copyright": "© 2024 Rijschool Lovanium. Alle rechten voorbehouden.",
-    "vat": "BTW BE 0000.000.000 · Erkend door VMO Vlaanderen"
+    "recognition": "Erkend door de Federale Overheid · Erkenningsnummer 2863"
   }
 }

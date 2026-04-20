@@ -1,231 +1,311 @@
 {
   "nav": {
     "services": "Services",
-    "whyUs": "Why Us",
-    "pricing": "Packages",
+    "team": "Team",
+    "pricing": "Pricing",
     "booking": "Enroll",
     "contact": "Contact",
-    "bookCta": "Start your license"
+    "bookCta": "Enroll now"
   },
   "hero": {
-    "eyebrow": "Rijschool Lovanium · Leuven",
-    "headline1": "Your license.",
-    "headline2": "Your freedom.",
-    "subtitle": "At Rijschool Lovanium, experienced instructors guide you step by step — without stress, with confidence, to your driver's license.",
-    "cta1": "Start your training",
-    "cta2": "View packages",
-    "stat1Value": "97%",
-    "stat1Label": "Pass rate",
-    "stat2Value": "600+",
-    "stat2Label": "Licensed students",
-    "stat3Value": "15+",
-    "stat3Label": "Years experience",
-    "scrollHint": "Scroll to discover"
+    "eyebrow": "Accredited driving school · License #2863",
+    "headline1": "Your driver's license,",
+    "headline2": "without stress.",
+    "subtitle": "At Rijschool Lovanium in Leuven, experienced instructors guide you step by step. Personal, patient, and at your own pace.",
+    "cta1": "Enroll now",
+    "cta2": "View pricing",
+    "stat1Value": "€85",
+    "stat1Label": "Per driving lesson",
+    "stat2Value": "€170",
+    "stat2Label": "Theory course (12h)",
+    "stat3Value": "#2863",
+    "stat3Label": "Government accredited",
+    "badge": "Manual & automatic · Audi training vehicles",
+    "scrollHint": "Discover more"
   },
   "proof": {
     "eyebrow": "What our students say",
-    "headline": "Over 600 satisfied license holders",
-    "ratingLabel": "average score",
-    "reviewsLabel": "Google reviews",
+    "headline": "Real stories, real results",
+    "ratingLabel": "average on Google",
+    "reviewsLabel": "reviews",
     "testimonials": [
       {
-        "name": "Sarah Vandenbroeck",
-        "age": 19,
-        "text": "Got my license in just three months! The instructors are patient, clear and really put you at ease. Absolutely recommended for anyone who is nervous.",
-        "rating": 5
+        "name": "Tibeau Reynaerts",
+        "text": "Gert immediately created a stress-free environment. Thanks to his approach I passed my driving exam. Absolutely recommended!",
+        "rating": 5,
+        "date": "June 2021"
       },
       {
-        "name": "Thomas De Smedt",
-        "age": 22,
-        "text": "I was very nervous at first, but after the first lesson I already felt much better. The personal approach really makes the difference. Passed first time!",
-        "rating": 5
+        "name": "Hanna Myklebust",
+        "text": "I learned a lot from the very first lesson. The stress literally fell off my shoulders. Flexible scheduling is a great plus.",
+        "rating": 5,
+        "date": "June 2021"
       },
       {
-        "name": "Emma Claes",
-        "age": 18,
-        "text": "Excellent value for money. Modern Audi, patient instructor and flexible hours. I would recommend Rijschool Lovanium to everyone.",
-        "rating": 5
+        "name": "Pauline Marbaix",
+        "text": "The positive feedback approach and insights into road safety and car mechanics make Rijschool Lovanium unique. Great experience!",
+        "rating": 5,
+        "date": "June 2021"
       },
       {
-        "name": "Luca Martens",
-        "age": 24,
-        "text": "After two failed attempts at another driving school, I passed here. The guidance is completely different — much calmer and more targeted.",
-        "rating": 5
+        "name": "Noémie Kamdem",
+        "text": "Thanks to the calm approach and efficient planning by email, I felt comfortable right away. Passed on the first attempt!",
+        "rating": 5,
+        "date": "June 2021"
       },
       {
-        "name": "Julie Peeters",
-        "age": 17,
-        "text": "My instructor was super professional and friendly. The theory lesson helped me enormously for the exam. Top driving school in Leuven!",
-        "rating": 5
+        "name": "Adinda Van Bé",
+        "text": "At Lovanium they are super friendly, they put you at ease and we don't only drive in Leuven but also on the motorway. Super!",
+        "rating": 5,
+        "date": "September 2021"
+      },
+      {
+        "name": "Si-Yuan Shen",
+        "text": "Gert and Hugo are both really great driving instructors. They are professional and give really good cues to teach me how to drive correctly and safely.",
+        "rating": 5,
+        "date": "September 2021"
+      },
+      {
+        "name": "Steffi Mercie",
+        "text": "Gert is a very calm and structured driving instructor. He gives clear explanations and helps you step by step. Very satisfied!",
+        "rating": 5,
+        "date": "March 2022"
       }
     ]
   },
   "services": {
     "eyebrow": "Our services",
-    "headline": "Everything for your license",
-    "subtitle": "From theory to practice — we guide you through every part of your driving education.",
+    "headline": "Everything for your category B license",
+    "subtitle": "From the first traffic rule to the driving exam — we guide you through every part of your training.",
+    "learnMore": "Learn more",
     "items": [
       {
         "icon": "BookOpen",
-        "title": "Theory Lessons",
-        "description": "Interactive theory lessons that fully prepare you for the theoretical traffic exam. Learn traffic rules in a clear and accessible way.",
-        "badge": "Included in every package"
+        "title": "Theory Course",
+        "price": "€170",
+        "priceNote": "12 hours of training",
+        "description": "Pass your theory exam on the first try. Our 12-hour interactive course fully prepares you for the official traffic exam in Leuven.",
+        "features": ["12 hours of intensive training", "Officially accredited curriculum", "Small group format", "Exam tips & strategy"],
+        "badge": "Required for beginners"
       },
       {
         "icon": "Car",
         "title": "Driving Lessons",
-        "description": "Get behind the wheel of a modern Audi with an experienced instructor beside you. We teach you to drive on real Leuven roads.",
+        "price": "€85",
+        "priceNote": "per hour (VAT incl.)",
+        "description": "Get safely on the road with an experienced instructor. Drive in a modern Audi with dual controls — manual or automatic transmission.",
+        "features": ["Modern Audi training vehicle", "Manual & automatic", "Dual controls", "Personal driving coach"],
         "badge": "Most popular"
       },
       {
         "icon": "RefreshCw",
         "title": "Refresher Session",
-        "description": "Already licensed but need a refresher? Our follow-up session helps you keep your driving skills sharp.",
+        "price": "On request",
+        "priceNote": "for license holders",
+        "description": "Already licensed but want to refresh your skills? Our refresher session is ideal for new drivers who want to build confidence.",
+        "features": ["For new license holders", "Build confidence", "Practice specific situations", "Flexible scheduling"],
         "badge": "After your license"
       }
-    ],
-    "cta": "Schedule a free consultation"
+    ]
   },
   "whyUs": {
-    "eyebrow": "Why Lovanium",
-    "headline": "Not just a driving school",
-    "subtitle": "We set the standard for driving education in Leuven. Here's why our students choose us.",
+    "eyebrow": "Why Rijschool Lovanium",
+    "headline": "What makes us different",
+    "subtitle": "More than a driving school. We invest in your success — with specializations you won't find anywhere else.",
     "items": [
       {
-        "icon": "Trophy",
-        "title": "97% pass rate",
-        "description": "Our results speak for themselves. Almost all our students pass on their first attempt."
+        "icon": "MapPin",
+        "title": "Central in Leuven",
+        "description": "Located in the Regus business center at Martelarenplein 20E — next to the train station, bus stops and kiss & ride zone."
       },
       {
-        "icon": "Zap",
-        "title": "Short waiting times",
-        "description": "Start driving quickly. No months of waiting — we schedule lessons at your pace."
+        "icon": "Brain",
+        "title": "Driving anxiety specialist",
+        "description": "Our instructors are specialized in guiding students with driving anxiety, ADHD, ADD and learning disabilities."
       },
       {
         "icon": "Car",
-        "title": "Modern Audi vehicles",
-        "description": "Drive in comfort and safety. Our fleet consists of recent Audi models with dual controls."
-      },
-      {
-        "icon": "MapPin",
-        "title": "Near Leuven station",
-        "description": "Centrally located within walking distance of the station. Easily accessible by tram, bus or train."
-      },
-      {
-        "icon": "User",
-        "title": "Personal coaching",
-        "description": "Every student gets a dedicated instructor. We build trust and go at your own pace."
+        "title": "Premium Audi fleet",
+        "description": "Drive in a modern Audi with the latest safety technology. Both manual and automatic transmissions available."
       },
       {
         "icon": "Shield",
-        "title": "Certified instructors",
-        "description": "All our instructors are officially recognized by the Flemish Department of Mobility and Public Works."
+        "title": "Government accredited",
+        "description": "Rijschool Lovanium is accredited by the Federal Government with recognition number 2863. Fully certified instructors."
+      },
+      {
+        "icon": "Clock",
+        "title": "Short waiting times",
+        "description": "No months of waiting. We schedule your lessons quickly so you can start as soon as possible."
+      },
+      {
+        "icon": "MessageCircle",
+        "title": "Available via WhatsApp",
+        "description": "Easy contact via WhatsApp at +32 492 48 28 53. Quick responses, personal service."
       }
     ]
   },
   "pricing": {
-    "eyebrow": "Packages & Pricing",
-    "headline": "Transparent. Fair. No surprises.",
-    "subtitle": "Choose the package that suits your situation. Every formula includes theory education.",
+    "eyebrow": "Pricing",
+    "headline": "Clear prices, no surprises",
+    "subtitle": "All prices include VAT. Transparent and fair.",
     "popular": "Most chosen",
-    "perLesson": "per lesson",
-    "included": "Included",
-    "bookPackage": "Choose this package",
-    "plans": [
+    "cta": "Enroll now",
+    "note": "All prices include VAT. Registration fee (€35) is one-time only. Exam fees charged by the exam center are not included.",
+    "packages": [
       {
-        "name": "Starter",
-        "price": "52",
-        "lessons": "10",
-        "description": "Ideal if you already have some driving experience or want to get started quickly.",
-        "features": [
-          "10 driving lessons (50 min)",
-          "Online theory education",
-          "1 exam registration included",
-          "Personal driving coach",
-          "Flexible scheduling"
-        ]
+        "name": "Registration",
+        "price": "35",
+        "unit": "one-time",
+        "description": "One-time registration at Rijschool Lovanium. Required for new students.",
+        "features": ["Registration as a student", "Personal driving file", "Access to lesson planning", "Intake interview"],
+        "highlight": false
       },
       {
-        "name": "Popular",
-        "price": "47",
-        "lessons": "20",
-        "description": "Our bestseller. Suitable for most beginners who want to drive comfortably.",
-        "features": [
-          "20 driving lessons (50 min)",
-          "Online theory education",
-          "2 exam registrations included",
-          "Personal driving coach",
-          "Flexible scheduling",
-          "1 refresher session free"
-        ]
+        "name": "Theory Course",
+        "price": "170",
+        "unit": "12 hours",
+        "description": "Complete 12-hour theory course. Recommended for those who want to pass on the first attempt.",
+        "features": ["12 hours theory lessons", "Officially accredited curriculum", "Traffic rules & signs", "Exam preparation", "Course materials included"],
+        "highlight": false
       },
       {
-        "name": "Intensive",
-        "price": "43",
-        "lessons": "30",
-        "description": "For those who want to pass quickly with maximum preparation and support.",
-        "features": [
-          "30 driving lessons (50 min)",
-          "Online theory education",
-          "Unlimited exam registrations",
-          "Personal driving coach",
-          "Priority scheduling",
-          "2 refresher sessions free",
-          "Exam preparation session"
-        ]
+        "name": "Driving Lesson",
+        "price": "85",
+        "unit": "per hour",
+        "description": "Individual driving lesson with a certified instructor in a modern Audi.",
+        "features": ["1 hour individual lesson", "Modern Audi training vehicle", "Manual or automatic", "Dual controls", "Personal feedback"],
+        "highlight": true
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "Our team",
+    "headline": "The people behind the wheel",
+    "subtitle": "Our team of certified instructors is ready to guide you. With specializations in driving anxiety, ADHD and learning disabilities, we offer a tailored approach for every student.",
+    "specializations": "Specializations",
+    "hobbies": "Interests",
+    "experience": "Experience",
+    "members": [
+      {
+        "name": "Gert",
+        "role": "Director & Instructor",
+        "initials": "G",
+        "color": "#0B2D5E",
+        "bio": "As founder and director, Gert leads Rijschool Lovanium. He combines his passion for education with an in-depth knowledge of road safety.",
+        "specializations": ["Driving anxiety", "ADHD & ADD", "Learning disabilities", "Eco-driving", "First aid"],
+        "hobbies": "Music & sports",
+        "experience": "Founder"
+      },
+      {
+        "name": "Hugo",
+        "role": "Instructor",
+        "initials": "H",
+        "color": "#1A4080",
+        "bio": "With over 9 years of experience, Hugo has guided hundreds of students to their license. Known for his calm, structured approach.",
+        "specializations": ["Driving anxiety", "Learning disabilities", "Eco-driving"],
+        "hobbies": "Photography",
+        "experience": "9+ years"
+      },
+      {
+        "name": "Sandra",
+        "role": "Instructor",
+        "initials": "S",
+        "color": "#C8963E",
+        "bio": "Sandra brings over 3 years of experience and specializes in guiding students with ADHD and autism. She also conducts refresher sessions.",
+        "specializations": ["ADHD & Autism", "Refresher sessions"],
+        "hobbies": "Motorcycling, cooking & socializing",
+        "experience": "3+ years"
+      },
+      {
+        "name": "Edward",
+        "role": "Instructor",
+        "initials": "E",
+        "color": "#2D6A4F",
+        "bio": "Edward has over 12 years of experience in driving instruction. He also leads refresher and training sessions for license holders.",
+        "specializations": ["Driving anxiety", "Learning disabilities", "Eco-driving"],
+        "hobbies": "Travel, music & culture",
+        "experience": "12+ years"
+      },
+      {
+        "name": "Joris",
+        "role": "Instructor",
+        "initials": "J",
+        "color": "#7B3F00",
+        "bio": "With 12+ years of experience, Joris is one of our most experienced instructors. He also manages theory and school license programs.",
+        "specializations": ["Autism", "Driving anxiety", "Learning disabilities", "Eco-driving"],
+        "hobbies": "Music",
+        "experience": "12+ years"
+      },
+      {
+        "name": "Johan",
+        "role": "Instructor",
+        "initials": "J",
+        "color": "#6B21A8",
+        "bio": "Johan has over 10 years of experience as a driving instructor, guiding students with special attention to driving anxiety and eco-driving.",
+        "specializations": ["Driving anxiety", "Eco-driving"],
+        "hobbies": "Cycling & travel",
+        "experience": "10+ years"
+      },
+      {
+        "name": "Ludo",
+        "role": "Instructor",
+        "initials": "L",
+        "color": "#065F46",
+        "bio": "Ludo is our enthusiastic newcomer with a background in first aid. He brings a fresh perspective and plenty of motivation to his lessons.",
+        "specializations": ["First aid"],
+        "hobbies": "Gardening & antiques",
+        "experience": "2 years"
       }
     ],
-    "note": "All prices include VAT. Exam fees are not included. Ask about our installment payment options.",
-    "customTitle": "Looking for something specific?",
-    "customText": "We also create custom offers. Contact us for a personal consultation.",
-    "customCta": "Contact us"
+    "vacancyTitle": "Join the team at Rijschool Lovanium",
+    "vacancyText": "We are looking for a new driving instructor. Send your CV and motivation letter to info@rijschoollovanium.be.",
+    "vacancyCta": "Apply now"
   },
   "booking": {
     "eyebrow": "Enroll",
     "headline": "Ready to start?",
-    "subtitle": "Fill in the form and we will contact you within 24 hours to discuss everything.",
+    "subtitle": "Send us a message and we will get back to you as soon as possible.",
     "form": {
-      "name": "Full name",
+      "name": "Name",
       "namePlaceholder": "John Smith",
       "phone": "Phone number",
-      "phonePlaceholder": "+32 470 00 00 00",
+      "phonePlaceholder": "+32 492 48 28 53",
       "email": "Email address",
       "emailPlaceholder": "john@example.com",
-      "package": "Which package interests you?",
-      "packageDefault": "Choose a package...",
-      "packageOptions": ["Starter (10 lessons)", "Popular (20 lessons)", "Intensive (30 lessons)", "Not sure yet"],
+      "service": "Desired service",
+      "serviceDefault": "Choose a service...",
+      "serviceOptions": ["Theory course (€170)", "Driving lessons (€85/h)", "Refresher session", "Registration + Theory + Practice", "Registration only (€35)"],
       "message": "Message (optional)",
-      "messagePlaceholder": "Tell us something about yourself or ask a question...",
+      "messagePlaceholder": "Ask a question or tell us something about yourself...",
       "submit": "Send request",
       "submitting": "Sending...",
-      "successTitle": "Request received!",
-      "successText": "We will contact you within 24 hours. See you soon!",
-      "errorText": "Something went wrong. Please try again or call us directly."
+      "successTitle": "Message received!",
+      "successText": "We will contact you as soon as possible. See you at Rijschool Lovanium!",
+      "errorText": "Something went wrong. Please try again or contact us via WhatsApp."
     },
     "contactInfo": {
-      "title": "Prefer direct contact?",
-      "phone": "+32 16 00 00 00",
+      "title": "Direct contact",
+      "phone": "+32 492 48 28 53",
       "email": "info@rijschoollovanium.be",
-      "address": "Bondgenotenlaan 1, 3000 Leuven",
-      "hours": "Mon–Sat: 8:00–20:00"
+      "address": "Martelarenplein 20E, 3000 Leuven",
+      "addressNote": "Regus business center · Next to the station",
+      "hours": "Mon–Fri: 10:00–17:00",
+      "hoursNote": "By appointment",
+      "whatsapp": "WhatsApp available"
     }
   },
   "footer": {
     "tagline": "Your license. Your freedom.",
-    "description": "Rijschool Lovanium guides young people in Leuven and surroundings to their driver's license. Professional, personal and with a proven approach.",
-    "links": {
-      "title": "Navigation",
-      "items": ["Services", "Why Us", "Packages", "Enroll", "Contact"]
-    },
-    "contact": {
-      "title": "Contact"
-    },
+    "description": "Accredited driving school in Leuven (license #2863). Theory lessons, driving lessons and refresher sessions. Specialized in driving anxiety, ADHD and learning disabilities.",
+    "navTitle": "Navigation",
+    "navLinks": ["Home", "Services", "Team", "Pricing", "Enroll"],
+    "contactTitle": "Contact",
     "legal": {
       "privacy": "Privacy Policy",
-      "terms": "Terms of Use",
-      "cookies": "Cookie Policy"
+      "terms": "Terms of Use"
     },
     "copyright": "© 2024 Rijschool Lovanium. All rights reserved.",
-    "vat": "VAT BE 0000.000.000 · Recognized by VMO Flanders"
+    "recognition": "Accredited by the Federal Government · Recognition number 2863"
   }
 }
