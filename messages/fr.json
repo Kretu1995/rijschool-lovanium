@@ -295,6 +295,86 @@
       "whatsapp": "WhatsApp disponible"
     }
   },
+  "howItWorks": {
+    "eyebrow": "Comment ça marche",
+    "headline": "De zéro au permis en 4 étapes",
+    "subtitle": "Nous vous guidons à travers chaque étape. Clair, personnel et à votre rythme.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "S'inscrire",
+        "description": "Envoyez-nous un message via le formulaire ou WhatsApp. Nous planifions un entretien d'accueil gratuit et créons votre dossier.",
+        "detail": "€35 inscription unique"
+      },
+      {
+        "number": "02",
+        "title": "Formation théorique",
+        "description": "Suivez notre formation théorique de 12h et apprenez toutes les règles de circulation. Les élèves qui suivent la théorie réussissent bien plus souvent du premier coup.",
+        "detail": "€170 · 12 heures interactif"
+      },
+      {
+        "number": "03",
+        "title": "Cours de conduite",
+        "description": "Conduisez une Audi moderne avec un moniteur certifié. Nous conduisons à Louvain, sur le ring et sur l'autoroute.",
+        "detail": "€85 par heure · manuel ou automatique"
+      },
+      {
+        "number": "04",
+        "title": "Examen & permis",
+        "description": "Quand vous êtes prêt(e), nous vous inscrivons à l'examen. Nous vous préparons de façon optimale pour que vous alliez au centre d'examen en toute confiance.",
+        "detail": "Nous vous accompagnons jusqu'au bout"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Questions fréquentes",
+    "headline": "Tout ce que vous voulez savoir",
+    "subtitle": "Votre question n'est pas listée ? Envoyez-nous un message via WhatsApp.",
+    "items": [
+      {
+        "question": "Combien de temps faut-il pour obtenir le permis de conduire ?",
+        "answer": "Cela varie beaucoup selon les personnes. En moyenne, cela prend 3 à 6 mois, mais nous nous adaptons entièrement à votre rythme. Ceux qui s'exercent régulièrement réussissent plus vite."
+      },
+      {
+        "question": "Puis-je prendre des cours de conduite en boîte automatique ?",
+        "answer": "Oui, absolument ! Nous avons des Audi de formation en boîte manuelle et automatique. Les deux options sont disponibles au même tarif de €85/heure."
+      },
+      {
+        "question": "Combien coûte l'examen de conduite lui-même ?",
+        "answer": "L'examen théorique coûte environ €24 et l'examen pratique environ €108. Ces frais sont facturés par le centre d'examen et ne sont pas inclus dans nos tarifs."
+      },
+      {
+        "question": "À quelle vitesse puis-je commencer les cours ?",
+        "answer": "Grâce à nos courts délais d'attente, vous pouvez souvent commencer dans la semaine. Contactez-nous via WhatsApp au +32 492 48 28 53 et nous vérifierons les disponibilités ensemble."
+      },
+      {
+        "question": "Dois-je d'abord suivre la théorie avant les cours pratiques ?",
+        "answer": "Pas obligatoire, mais fortement recommandé. Les élèves qui suivent notre formation théorique de 12h réussissent beaucoup plus souvent l'examen théorique du premier coup."
+      },
+      {
+        "question": "Que se passe-t-il si je ne réussis pas mon examen ?",
+        "answer": "Pas de panique ! Nous discutons ensemble de ce qui peut être amélioré et planifions des cours complémentaires ciblés. Vous pouvez repasser l'examen autant de fois que nécessaire."
+      },
+      {
+        "question": "Êtes-vous spécialisés en anxiété de conduite ou TDAH ?",
+        "answer": "Oui ! Tous nos moniteurs sont spécialement formés pour accompagner les élèves souffrant d'anxiété de conduite, TDAH, TDA et troubles d'apprentissage."
+      },
+      {
+        "question": "Comment puis-je me rendre à votre adresse ?",
+        "answer": "Nous sommes situés au centre d'affaires Regus, Martelarenplein 20E, 3000 Louvain — juste à côté de la gare. Accessible en train, tram, bus et il y a une zone kiss & ride."
+      }
+    ]
+  },
+  "chatbot": {
+    "title": "Chattez avec nous",
+    "subtitle": "Posez votre question — réponse immédiate",
+    "placeholder": "Tapez votre question...",
+    "send": "Envoyer",
+    "greeting": "Bonjour ! 👋 Je suis l'assistant de Rijschool Lovanium. Comment puis-je vous aider ?",
+    "quickReplies": ["Quels sont les tarifs ?", "Comment s'inscrire ?", "Manuel ou automatique ?", "Adresse & horaires"],
+    "whatsappText": "Préférez un chat personnel ?",
+    "whatsappCta": "Ouvrir WhatsApp"
+  },
   "footer": {
     "tagline": "Votre permis. Votre liberté.",
     "description": "Auto-école agréée à Louvain (agrément #2863). Cours théoriques, cours de conduite et séances de rappel. Spécialisée en anxiété de conduite, TDAH et troubles d'apprentissage.",

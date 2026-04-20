@@ -7,6 +7,8 @@ import '../globals.css';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
 import StickyMobileCTA from '@/components/ui/StickyMobileCTA';
+import WhatsAppButton from '@/components/ui/WhatsAppButton';
+import ChatBot from '@/components/ui/ChatBot';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -81,6 +83,8 @@ export default async function LocaleLayout({
           <main>{children}</main>
           <Footer />
           <StickyMobileCTA />
+          <WhatsAppButton />
+          <ChatBot />
         </NextIntlClientProvider>
       </body>
     </html>

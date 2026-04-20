@@ -1,8 +1,22 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import { ArrowRight, ChevronDown, Phone, MapPin, CheckCircle } from 'lucide-react';
+import Image from 'next/image';
+import { useEffect } from 'react';
+
+function AnimatedCounter({ to, suffix = '' }: { to: number; suffix?: string }) {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (v) => Math.round(v) + suffix);
+
+  useEffect(() => {
+    const controls = animate(count, to, { duration: 2, ease: 'easeOut', delay: 0.8 });
+    return controls.stop;
+  }, [count, to]);
+
+  return <motion.span>{rounded}</motion.span>;
+}
 
 export default function Hero() {
   const t = useTranslations('hero');
@@ -133,8 +147,16 @@ export default function Hero() {
           >
             {/* Main card */}
             <div className="relative rounded-3xl overflow-hidden bg-navy aspect-[4/5] shadow-navy">
-              {/* Gradient overlay background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-gold/30" />
+              {/* Audi photo or gradient fallback */}
+              <Image
+                src="/audi-lovanium.jpg"
+                alt="Rijschool Lovanium lesvoertuig"
+                fill
+                className="object-cover opacity-60"
+                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/20" />
 
               {/* Content on card */}
               <div className="absolute inset-0 flex flex-col justify-between p-10">
@@ -143,18 +165,20 @@ export default function Hero() {
                   <p className="text-white/90 text-sm">Leuven · België</p>
                 </div>
 
-                {/* Stats */}
+                {/* Animated stats */}
                 <div className="space-y-4">
-                  {[
-                    { value: t('stat1Value'), label: t('stat1Label') },
-                    { value: t('stat2Value'), label: t('stat2Label') },
-                    { value: t('stat3Value'), label: t('stat3Label') },
-                  ].map((stat, i) => (
-                    <div key={i} className="flex items-center justify-between py-4 border-b border-white/10 last:border-0">
-                      <span className="text-white/60 text-sm">{stat.label}</span>
-                      <span className="text-white font-black text-xl">{stat.value}</span>
-                    </div>
-                  ))}
+                  <div className="flex items-center justify-between py-4 border-b border-white/10">
+                    <span className="text-white/60 text-sm">{t('stat1Label')}</span>
+                    <span className="text-white font-black text-xl"><AnimatedCounter to={97} suffix="%" /></span>
+                  </div>
+                  <div className="flex items-center justify-between py-4 border-b border-white/10">
+                    <span className="text-white/60 text-sm">{t('stat2Label')}</span>
+                    <span className="text-white font-black text-xl"><AnimatedCounter to={10} suffix="+" /></span>
+                  </div>
+                  <div className="flex items-center justify-between py-4">
+                    <span className="text-white/60 text-sm">{t('stat3Label')}</span>
+                    <span className="text-white font-black text-xl"><AnimatedCounter to={500} suffix="+" /></span>
+                  </div>
                 </div>
 
                 {/* Bottom CTA */}

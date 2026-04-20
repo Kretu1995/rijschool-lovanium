@@ -295,6 +295,86 @@
       "whatsapp": "WhatsApp available"
     }
   },
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "headline": "From zero to license in 4 steps",
+    "subtitle": "We guide you through every part. Clear, personal and at your own pace.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Enroll",
+        "description": "Send us a message via the form or WhatsApp. We schedule a free intake conversation and set up your driving file.",
+        "detail": "€35 one-time registration"
+      },
+      {
+        "number": "02",
+        "title": "Theory course",
+        "description": "Follow our 12h theory course and learn all traffic rules. Students who take theory pass much more often on the first attempt.",
+        "detail": "€170 · 12 hours interactive"
+      },
+      {
+        "number": "03",
+        "title": "Driving lessons",
+        "description": "Drive a modern Audi with a certified instructor. We drive in Leuven, on the ring road and on the motorway.",
+        "detail": "€85 per hour · manual or automatic"
+      },
+      {
+        "number": "04",
+        "title": "Driving exam & license",
+        "description": "When you're ready, we register you for the exam. We prepare you optimally so you go to the exam center with confidence.",
+        "detail": "We accompany you to the end"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Frequently asked questions",
+    "headline": "Everything you want to know",
+    "subtitle": "Question not listed? Send us a message via WhatsApp.",
+    "items": [
+      {
+        "question": "How long does it take to get my driver's license?",
+        "answer": "This varies greatly per person. On average it takes 3 to 6 months, but we fully adapt to your pace. Those who practice regularly pass faster. We schedule lessons as flexibly as possible."
+      },
+      {
+        "question": "Can I take driving lessons in an automatic car?",
+        "answer": "Yes, absolutely! We have both manual and automatic Audi training vehicles available. Both options are available for the same rate of €85/hour. Some students choose automatic to focus more quickly on the driving itself."
+      },
+      {
+        "question": "What does the driving exam itself cost?",
+        "answer": "The theoretical exam costs approximately €24 and the practical exam approximately €108. These costs are charged by the exam center and are not included in our rates. We will help you with registration."
+      },
+      {
+        "question": "How quickly can I start lessons?",
+        "answer": "Thanks to our short waiting times, you can often start within the week. Contact us via WhatsApp at +32 492 48 28 53 and we will check availability together."
+      },
+      {
+        "question": "Do I need to take theory before I can start driving lessons?",
+        "answer": "Not required, but strongly recommended. Students who follow our 12h theory course before practical lessons understand traffic better and pass the theory exam much more often on the first attempt."
+      },
+      {
+        "question": "What if I don't pass my driving exam?",
+        "answer": "Don't worry! We discuss together what can be improved and plan targeted additional lessons. You can repeat the exam as many times as needed. We won't let you go until you've passed."
+      },
+      {
+        "question": "Are you specialized in driving anxiety or ADHD?",
+        "answer": "Yes! All our instructors are specially trained in guiding students with driving anxiety, ADHD, ADD and learning disabilities. We work in a calm, structured environment without stress."
+      },
+      {
+        "question": "How do I reach your location?",
+        "answer": "We are located in the Regus business center at Martelarenplein 20E, 3000 Leuven — right next to the train station. Accessible by train, tram, bus and there is a kiss & ride zone. Ideally located for students from the entire Leuven region."
+      }
+    ]
+  },
+  "chatbot": {
+    "title": "Chat with us",
+    "subtitle": "Ask your question — we answer instantly",
+    "placeholder": "Type your question...",
+    "send": "Send",
+    "greeting": "Hello! 👋 I'm the assistant of Rijschool Lovanium. How can I help you?",
+    "quickReplies": ["What are the prices?", "How to enroll?", "Manual or automatic?", "Location & hours"],
+    "whatsappText": "Prefer a personal chat?",
+    "whatsappCta": "Open WhatsApp"
+  },
   "footer": {
     "tagline": "Your license. Your freedom.",
     "description": "Accredited driving school in Leuven (license #2863). Theory lessons, driving lessons and refresher sessions. Specialized in driving anxiety, ADHD and learning disabilities.",

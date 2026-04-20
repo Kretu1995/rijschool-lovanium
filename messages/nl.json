@@ -312,6 +312,86 @@
       "whatsapp": "WhatsApp beschikbaar"
     }
   },
+  "howItWorks": {
+    "eyebrow": "Hoe het werkt",
+    "headline": "Van nul tot rijbewijs in 4 stappen",
+    "subtitle": "We begeleiden je door elk onderdeel. Duidelijk, persoonlijk en op jouw tempo.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Inschrijven",
+        "description": "Stuur ons een berichtje via het formulier of WhatsApp. We plannen een vrijblijvend intake gesprek en maken je rijdossier aan.",
+        "detail": "€35 eenmalige inschrijving"
+      },
+      {
+        "number": "02",
+        "title": "Theorieopleiding",
+        "description": "Volg onze 12u theorieopleiding en leer alle verkeersregels. Leerlingen die theorie volgen slagen veel vaker bij de eerste poging.",
+        "detail": "€170 · 12 uur interactief"
+      },
+      {
+        "number": "03",
+        "title": "Praktijklessen",
+        "description": "Rij aan het stuur van een moderne Audi met een gecertificeerde instructeur. We rijden in Leuven, op de ring én op de autosnelweg.",
+        "detail": "€85 per uur · manueel of automaat"
+      },
+      {
+        "number": "04",
+        "title": "Rijexamen & rijbewijs",
+        "description": "Wanneer je klaar bent, schrijven we je in voor het examen. We bereiden je optimaal voor zodat je met vertrouwen naar het examencentrum gaat.",
+        "detail": "Wij begeleiden je tot het einde"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Veelgestelde vragen",
+    "headline": "Alles wat je wil weten",
+    "subtitle": "Staat je vraag er niet bij? Stuur ons een berichtje via WhatsApp.",
+    "items": [
+      {
+        "question": "Hoelang duurt het om mijn rijbewijs te halen?",
+        "answer": "Dit verschilt sterk per persoon. Gemiddeld duurt het 3 tot 6 maanden, maar we passen het volledig aan jouw tempo aan. Wie regelmatig oefent, slaagt sneller. We plannen lessen zo flexibel mogelijk."
+      },
+      {
+        "question": "Kan ik rijlessen volgen op een automaat?",
+        "answer": "Ja, absoluut! We hebben zowel manuele als automatische Audi-lesvoertuigen beschikbaar. Beide opties zijn beschikbaar voor hetzelfde tarief van €85/uur. Sommige leerlingen kiezen automaat om zich sneller op het rijden zelf te focussen."
+      },
+      {
+        "question": "Wat kost het rijexamen zelf?",
+        "answer": "Het theoretisch examen kost circa €24 en het praktijkexamen circa €108. Deze kosten worden aangerekend door het examencentrum en zijn niet inbegrepen in onze tarieven. Wij helpen je wel met de inschrijving."
+      },
+      {
+        "question": "Hoe snel kan ik starten met lessen?",
+        "answer": "Dankzij onze korte wachttijden kun je vaak al binnen de week starten. Neem contact op via WhatsApp op +32 492 48 28 53 en we checken samen de beschikbaarheid van je favoriete instructeur."
+      },
+      {
+        "question": "Moet ik eerst theorie volgen voor ik praktijklessen kan nemen?",
+        "answer": "Niet verplicht, maar sterk aanbevolen. Leerlingen die onze 12u theorieopleiding volgen vóór de praktijk, begrijpen het verkeer beter en slagen veel vaker bij de eerste poging voor het theoretisch examen."
+      },
+      {
+        "question": "Wat als ik niet slaag voor mijn rijexamen?",
+        "answer": "Geen zorgen! We bespreken samen wat er beter kan en plannen gerichte bijscholingslessen. Je kunt het examen zo vaak herhalen als nodig. We laten je niet vallen tot je geslaagd bent."
+      },
+      {
+        "question": "Zijn jullie gespecialiseerd in rijangst of ADHD?",
+        "answer": "Ja! Al onze instructeurs zijn speciaal opgeleid in de begeleiding van leerlingen met rijangst, ADHD, ADD en leerstoornissen. We werken in een rustige, gestructureerde omgeving zonder stress."
+      },
+      {
+        "question": "Hoe bereik ik jullie locatie?",
+        "answer": "We zitten in het Regus businesscenter op Martelarenplein 20E, 3000 Leuven — vlak naast het station. Bereikbaar met trein, tram, bus en er is een kiss & ride zone. Ideaal gelegen voor leerlingen uit de hele regio Leuven."
+      }
+    ]
+  },
+  "chatbot": {
+    "title": "Chat met ons",
+    "subtitle": "Stel je vraag — we antwoorden meteen",
+    "placeholder": "Typ je vraag...",
+    "send": "Verstuur",
+    "greeting": "Hallo! 👋 Ik ben de assistent van Rijschool Lovanium. Hoe kan ik je helpen?",
+    "quickReplies": ["Wat zijn de prijzen?", "Hoe inschrijven?", "Manueel of automaat?", "Locatie & uren"],
+    "whatsappText": "Liever persoonlijk chatten?",
+    "whatsappCta": "Open WhatsApp"
+  },
   "footer": {
     "tagline": "Jouw rijbewijs. Jouw vrijheid.",
     "description": "Erkende rijschool in Leuven (erkenning #2863). Theorielessen, praktijklessen en terugkommomenten. Gespecialiseerd in rijangst, ADHD en leerstoornissen.",
