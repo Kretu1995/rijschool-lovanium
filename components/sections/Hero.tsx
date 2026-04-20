@@ -147,16 +147,15 @@ export default function Hero() {
           >
             {/* Main card */}
             <div className="relative rounded-3xl overflow-hidden bg-navy aspect-[4/5] shadow-navy">
-              {/* Audi photo or gradient fallback */}
+              {/* Car photo */}
               <Image
-                src="/audi-lovanium.jpg"
+                src="https://images.unsplash.com/photo-1605559424843-9073c6e09ea8?w=900&q=85&fit=crop"
                 alt="Rijschool Lovanium lesvoertuig"
                 fill
-                className="object-cover opacity-60"
-                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                className="object-cover opacity-70"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-navy/10" />
 
               {/* Content on card */}
               <div className="absolute inset-0 flex flex-col justify-between p-10">

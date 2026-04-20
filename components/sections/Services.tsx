@@ -5,6 +5,13 @@ import { BookOpen, Car, RefreshCw, ArrowRight, Check, type LucideIcon } from 'lu
 import { motion } from 'framer-motion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import Link from 'next/link';
+import Image from 'next/image';
+
+const servicePhotos = [
+  'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80&fit=crop',
+  'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&q=80&fit=crop',
+  'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80&fit=crop',
+];
 
 const iconMap: Record<string, LucideIcon> = { BookOpen, Car, RefreshCw };
 
@@ -28,55 +35,64 @@ function ServiceCard({ item, index }: { item: ServiceItem; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.7, delay: index * 0.12, ease: [0.16, 1, 0.3, 1] }}
-      className={`relative flex flex-col rounded-3xl p-8 transition-all duration-300 ${
-        isMiddle
-          ? 'bg-navy text-white shadow-navy'
-          : 'card-light-hover'
+      className={`relative flex flex-col rounded-3xl overflow-hidden transition-all duration-300 ${
+        isMiddle ? 'bg-navy text-white shadow-navy' : 'card-light-hover'
       }`}
     >
-      {/* Badge */}
-      <span className={`tag mb-6 self-start ${isMiddle ? 'bg-white/10 text-gold border-0' : ''}`}>
-        {item.badge}
-      </span>
-
-      {/* Icon */}
-      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 ${
-        isMiddle ? 'bg-white/10' : 'bg-navy-50'
-      }`}>
-        <Icon size={24} className={isMiddle ? 'text-gold' : 'text-navy'} />
+      {/* Photo header */}
+      <div className="relative h-44 overflow-hidden flex-shrink-0">
+        <Image
+          src={servicePhotos[index]}
+          alt={item.title}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className={`absolute inset-0 ${isMiddle ? 'bg-navy/60' : 'bg-navy/30'}`} />
+        <div className="absolute bottom-4 left-4">
+          <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${isMiddle ? 'bg-gold' : 'bg-white'}`}>
+            <Icon size={20} className={isMiddle ? 'text-white' : 'text-navy'} />
+          </div>
+        </div>
+        <div className="absolute top-4 right-4">
+          <span className={`tag text-[10px] ${isMiddle ? 'bg-white/15 text-white border-0' : ''}`}>
+            {item.badge}
+          </span>
+        </div>
       </div>
 
-      {/* Title + price */}
-      <h3 className={`text-xl font-bold mb-1 ${isMiddle ? 'text-white' : 'text-navy'}`}>
-        {item.title}
-      </h3>
-      <div className="flex items-baseline gap-2 mb-4">
-        <span className={`text-2xl font-black ${isMiddle ? 'text-gold' : 'text-navy'}`}>
-          {item.price}
-        </span>
-        <span className={`text-xs ${isMiddle ? 'text-white/50' : 'text-slate-400'}`}>
-          {item.priceNote}
-        </span>
+      <div className="p-8 flex flex-col flex-1">
+        {/* Title + price */}
+        <h3 className={`text-xl font-bold mb-1 ${isMiddle ? 'text-white' : 'text-navy'}`}>
+          {item.title}
+        </h3>
+        <div className="flex items-baseline gap-2 mb-4">
+          <span className={`text-2xl font-black ${isMiddle ? 'text-gold' : 'text-navy'}`}>
+            {item.price}
+          </span>
+          <span className={`text-xs ${isMiddle ? 'text-white/50' : 'text-slate-400'}`}>
+            {item.priceNote}
+          </span>
+        </div>
+
+        {/* Description */}
+        <p className={`text-sm leading-relaxed mb-6 ${isMiddle ? 'text-white/70' : 'text-slate-500'}`}>
+          {item.description}
+        </p>
+
+        {/* Features */}
+        <ul className="space-y-2.5 flex-1">
+          {item.features.map((f, i) => (
+            <li key={i} className="flex items-center gap-3 text-sm">
+              <div className={`w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 ${
+                isMiddle ? 'bg-gold/20' : 'bg-navy-50'
+              }`}>
+                <Check size={10} className={isMiddle ? 'text-gold' : 'text-navy'} />
+              </div>
+              <span className={isMiddle ? 'text-white/80' : 'text-slate-600'}>{f}</span>
+            </li>
+          ))}
+        </ul>
       </div>
-
-      {/* Description */}
-      <p className={`text-sm leading-relaxed mb-6 ${isMiddle ? 'text-white/70' : 'text-slate-500'}`}>
-        {item.description}
-      </p>
-
-      {/* Features */}
-      <ul className="space-y-2.5 flex-1 mb-6">
-        {item.features.map((f, i) => (
-          <li key={i} className="flex items-center gap-3 text-sm">
-            <div className={`w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 ${
-              isMiddle ? 'bg-gold/20' : 'bg-navy-50'
-            }`}>
-              <Check size={10} className={isMiddle ? 'text-gold' : 'text-navy'} />
-            </div>
-            <span className={isMiddle ? 'text-white/80' : 'text-slate-600'}>{f}</span>
-          </li>
-        ))}
-      </ul>
     </motion.div>
   );
 }

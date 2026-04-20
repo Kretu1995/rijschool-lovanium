@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { MapPin, Brain, Car, Shield, Clock, MessageCircle, type LucideIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
+import Image from 'next/image';
 
 const iconMap: Record<string, LucideIcon> = { MapPin, Brain, Car, Shield, Clock, MessageCircle };
 
@@ -42,10 +43,43 @@ export default function WhyUs() {
             </p>
 
             {/* Recognition badge */}
-            <div className="inline-flex flex-col gap-1 bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl px-6 py-5">
+            <div className="inline-flex flex-col gap-1 bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl px-6 py-5 mb-8">
               <span className="text-gold text-xs font-bold tracking-widest uppercase">Federale erkenning</span>
               <span className="text-white text-3xl font-black">#2863</span>
               <span className="text-white/50 text-xs">Rijschool Lovanium · Leuven</span>
+            </div>
+
+            {/* Photo collage */}
+            <div className="grid grid-cols-2 gap-3">
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+                <Image
+                  src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&q=80&fit=crop"
+                  alt="Rijles interieur"
+                  fill
+                  className="object-cover opacity-80"
+                />
+              </div>
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+                <Image
+                  src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=400&q=80&fit=crop"
+                  alt="Rijden op de weg"
+                  fill
+                  className="object-cover opacity-80"
+                />
+              </div>
+              <div className="col-span-2 relative rounded-2xl overflow-hidden aspect-[16/7]">
+                <Image
+                  src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=700&q=80&fit=crop"
+                  alt="Lesvoertuig"
+                  fill
+                  className="object-cover opacity-75"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-navy/60 to-transparent" />
+                <div className="absolute bottom-3 left-4">
+                  <p className="text-white text-xs font-bold">Audi lesvoertuigen</p>
+                  <p className="text-white/60 text-[10px]">Manueel & automaat</p>
+                </div>
+              </div>
             </div>
           </AnimatedSection>
 
