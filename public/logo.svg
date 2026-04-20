@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 56" fill="none">
+  <!-- Icon: 4 overlapping petal/leaf shapes in pinwheel formation -->
+  <g transform="translate(28,28)">
+    <!-- Top petal (blue) -->
+    <ellipse cx="0" cy="-10" rx="8" ry="14" fill="#3B4FCC" transform="rotate(0)"/>
+    <!-- Right petal (teal) -->
+    <ellipse cx="0" cy="-10" rx="8" ry="14" fill="#00B4B6" transform="rotate(90)"/>
+    <!-- Bottom petal (blue) -->
+    <ellipse cx="0" cy="-10" rx="8" ry="14" fill="#3B4FCC" opacity="0.85" transform="rotate(180)"/>
+    <!-- Left petal (teal) -->
+    <ellipse cx="0" cy="-10" rx="8" ry="14" fill="#00B4B6" opacity="0.85" transform="rotate(270)"/>
+    <!-- Center circle for depth -->
+    <circle cx="0" cy="0" r="6" fill="#2A3CB5" opacity="0.3"/>
+  </g>
+
+  <!-- Text: "Rijschool" -->
+  <text x="62" y="22" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400" fill="#6B7280" letter-spacing="0.5">Rijschool</text>
+  <!-- Text: "LOVANIUM" -->
+  <text x="60" y="42" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#374151" letter-spacing="1">LOVANIUM</text>
+</svg>

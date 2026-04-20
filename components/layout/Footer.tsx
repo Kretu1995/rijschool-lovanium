@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { Phone, Mail, MapPin, Clock, Instagram, Facebook } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -23,14 +24,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-9 h-9 rounded-xl bg-gold flex items-center justify-center">
-                <span className="text-white font-black">L</span>
-              </div>
-              <div>
-                <span className="font-black text-white text-base">Rijschool Lovanium</span>
-                <p className="text-white/40 text-[10px] tracking-widest uppercase">Leuven · België</p>
-              </div>
+            <div className="mb-5">
+              <Image
+                src="/logo.svg"
+                alt="Rijschool Lovanium"
+                width={160}
+                height={44}
+                className="h-10 w-auto brightness-0 invert opacity-90"
+              />
             </div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs mb-6">{t('description')}</p>
             <p className="text-gold font-semibold text-sm italic mb-6">"{t('tagline')}"</p>

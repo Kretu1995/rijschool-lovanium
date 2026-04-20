@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
 import { cn } from '@/lib/utils';
 
@@ -21,11 +22,11 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
+    { label: 'Home', href: `/${locale}` },
     { label: t('services'), href: `/${locale}/diensten` },
     { label: t('team'), href: `/${locale}/team` },
     { label: t('pricing'), href: `/${locale}#pricing` },
     { label: t('contact'), href: `/${locale}#booking` },
-    { label: t('booking'), href: `/${locale}/inschrijven` },
   ];
 
   return (
@@ -43,14 +44,15 @@ export default function Navigation() {
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center gap-3 group">
-            <div className="w-9 h-9 rounded-xl bg-navy flex items-center justify-center group-hover:bg-navy-light transition-colors duration-200">
-              <span className="text-white font-black text-sm">L</span>
-            </div>
-            <div>
-              <span className="font-black text-navy text-base tracking-tight">Lovanium</span>
-              <span className="hidden sm:block text-[10px] text-slate-400 tracking-widest uppercase -mt-0.5">Rijschool · Leuven</span>
-            </div>
+          <Link href={`/${locale}`} className="flex items-center group">
+            <Image
+              src="/logo.svg"
+              alt="Rijschool Lovanium"
+              width={160}
+              height={44}
+              className="h-10 w-auto transition-opacity duration-200 group-hover:opacity-80"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
