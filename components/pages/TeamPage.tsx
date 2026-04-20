@@ -3,9 +3,20 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Briefcase, Heart, Star, ArrowRight, Mail } from 'lucide-react';
-import { useIsMobile } from '@/lib/useIsMobile';
+import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
+import { useIsMobile } from '@/lib/useIsMobile';
+
+const memberPhotos: Record<string, string> = {
+  'Gert':   '/Gert_voor_website_card-removebg-preview.png',
+  'Hugo':   '/Hugo_voor_website_card-removebg-preview.png',
+  'Sandra': '/Sandra2__1_-removebg-preview.png',
+  'Edward': '/Edward-website-removebg-preview.png',
+  'Joris':  '/Joris_Van_Beneden-removebg-preview.png',
+  'Johan':  '/476761885_618823677416398_3576175194478054195_n-removebg-preview.png',
+  'Ludo':   '/Schermafbeelding_2025-10-14_om_09.45.55-removebg-preview.png',
+};
 
 interface TeamMember {
   name: string;
@@ -21,6 +32,7 @@ interface TeamMember {
 function MemberCard({ member, index }: { member: TeamMember; index: number }) {
   const t = useTranslations('team');
   const isMobile = useIsMobile();
+  const photo = memberPhotos[member.name];
 
   const Wrapper = isMobile ? 'div' : motion.div;
   const motionProps = isMobile ? {} : {
@@ -35,21 +47,29 @@ function MemberCard({ member, index }: { member: TeamMember; index: number }) {
       {...(motionProps as object)}
       className="card-light-hover rounded-3xl overflow-hidden group"
     >
-      {/* Avatar header */}
+      {/* Photo / avatar header */}
       <div
-        className="h-36 flex items-center justify-center relative overflow-hidden"
+        className="h-52 relative overflow-hidden flex items-end justify-center"
         style={{ backgroundColor: member.color }}
       >
-        {/* Subtle pattern */}
         <div className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: 'radial-gradient(circle at 50% 50%, white 1px, transparent 1px)',
             backgroundSize: '20px 20px',
           }}
         />
-        <div className="relative w-20 h-20 rounded-full bg-white/20 border-2 border-white/30 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-          <span className="text-white font-black text-3xl">{member.initials}</span>
-        </div>
+        {photo ? (
+          <Image
+            src={photo}
+            alt={member.name}
+            fill
+            className="object-contain object-bottom group-hover:scale-105 transition-transform duration-500"
+          />
+        ) : (
+          <div className="relative w-20 h-20 rounded-full bg-white/20 border-2 border-white/30 flex items-center justify-center mb-4">
+            <span className="text-white font-black text-3xl">{member.initials}</span>
+          </div>
+        )}
       </div>
 
       {/* Content */}
