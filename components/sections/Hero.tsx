@@ -27,9 +27,22 @@ export default function Hero() {
   return (
     <section className="relative bg-navy overflow-hidden min-h-screen flex flex-col">
 
-      {/* Subtle radial glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(200,150,62,0.08)_0%,transparent_60%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(11,45,94,0.6)_0%,transparent_70%)]" />
+      {/* Mobile: full-bleed photo background */}
+      <div className="absolute inset-0 lg:hidden">
+        <Image
+          src="/audi-lovanium.jpg"
+          alt="Rijschool Lovanium"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-navy/30" />
+      </div>
+
+      {/* Desktop: subtle radial glow on navy */}
+      <div className="absolute inset-0 hidden lg:block bg-[radial-gradient(ellipse_at_top_left,rgba(200,150,62,0.08)_0%,transparent_60%)]" />
+      <div className="absolute inset-0 hidden lg:block bg-[radial-gradient(ellipse_at_bottom_right,rgba(11,45,94,0.6)_0%,transparent_70%)]" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col flex-1 pt-20">
