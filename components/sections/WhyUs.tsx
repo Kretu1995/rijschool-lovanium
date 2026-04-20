@@ -1,11 +1,11 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Trophy, Zap, Car, MapPin, User, Shield } from 'lucide-react';
+import { Trophy, Zap, Car, MapPin, User, Shield, type LucideIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 
-const iconMap: Record<string, React.FC<{ size?: number; className?: string }>> = {
+const iconMap: Record<string, LucideIcon> = {
   Trophy,
   Zap,
   Car,

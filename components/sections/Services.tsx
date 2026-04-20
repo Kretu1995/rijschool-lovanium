@@ -1,11 +1,11 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { BookOpen, Car, RefreshCw, ArrowRight } from 'lucide-react';
+import { BookOpen, Car, RefreshCw, ArrowRight, type LucideIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 
-const iconMap: Record<string, React.FC<{ size?: number; className?: string }>> = {
+const iconMap: Record<string, LucideIcon> = {
   BookOpen,
   Car,
   RefreshCw,
