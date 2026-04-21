@@ -156,34 +156,32 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* ── RIGHT COLUMN: Photo Card ── */}
+          {/* ── RIGHT COLUMN: Car PNG ── */}
           <motion.div
             initial={{ opacity: 0, x: 40, scale: 0.97 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="relative hidden lg:block"
+            style={{ minHeight: '480px' }}
           >
-            {/* Glow behind card */}
-            <div className="absolute -inset-6 bg-gold/10 rounded-3xl blur-2xl pointer-events-none" />
+            {/* Glow under car */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-4/5 h-14 bg-gold/20 blur-3xl rounded-full pointer-events-none" />
 
-            {/* Main photo card */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl" style={{ height: '520px' }}>
+            {/* Floating car image */}
+            <motion.div
+              animate={{ y: [0, -14, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+              className="relative z-10 flex items-end justify-center h-full pt-12"
+            >
               <Image
-                src="/audi-lovanium.jpg"
+                src="/shen_banner-removebg-preview.png"
                 alt="Rijschool Lovanium Audi A3"
-                fill
-                className="object-cover object-center"
+                width={680}
+                height={420}
+                className="object-contain drop-shadow-2xl w-full"
                 priority
               />
-              {/* Bottom gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
-
-              {/* Bottom text overlay */}
-              <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-white/60 text-xs uppercase tracking-widest mb-1">Rijschool Lovanium</p>
-                <p className="text-white font-bold text-lg">Audi A3 · Leuven</p>
-              </div>
-            </div>
+            </motion.div>
 
             {/* Floating: Google card (top-left) */}
             <motion.div
