@@ -47,11 +47,11 @@ export default function Navigation() {
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center group">
             <Image
-              src="/logo.svg"
+              src="/newlogo.png"
               alt="Rijschool Lovanium"
-              width={160}
-              height={44}
-              className="h-10 w-auto transition-opacity duration-200 group-hover:opacity-80"
+              width={180}
+              height={48}
+              className="h-11 w-auto transition-opacity duration-200 group-hover:opacity-80"
               priority
             />
           </Link>
