@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
-import { ArrowRight, Phone, MapPin, Star, Shield, CheckCircle } from 'lucide-react';
+import { ArrowRight, Phone, MapPin, Star, Shield, CheckCircle, Award } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
@@ -24,232 +24,240 @@ export default function Hero() {
   const scrollTo = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
+  const statLabels = t.raw('statLabels') as string[];
+
   return (
-    <section className="relative bg-navy overflow-hidden min-h-screen flex flex-col">
+    <section className="relative bg-white overflow-hidden">
 
-      {/* Mobile: full-bleed photo */}
-      <div className="absolute inset-0 lg:hidden">
-        <Image src="/audi-lovanium.jpg" alt="Rijschool Lovanium" fill className="object-cover object-center" priority />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/20" />
-      </div>
+      {/* Subtle top teal accent line */}
+      <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent z-10" />
 
-      {/* Desktop decorative elements */}
-      {/* Large gold glow orb behind headline */}
-      <div className="absolute hidden lg:block top-1/4 -left-40 w-[600px] h-[600px] rounded-full bg-gold/5 blur-[120px] pointer-events-none" />
-      {/* Subtle grid pattern */}
-      <div
-        className="absolute inset-0 hidden lg:block opacity-[0.03] pointer-events-none"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)',
-          backgroundSize: '60px 60px',
-        }}
-      />
-      {/* Gold accent line top */}
-      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
+      {/* Background: right half tinted */}
+      <div className="absolute inset-y-0 right-0 w-1/2 bg-surface hidden lg:block" />
 
-      {/* Content */}
-      <div className="relative z-10 flex flex-col flex-1 pt-20">
+      {/* ===== MAIN CONTENT ===== */}
+      <div className="relative max-w-7xl mx-auto px-6 pt-28 pb-0 lg:pt-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-        <div className="flex-1 flex items-center">
-          <div className="max-w-7xl mx-auto px-6 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center">
+          {/* ── LEFT COLUMN ── */}
+          <div className="relative z-10 pb-12 lg:pb-20">
 
-              {/* Left */}
-              <div className="py-10 lg:py-20 max-w-xl">
+            {/* Eyebrow */}
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: 0.05 }}
+              className="inline-flex items-center gap-2 mb-6"
+            >
+              <span className="inline-flex items-center gap-1.5 bg-gold/10 text-gold-dark border border-gold/20 rounded-full px-4 py-1.5 text-xs font-bold tracking-wider uppercase">
+                <Shield size={11} />
+                {t('eyebrow')}
+              </span>
+              <span className="inline-flex items-center gap-1.5 bg-green-50 border border-green-200 rounded-full px-3 py-1.5">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
+                </span>
+                <span className="text-green-700 text-[11px] font-semibold">{t('available')}</span>
+              </span>
+            </motion.div>
 
-                {/* Live badge + eyebrow */}
-                <motion.div
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  className="flex items-center gap-3 mb-8"
+            {/* Headline */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+              className="mb-5"
+            >
+              <h1 className="text-5xl md:text-6xl xl:text-[68px] font-black tracking-tight leading-[1.05] text-navy">
+                {t('headline1')}
+              </h1>
+              <h1 className="text-5xl md:text-6xl xl:text-[68px] font-black tracking-tight leading-[1.05] text-gold">
+                {t('headline2')}
+              </h1>
+            </motion.div>
+
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-slate-500 text-base md:text-lg leading-relaxed mb-8 max-w-md"
+            >
+              {t('subtitle')}
+            </motion.p>
+
+            {/* Trust bullets */}
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="flex flex-wrap gap-2 mb-9"
+            >
+              {(t.raw('trustBullets') as string[]).map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-1.5 bg-navy/5 border border-navy/10 rounded-full px-3.5 py-1.5"
                 >
-                  {/* Pulsing availability dot */}
-                  <div className="flex items-center gap-2 bg-white/8 border border-white/15 rounded-full px-4 py-2">
-                    <span className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
-                    </span>
-                    <span className="text-white/70 text-xs font-semibold tracking-widest uppercase">{t('available')}</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 bg-white/8 border border-white/15 rounded-full px-3 py-2">
-                    <Shield size={11} className="text-gold" />
-                    <span className="text-white/60 text-[10px] font-semibold tracking-wider uppercase">{t('eyebrow')}</span>
-                  </div>
-                </motion.div>
+                  <CheckCircle size={12} className="text-gold flex-shrink-0" />
+                  <span className="text-navy/70 text-xs font-semibold">{item}</span>
+                </div>
+              ))}
+            </motion.div>
 
-                {/* Headline */}
-                <motion.div
-                  initial={{ opacity: 0, y: 28 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                  className="mb-6"
-                >
-                  <h1 className="text-5xl md:text-6xl xl:text-[72px] font-black tracking-tight leading-[1.0] text-white">
-                    {t('headline1')}
-                  </h1>
-                  <h1 className="text-5xl md:text-6xl xl:text-[72px] font-black tracking-tight leading-[1.0] text-gold">
-                    {t('headline2')}
-                  </h1>
-                </motion.div>
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="flex flex-wrap gap-3 mb-10"
+            >
+              <Link
+                href={`/${locale}/inschrijven`}
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gold text-white font-bold text-sm shadow-[0_4px_20px_rgba(3,193,179,0.35)] hover:shadow-[0_6px_28px_rgba(3,193,179,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 group"
+              >
+                {t('cta1')}
+                <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform duration-200" />
+              </Link>
+              <button
+                onClick={() => scrollTo('pricing')}
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-navy/15 text-navy font-bold text-sm hover:border-navy/30 hover:bg-navy/5 transition-all duration-200"
+              >
+                {t('cta2')}
+              </button>
+            </motion.div>
 
-                {/* Subtitle */}
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.7, delay: 0.4 }}
-                  className="text-white/55 text-base md:text-lg leading-relaxed mb-8 max-w-md"
-                >
-                  {t('subtitle')}
-                </motion.p>
-
-                {/* Trust bullets */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                  className="flex flex-wrap gap-x-5 gap-y-2 mb-9"
-                >
-                  {(t.raw('trustBullets') as string[]).map((item) => (
-                    <div key={item} className="flex items-center gap-1.5">
-                      <CheckCircle size={13} className="text-gold flex-shrink-0" />
-                      <span className="text-white/60 text-xs font-medium">{item}</span>
-                    </div>
+            {/* Google strip */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.65 }}
+              className="flex flex-wrap items-center gap-5 pt-6 border-t border-slate-100"
+            >
+              {/* Google rating inline */}
+              <div className="flex items-center gap-2.5">
+                <div className="flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={13} className="fill-[#f59e0b] text-[#f59e0b]" />
                   ))}
-                </motion.div>
-
-                {/* CTAs */}
-                <motion.div
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  className="flex flex-wrap gap-3 mb-10"
-                >
-                  <Link
-                    href={`/${locale}/inschrijven`}
-                    className="relative inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gold text-white font-bold text-sm overflow-hidden group transition-all duration-200 hover:shadow-[0_0_30px_rgba(3,193,179,0.5)] hover:scale-[1.02] active:scale-[0.98]"
-                  >
-                    <span className="relative z-10 flex items-center gap-2">
-                      {t('cta1')}
-                      <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
-                    </span>
-                  </Link>
-                  <button
-                    onClick={() => scrollTo('pricing')}
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/25 text-white font-bold text-sm hover:bg-white/8 hover:border-white/40 transition-all duration-200"
-                  >
-                    {t('cta2')}
-                  </button>
-                </motion.div>
-
-                {/* Contact strip */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 0.75 }}
-                  className="flex flex-wrap gap-5 pt-5 border-t border-white/8"
-                >
-                  <a href="tel:+32492482853" className="flex items-center gap-2 text-sm text-white/40 hover:text-white/80 transition-colors">
-                    <Phone size={13} className="text-gold" />
-                    +32 492 48 28 53
-                  </a>
-                  <div className="flex items-center gap-2 text-sm text-white/40">
-                    <MapPin size={13} className="text-gold" />
-                    Martelarenplein 20E, Leuven
-                  </div>
-                </motion.div>
+                </div>
+                <span className="text-navy font-black text-sm">4.9</span>
+                <span className="text-slate-400 text-xs">Google Reviews</span>
               </div>
 
-              {/* Right: Audi — desktop only */}
-              <motion.div
-                initial={{ opacity: 0, x: 60 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1.1, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-                className="relative hidden lg:flex items-end justify-center"
-                style={{ minHeight: '480px' }}
-              >
-                {/* Glow under car */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-16 bg-gold/20 blur-3xl rounded-full pointer-events-none" />
+              <a href="tel:+32492482853" className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-navy transition-colors">
+                <Phone size={12} className="text-gold" />
+                +32 492 48 28 53
+              </a>
+              <div className="flex items-center gap-1.5 text-sm text-slate-400">
+                <MapPin size={12} className="text-gold" />
+                Leuven
+              </div>
+            </motion.div>
+          </div>
 
-                {/* Google rating — floats up/down */}
-                <motion.div
-                  initial={{ opacity: 0, y: -12 }}
-                  animate={{ opacity: 1, y: [0, -10, 0] }}
-                  transition={{
-                    opacity: { duration: 0.5, delay: 1.2 },
-                    y: { duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 1.2 },
-                  }}
-                  className="absolute top-10 right-4 bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl px-5 py-4 text-center z-20"
-                >
-                  <div className="flex items-center justify-center gap-0.5 mb-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={11} className="fill-[#f59e0b] text-[#f59e0b]" />
-                    ))}
-                  </div>
-                  <p className="text-white font-black text-2xl leading-none">4.9</p>
-                  <p className="text-white/40 text-[10px] mt-1">Google Reviews</p>
-                </motion.div>
+          {/* ── RIGHT COLUMN: Photo Card ── */}
+          <motion.div
+            initial={{ opacity: 0, x: 40, scale: 0.97 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="relative hidden lg:block"
+          >
+            {/* Glow behind card */}
+            <div className="absolute -inset-6 bg-gold/10 rounded-3xl blur-2xl pointer-events-none" />
 
-                {/* 97% stat — above the car, floats opposite phase */}
-                <motion.div
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: [0, 10, 0] }}
-                  transition={{
-                    opacity: { duration: 0.5, delay: 1.35 },
-                    y: { duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 1.35 },
-                  }}
-                  className="absolute top-36 left-4 bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl px-5 py-3 z-20"
-                >
-                  <p className="text-gold font-black text-2xl leading-none">97%</p>
-                  <p className="text-white/40 text-[10px] mt-0.5">Slaagpercentage</p>
-                </motion.div>
+            {/* Main photo card */}
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl" style={{ height: '520px' }}>
+              <Image
+                src="/audi-lovanium.jpg"
+                alt="Rijschool Lovanium Audi A3"
+                fill
+                className="object-cover object-center"
+                priority
+              />
+              {/* Bottom gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
 
-                <Image
-                  src="/shen_banner-removebg-preview.png"
-                  alt="Rijschool Lovanium Audi A3"
-                  width={720}
-                  height={460}
-                  className="object-contain object-bottom w-full drop-shadow-2xl relative z-10"
-                  priority
-                />
-              </motion.div>
-
+              {/* Bottom text overlay */}
+              <div className="absolute bottom-6 left-6 right-6">
+                <p className="text-white/60 text-xs uppercase tracking-widest mb-1">Rijschool Lovanium</p>
+                <p className="text-white font-bold text-lg">Audi A3 · Leuven</p>
+              </div>
             </div>
+
+            {/* Floating: Google card (top-left) */}
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+              className="absolute -top-5 -left-6 bg-white rounded-2xl shadow-xl px-5 py-3.5 flex items-center gap-3 border border-slate-100 z-20"
+            >
+              <div className="w-9 h-9 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
+                <Award size={18} className="text-gold" />
+              </div>
+              <div>
+                <div className="flex gap-0.5 mb-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={10} className="fill-[#f59e0b] text-[#f59e0b]" />
+                  ))}
+                </div>
+                <p className="text-navy font-black text-sm leading-none">4.9 <span className="font-normal text-slate-400 text-xs">Google</span></p>
+              </div>
+            </motion.div>
+
+            {/* Floating: 97% card (top-right) */}
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+              className="absolute -top-4 -right-5 bg-navy rounded-2xl shadow-xl px-5 py-3.5 z-20"
+            >
+              <p className="text-gold font-black text-2xl leading-none">97%</p>
+              <p className="text-white/50 text-[10px] mt-0.5 whitespace-nowrap">{statLabels[0]}</p>
+            </motion.div>
+
+            {/* Floating: badge bottom-right */}
+            <motion.div
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+              className="absolute -bottom-4 -right-5 bg-white rounded-2xl shadow-xl px-4 py-3 border border-slate-100 z-20"
+            >
+              <div className="flex items-center gap-2">
+                <Shield size={15} className="text-gold" />
+                <div>
+                  <p className="text-navy font-bold text-xs leading-none">Erkend</p>
+                  <p className="text-slate-400 text-[10px] mt-0.5">#2863</p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* ===== STATS BAR ===== */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.8 }}
+        className="relative mt-12 border-t border-slate-100"
+      >
+        <div className="max-w-7xl mx-auto px-6 py-0">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-100">
+            {[
+              { value: 97, suffix: '%' },
+              { value: 10, suffix: '+' },
+              { value: 7, suffix: '' },
+              { value: 500, suffix: '+' },
+            ].map((stat, i) => (
+              <div key={i} className="px-6 py-8 text-center">
+                <p className="text-3xl font-black text-navy leading-none mb-1">
+                  <AnimatedCounter to={stat.value} suffix={stat.suffix} />
+                </p>
+                <p className="text-slate-400 text-xs font-medium">{statLabels[i]}</p>
+              </div>
+            ))}
           </div>
         </div>
+      </motion.div>
 
-        {/* Stats bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.85, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <div className="border-t border-white/8">
-            <div className="max-w-7xl mx-auto px-6 py-6">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/8 rounded-2xl overflow-hidden">
-                {[
-                  { value: 97, suffix: '%' },
-                  { value: 10, suffix: '+' },
-                  { value: 7, suffix: '' },
-                  { value: 500, suffix: '+' },
-                ].map((stat, i) => {
-                  const labels = t.raw('statLabels') as string[];
-                  return (
-                  <div key={i} className="bg-navy px-6 py-5 text-center">
-                    <p className="text-2xl font-black text-white leading-none mb-1">
-                      <AnimatedCounter to={stat.value} suffix={stat.suffix} />
-                    </p>
-                    <p className="text-white/35 text-xs">{labels[i]}</p>
-                  </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-      </div>
     </section>
   );
 }
