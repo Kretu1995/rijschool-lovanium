@@ -206,10 +206,10 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-              className="absolute -top-4 -right-5 bg-navy rounded-2xl shadow-xl px-5 py-3.5 z-20"
+              className="absolute -top-4 -right-5 bg-white rounded-2xl shadow-xl px-5 py-3.5 border border-slate-100 z-20"
             >
               <p className="text-gold font-black text-2xl leading-none">97%</p>
-              <p className="text-white/50 text-[10px] mt-0.5 whitespace-nowrap">{statLabels[0]}</p>
+              <p className="text-slate-400 text-[10px] mt-0.5 whitespace-nowrap">{statLabels[0]}</p>
             </motion.div>
 
             {/* Floating: badge bottom-right */}
